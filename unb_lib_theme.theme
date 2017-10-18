@@ -1,7 +1,77 @@
 <?php
+
 /**
  * @file
- * Bootstrap sub-theme.
- *
- * Place your custom PHP code in this file.
+ * Custom functions related to unb_lib_theme.
  */
+
+define('UNB_LIB_THEME_DEFAULT_REFRESH_TIME', 900);
+define('UNB_LIB_THEME_DEFAULT_REFRESH_URI', 'https://lib.unb.ca/core/inc-2015/head-nav.php');
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function unb_lib_theme_preprocess_page(&$variables) {
+  _unb_lib_theme_check_update_header();
+}
+
+/**
+ * Check to see if stored header needs updating, and do so if needed.
+ */
+function _unb_lib_theme_check_update_header() {
+  $current_time = time();
+  $expire_seconds = _unb_lib_theme_get_header_refresh_seconds_setting();
+  $last_run_state_name = 'unb_lib_theme_header_last_run';
+  $last_run = \Drupal::state()->get($last_run_state_name);
+
+  if (
+    empty($last_run) ||
+    !ctype_digit($last_run) ||
+    $current_time - $last_run > $expire_seconds
+  ) {
+    _unb_lib_theme_update_header();
+    \Drupal::state()->set($last_run_state_name, $current_time);
+  }
+}
+
+/**
+ * Get the header refresh time setting, defaulting to a value if none exists.
+ *
+ * @return string
+ *   The refresh setting time, in seconds.
+ */
+function _unb_lib_theme_get_header_refresh_seconds_setting() {
+  return !empty(theme_get_setting('header_refresh_seconds')) ? theme_get_setting('header_refresh_seconds') : UNB_LIB_THEME_DEFAULT_REFRESH_TIME;
+}
+
+/**
+ * Get the header source URI setting, defaulting to a value if none exists.
+ *
+ * @return string
+ *   The refresh URI.
+ */
+function _unb_lib_theme_get_header_uri_setting() {
+  return !empty(theme_get_setting('header_uri')) ? theme_get_setting('header_uri') : UNB_LIB_THEME_DEFAULT_REFRESH_URI;
+}
+
+/**
+ * Get the header file write path.
+ *
+ * @return string
+ *   The refresh URI.
+ */
+function _unb_lib_theme_get_header_write_path() {
+  $path = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
+  return !empty(theme_get_setting('header_write_path')) ? theme_get_setting('header_write_path') : "{$path}/head-nav.html.twig";
+}
+
+/**
+ * Update the header file on disk.
+ */
+function _unb_lib_theme_update_header() {
+  $client = \Drupal::httpClient();
+  $res = $client->get(_unb_lib_theme_get_header_uri_setting());
+  $path = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
+  file_put_contents(_unb_lib_theme_get_header_write_path(), $res->getBody());
+  drupal_flush_all_caches();
+}
