@@ -1,4 +1,4 @@
-custom:
+global-styling:
   css:
     theme:
       '//lib.unb.ca/core/css-2015/fhmm.css': {type: external }
