@@ -4,3 +4,4 @@ global-styling:
       '//lib.unb.ca/core/css-2015/fhmm.css': {type: external }
       '//lib.unb.ca/core/css-2015/unb-lib.css': {type: external }
       '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css': {type: external}
+      '//fonts.googleapis.com/css?family=Source+Sans+Pro': {type: external}
