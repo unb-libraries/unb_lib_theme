@@ -2,3 +2,8 @@
 body {
 	margin-top: 0;
 }
+
+.form-item > .tab-content {
+	border: 0;
+	padding: 0;
+}
