@@ -11,3 +11,7 @@ body {
 input[type="checkbox"] {
   height: auto;
 }
+
+#main {
+  padding: 0;
+}
