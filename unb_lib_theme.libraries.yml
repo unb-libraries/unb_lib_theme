@@ -1,0 +1,12 @@
+global-styling:
+  css:
+    base:
+      '//fonts.googleapis.com/css?family=Source+Sans+Pro': {type: external}
+    component:
+      '//lib.unb.ca/core/css-2015/unb-lib.css': { type: external }
+    layout:
+      '//lib.unb.ca/core/css-2015/fhmm.css': { type: external }
+    theme:
+      css/style.css: {}
+      css/print.css: { media: print }
+
