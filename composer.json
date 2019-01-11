@@ -1,0 +1,10 @@
+{
+  "name": "unb-libraries/unb_lib_theme",
+  "description": "Drupal Base Theme For UNB Lib Branding.",
+  "type": "drupal-theme",
+  "license": "MIT",
+  "homepage": "https://github.com/unb-libraries/unb_lib_theme",
+  "require": {
+    "twbs/bootstrap-sass": "^3.3.7"
+  }
+}
