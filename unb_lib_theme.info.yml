@@ -1,13 +1,21 @@
-name: UNB Libraries Subtheme
+name: Bootstrap UNB Libraries
 type: theme
-description: 'Basic structure for a Bootstrap Barrio SubTheme.'
-# version: VERSION
+description: 'A flexible Booststrap 4 based theme, with many regions and a responsive, mobile-first layout.'
+version: VERSION
 core: 8.x
-base theme: bootstrap_barrio
+base theme: false
 
 libraries:
-  - unb_lib_theme/bootstrap_cdn
   - unb_lib_theme/global-styling
+
+libraries-extend:
+  file/drupal.file:
+    - unb_lib_theme/file
+
+ckeditor_stylesheets:
+  - css/base/elements.css
+  - css/components/captions.css
+  - css/components/table.css
 
 regions:
   top_header: 'Top Header'
@@ -32,4 +40,3 @@ regions:
   footer_third: 'Footer third'
   footer_fourth: 'Footer fourth'
   footer_fifth: 'Footer fifth'
-
