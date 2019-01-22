@@ -6,7 +6,7 @@ global-styling:
     dist/js/affix.js: {}
   css:
     component:
-      dist/css/style.css
+      dist/css/style.css: {}
     theme:
       css/print.css: { media: print }
 
