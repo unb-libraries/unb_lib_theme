@@ -1,21 +1,20 @@
-# Bootstrap Grokology
+# unb_lib_theme
+## Drupal 8 Theme Based on Bootstrap.
 
-Bootstrap 4 based theme for Drupal 8
+UNB Libraries Theme.
 
-Bootstrap Grokology is a theme based on Bootstrap Barrio, and
-Bootstrap 4 beta, a sleek, intuitive, and powerful front-end framework 
-for faster and easier web development. 
-Bootstrap Grokology focus on layout flexibility 
-and customization using theme parameters.
+## License
+- unb_lib_theme is licensed under the MIT License:
+  - http://opensource.org/licenses/mit-license.html
+- Attribution is not required, but much appreciated:
+  - `unb_lib_theme by UNB Libraries`
 
-- Layout is handle by Bootstrap.
-- Two columns, with configurable widths.
-- Fixed and fluid layouts.
-- Configurable header behaviour, using Bootstrap "fixed to top".
-- Any block could be defined as "modal" with one click using Skinr.
-- Full screen width slider region.
 
-Installation
+## Notes
+- This depends on Bootstrap Barrio theme:
+  - https://www.drupal.org/project/bootstrap_barrio
 
-Unpack and upload Bootstrap Theme to your /themes folder.
-Install Bootstrap Library module to load the libraries.
+  
+- As of 8.x-4.17, the following patches should be installed in your build>composer.json
+  - Fix 404: https://www.drupal.org/project/bootstrap_barrio/issues/2979684
+  - Fix logo theme setting: https://www.drupal.org/project/bootstrap_barrio/issues/2996094

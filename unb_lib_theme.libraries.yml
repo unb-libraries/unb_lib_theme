@@ -1,63 +1,11 @@
 global-styling:
   version: VERSION
   js:
-    //stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js: { type: external, minified: true }
+    https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js: { type: external, minified: true }
     dist/js/global.js: {}
-    dist/js/affix.js: {}
-  css:
-    component:
-      dist/css/style.css: {}
-    theme:
-      css/print.css: { media: print }
-
-affix:
-  version: VERSION
-  js:
-    dist/js/affix.js: {}
-
-maintenance_page:
-  version: VERSION
-  css:
-    theme:
-      css/maintenance-page.css: {}
   dependencies:
-    - system/maintenance
-    - unb_lib_theme/global-styling
-
-sidebar-collapse:
-  version: VERSION
-  js:
-    dist/js/sidebar-collapse.js: { external: true }
-
-# Fonts
-
-SourceSansPro:
-  version: VERSION
+    - core/jquery
   css:
-    component:
-      fonts/source-sans-pro.css: {}
-      //fonts.googleapis.com/css?family=Source+Sans+Pro: {type: external}
-
-# Colors
-
-messages_light:
-  version: VERSION
-  css:
-    component:
-      css/colors/messages/messages-light.css: {}
-
-messages_dark:
-  version: VERSION
-  css:
-    component:
-      css/colors/messages/messages-dark.css: {}
-
-# icons
-
-fontawesome:
-  version: VERSION
-  css:
-    component:
-      //maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: { type: external, minified: true }
-
-
+    theme:
+      dist/css/style.css: {}
+      #dist/css/print.css: { media: print }

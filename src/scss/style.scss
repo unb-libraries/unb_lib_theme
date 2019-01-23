@@ -1,60 +1,20 @@
-/* 
-Description: Bootstrap 4 with Sass
-*/
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
 
-// import files
-@import "import";
-
-
-/* GENERAL STYLES
--------------------------------------------------*/
+/* Import Sass files */
+@import 'import';
 
 body {
+    color: $font-dark;
     background: $white;
 }
 
-
-/* COLORS 
---------------------------------------------------*/
-
-a {
-    color: $accent-shade;
+#navbar-top {
+    background-color: #055a8e;
 }
 
-.bg-inverse {
-    background: $primary-shade !important;
-}
-
-.site-footer {
-    background: $accent-shade !important;
-}
-
-.menu--main li a {
-    color: $primary-shade;
-}
-
-.menu--account li a {
-    color: $primary-shade;
-}
-
-.site-name-slogan a {
-    text-decoration: none;
-}
-
-.card-group img {
-    margin: 0;
-    width: 100%;
-    height: auto;
-}
-
-.card-group .field--type-image {
-    margin: 0
-}
-
-.slick {
-    width: 100%;
-}
-
-.slick>div {
-    margin: 0 15px;
+#navbar-main {
+    background-color: #1d84c3;
 }
