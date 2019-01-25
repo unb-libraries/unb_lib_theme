@@ -35,7 +35,7 @@
  *   comment/reply/12345).
  *
  * Regions:
- * - page.top_header: Items for the top header region.
+ * - page.top_header_meny: Items for the top header menu region.
  * - page.top_header_form: Items for the top header form region.
  * - page.header: Items for the header region.
  * - page.header_form: Items for the header form region.
@@ -68,15 +68,17 @@
  * @see html.html.twig
  */
 #}
-
 {% block head %}
-        {% if page.secondary_menu or page.top_header or page.top_header_form %}
+        {% if page.top_header_menu or page.secondary_menu or page.top_header_form %}
           <nav{{ navbar_top_attributes }}>
-          {% if container_navbar %}
-          <div class="container">
+          {% if page.top_header_menu %}
+              <div class="container">
+                  <div class="d-none d-sm-block">
+                    {{ page.top_header_menu }}
+                  </div>
+              </div>
           {% endif %}
               {{ page.secondary_menu }}
-              {{ page.top_header }}
               {% if page.top_header_form %}
                 <div class="form-inline navbar-form float-right">
                   {{ page.top_header_form }}
@@ -88,26 +90,24 @@
           </nav>
         {% endif %}
         <nav{{ navbar_attributes }}>
-          {% if container_navbar %}
-          <div class="container">
-          {% endif %}
-            {{ page.header }}
-            {% if page.primary_menu or page.header_form %}
-              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-              <div class="collapse navbar-collapse" id="CollapsingNavbar">
-                {{ page.primary_menu }}
-                {% if page.header_form %}
-                  <div class="form-inline navbar-form float-right">
-                    {{ page.header_form }}
+          {% if page.header %}
+            <div class="container">
+                {{ page.header }}
+                {% if page.primary_menu or page.header_form %}
+                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                  <div class="collapse navbar-collapse" id="CollapsingNavbar">
+                    {{ page.primary_menu }}
+                    {% if page.header_form %}
+                      <div class="form-inline navbar-form float-right">
+                        {{ page.header_form }}
+                      </div>
+                    {% endif %}
                   </div>
                 {% endif %}
-	          </div>
-            {% endif %}
+            </div>
             {% if sidebar_collapse %}
               <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#CollapsingLeft" aria-controls="CollapsingLeft" aria-expanded="false" aria-label="Toggle navigation"></button>
             {% endif %}
-          {% if container_navbar %}
-          </div>
           {% endif %}
         </nav>
 {% endblock %}
@@ -141,19 +141,28 @@
 {% endblock %}
 
 {% block footer %}
+    {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
         <div class="{{ container }}">
-          {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-            <div class="site-footer__top clearfix">
+            <div class="footer-top top clearfix">
               {{ page.footer_first }}
               {{ page.footer_second }}
               {{ page.footer_third }}
               {{ page.footer_fourth }}
             </div>
-          {% endif %}
-          {% if page.footer_fifth %}
-            <div class="site-footer__bottom">
-              {{ page.footer_fifth }}
-            </div>
-          {% endif %}
         </div>
+    {% endif %}
+    {% if page.footer_menu_first or page.footer_menu_second %}
+        <div id="footer-bottom">
+            <div class="{{ container }}">
+                <div class="row no-gutters">
+                    <div class="col-lg-6 col-md-12">
+                        {{ page.footer_menu_first }}
+                    </div>
+                    <div class="col-lg-6 col-md-12 d-flex justify-content-lg-end">
+                        {{ page.footer_menu_second }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 {% endblock %}
