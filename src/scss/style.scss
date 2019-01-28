@@ -11,6 +11,9 @@ body {
     background: $white;
     font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
 
 /**
  * Links
@@ -24,7 +27,7 @@ a:hover {
     color: $link-hover-color;
 }
 a.nav-link[href$="//unb.ca"]::before {
-    background-image: url(/themes/custom/unb_lib_theme/dist/img/unbsail-r.png);
+    background-image: url(/themes/custom/unb_lib_theme/dist/img/unb-sail-r.png);
     background-size: 18px 18px;
     background-repeat: no-repeat;
     content: '';
@@ -62,20 +65,17 @@ a.nav-link[href$="//unb.ca"]::before {
 .navbar-dark {
     background: $navbar-dark;
 }
-.menu--footer ul,
+.footer-bottom-first  ul,
 .menu--utilities-menu ul {
-    margin: 0;
-    padding: 10px 0 6px 0x;
+    margin: .75em 0;
 }
-.menu--footer li,
+.footer-bottom-first  li,
 .menu--utilities-menu li {
     display: inline;
 }
-.menu--footer li:not(:first-child),
 .menu--utilities-menu li:not(:first-child) {
     margin-left: 8px;
 }
-.menu--footer li:not(:last-child),
 .menu--utilities-menu li:not(:last-child) {
     margin-right: 8px;
 }
@@ -83,15 +83,6 @@ a.nav-link[href$="//unb.ca"]::before {
     border-right: 1px solid $gray-medium;
     padding-right: 15px;
 }
-.menu--footer a.nav-link::after,
-.site-footer a.nav-link::after {
-    color: $red;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f105";
-    margin: 0px 5px;
-}
-.site-footer a.nav-link,
 .menu--utilities-menu a.nav-link {
     color: $white;
     border: none;
@@ -110,9 +101,6 @@ a.nav-link[href$="//unb.ca"]::before {
 /**
  * Footer
  */
-#footer-bottom {
-    background: $navbar-dark;
-}
 
 /**
  * Accessibility

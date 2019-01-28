@@ -19,7 +19,7 @@
 ]
 %}
 {% if content %}
-    {% if 'footer' in region %}
+    {% if 'footer' in region or 'header' in region %}
         {{ content }}
     {% else %}
         <section{{ attributes.addClass(classes) }}>

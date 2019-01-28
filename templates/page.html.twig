@@ -141,25 +141,49 @@
 {% endblock %}
 
 {% block footer %}
-    {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+    {% if page.footer_top_first or page.footer_top_second or page.footer_top_third %}
         <div class="{{ container }}">
-            <div class="footer-top top clearfix">
-              {{ page.footer_first }}
-              {{ page.footer_second }}
-              {{ page.footer_third }}
-              {{ page.footer_fourth }}
+            <div class="row footer-top">
+                {% if page.footer_top_first %}
+                <div class="col-lg-2 col-md-6 col-xs-12">
+                    {{ page.footer_top_first }}
+                </div>
+                {% endif %}
+                {% if page.footer_top_second %}
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    {{ page.footer_top_second }}
+                </div>
+                {% endif %}
+                {% if page.footer_top_third %}
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    {{ page.footer_top_third }}
+                </div>
+                {% endif %}
+                                                                                                                                                    {# Footer Middle | 4th column | UNB Image Link #}
+                <div class="col-lg-3 col-md-6 d-none d-md-block unb-logo">
+                    <a href="//unb.ca">
+                        <img class="img-fluid" src="/themes/custom/unb_lib_theme/dist/img/unb-logo-primary-w.png" alt="University of New Brunswick; established 1785">
+                    </a>
+                </div>
             </div>
         </div>
     {% endif %}
-    {% if page.footer_menu_first or page.footer_menu_second %}
-        <div id="footer-bottom">
+    {% if page.footer_middle %}
+        <div class="{{ container }}">
+            <div class="footer-middle">
+                {{ page.footer_middle }}
+            </div>
+        </div>
+    {% endif %}
+    {% if page.footer_bottom_first or page.footer_bottom_second %}
+        <div class="footer-bottom">
             <div class="{{ container }}">
-                <div class="row no-gutters">
-                    <div class="col-lg-6 col-md-12">
-                        {{ page.footer_menu_first }}
+                <div class="row">
+                    <div class="footer-bottom-first col-lg-6 col-md-12">
+                        {{ page.footer_bottom_first }}
                     </div>
-                    <div class="col-lg-6 col-md-12 d-flex justify-content-lg-end">
-                        {{ page.footer_menu_second }}
+                    <div class="footer-bottom-second col-lg-6 col-md-12 d-flex justify-content-lg-end">
+                        {{ page.footer_bottom_second }}
                     </div>
                 </div>
             </div>
