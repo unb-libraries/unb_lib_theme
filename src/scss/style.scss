@@ -6,6 +6,9 @@
 /* Import Sass files */
 @import 'import';
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     color: $font-dark;
     background: $white;
@@ -36,6 +39,13 @@ a.nav-link[href$="//unb.ca"]::before {
     vertical-align: text-bottom;
     width: 18px;
     height: 18px;
+}
+a.navbar-brand img {
+    border-bottom: 3px outset transparent;
+    padding: 8px 0;
+}
+a.navbar-brand:hover img {
+    border-bottom: 3px solid $header-hover-color;
 }
 
 /**
@@ -68,6 +78,8 @@ a.nav-link[href$="//unb.ca"]::before {
 .footer-bottom-first  ul,
 .menu--utilities-menu ul {
     margin: .75em 0;
+}html {
+  scroll-behavior: smooth;
 }
 .footer-bottom-first  li,
 .menu--utilities-menu li {
@@ -98,6 +110,14 @@ a.nav-link[href$="//unb.ca"]::before {
     color: $navbar-dark-hover;
 }
 
+#navbar-main a.nav-link {
+    padding-left:2.5rem;
+    padding-right:2.5rem;
+    color: $navbar-dark;
+    font-size: larger;
+    font-weight:bold;
+}
+
 /**
  * Footer
  */
@@ -109,26 +129,72 @@ a.nav-link[href$="//unb.ca"]::before {
 /* Skip link */
 #skiptocontent a {
     background: $skip-link-bg;
-    border-bottom: 1px solid $white;
     color: $white;
     display: block;
     font-size: 2em;
+    padding: .13em;
     position: absolute;
     text-align: center;
     text-decoration: none;
-    top: -2em;
+    top: -3.5rem;
     -webkit-transition: all 1s ease-out;
-    transition: all .75s ease-out;
+    transition: all .7s ease-out;
     width: 100%;
     z-index: 1000;
 }
 #skiptocontent a:focus {
-position: relative;
-    outline-color: transparent;
+    box-shadow: 0 0 5px #000;
     top: 0;
     -webkit-transition: top .1s ease-in;
-    transition: top .25s ease-in;
+    transition: top .2s linear;
+}
+.user-logged-in #skiptocontent a:focus {
+    position: relative;
 }
 #skiptocontent a:hover {
     text-decoration: underline;
+}
+
+/* Superfish WIP */
+#superfish-main .sf-depth-1 {
+    color: $black;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.sf-depth-1 .sf-depth-1 {
+    background: none;
+    border-bottom: 3px solid transparent;
+    padding: 1.5em 2em;
+    text-decoration: none;
+}
+
+#superfish-main a.sf-depth-1:hover,
+#superfish-main li.sfHover > a.sf-depth-1 {
+    border-bottom: 3px solid $header-hover-color;
+}
+#superfish-main li.sf-depth-1 a.sf-depth-1 {
+    transition: all .25s;
+}
+.sfHover .sf-clicked {
+    background: #e2e2e2;
+}
+ul.sf-menu.menu ul.sf-multicolumn {
+    background: #373f44;
+    padding: 15px 20px;
+    top: 4.6em;
+}
+
+#superfish-main .nolink {
+    color: $header-link-color;
+    font-size: 1.3em;
+    padding: 0;
+}
+ul.sf-menu.menu ul a.sf-depth-3 {
+    color: $header-link-color;
+    padding: .75em 1em;
+}
+
+.navbar-brand {
+    margin-right: 0;
+    min-width: 350px;
 }

@@ -7,9 +7,10 @@
 
   'use strict';
 
-  Drupal.behaviors.bootstrap_barrio_subtheme = {
+  Drupal.behaviors.unb_lib_theme = {
     attach: function (context, settings) {
-
+      $('.sf-multicolumn').addClass('container');
+      $('.sf-multicolumn-wrapper ').addClass('row');
     }
   };
 
