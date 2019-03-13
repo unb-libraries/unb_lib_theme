@@ -1,35 +1,19 @@
 <?php
 
 /**
- * @file
- * Functions to support theming in the SASS Starterkit subtheme.
+ * Implements hook_theme_preprocess_page().
  */
+function unb_lib_theme_preprocess_page(&$variables) {
+    $fids = theme_get_setting('banner_images');
+    $fids = empty($fids) ?  : $fids;
+    if (sizeof($fids) > 0) {
+        $file_storage = \Drupal::entityTypeManager()->getStorage('file');
+        shuffle($fids);
+        $rand_banner_image = $file_storage->load($fids[0]);
+        // Verify image file exists.
+        if (!empty($rand_banner_image)) {
+            $variables['header_banner_img'] = $rand_banner_image->url();
+        }
+    }
 
-use Drupal\Core\Form\FormStateInterface;
-
-/**
- * Implements hook_form_system_theme_settings_alter() for settings form.
- *
- * Replace Barrio setting options with subtheme ones.
- *
- * Example on how to alter theme settings form
- *
- */
-function unb_lib_theme_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
-    $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
-        'bg-primary' => t('Primary'),
-        'bg-secondary' => t('Secondary'),
-        'bg-light' => t('Light'),
-        'bg-dark' => t('Dark'),
-        'bg-white' => t('White'),
-        'bg-transparent' => t('Transparent'),
-    );
-    $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
-        'bg-primary' => t('Primary'),
-        'bg-secondary' => t('Secondary'),
-        'bg-light' => t('Light'),
-        'bg-dark' => t('Dark'),
-        'bg-white' => t('White'),
-        'bg-transparent' => t('Transparent'),
-    );
 }
