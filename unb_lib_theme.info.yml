@@ -1,6 +1,6 @@
-name: UNB Libraries Subtheme
+name: UNB Libraries Base Theme
 type: theme
-description: 'Basic structure for a Bootstrap Barrio SubTheme.'
+description: 'UNB Libraries Drupal 8 base theme constructed from Bootstrap Barrio.'
 # version: VERSION
 core: 8.x
 base theme: bootstrap_barrio
