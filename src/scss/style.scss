@@ -51,9 +51,13 @@ a.nav-link[href$="//unb.ca"]::before {
     width: 18px;
     height: 18px;
 }
-.branding img {
-    max-width: 320px;
+.branding h1 {
+    min-width: 320px;
 }
+.branding img {
+    max-width: 350px;
+}
+
 /**
  * Focus ring
  */
