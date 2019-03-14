@@ -7,8 +7,7 @@ function unb_lib_theme_preprocess_page(&$variables) {
   $variables['unb_lib_theme_path'] = drupal_get_path('theme', 'unb_lib_theme');
 
   $fids = theme_get_setting('banner_images');
-  $fids = empty($fids) ? : $fids;
-  if (sizeof($fids) > 0) {
+  if ($fids != null) {
     $file_storage = \Drupal::entityTypeManager()->getStorage('file');
     shuffle($fids);
     $rand_banner_image = $file_storage->load($fids[0]);
