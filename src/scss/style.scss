@@ -41,7 +41,7 @@ a.branding:hover,
     border-bottom: 3px solid $link-hover-color;
 }
 a.nav-link[href$="//unb.ca"]::before {
-    background-image: url(/themes/custom/unb_lib_theme/dist/img/unb-sail-r.png);
+    background-image: url(../../img/unb-sail-r.png);
     background-size: 18px 18px;
     background-repeat: no-repeat;
     content: '';
@@ -230,9 +230,6 @@ ul[role="menubar"] a[role="button"] {
 }
 .dropdown-item {
     white-space: normal;
-}
-#hours {
-    background: transparent url(./front-1.jpg) 0 0 no-repeat;
 }
 #hours .row {
     background-color: rgba(0, 0, 0, 0.8);
