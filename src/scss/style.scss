@@ -30,12 +30,12 @@ a:focus,
 a:hover {
     color: $link-hover-color;
 }
-a.branding,
+.branding a,
 .megamenu-li a {
     border-bottom: 3px solid transparent;
 }
-a.branding:focus,
-a.branding:hover,
+.branding a:focus,
+.branding a:hover,
 .megamenu-li a:focus,
 .megamenu-li a:hover {
     border-bottom: 3px solid $link-hover-color;
