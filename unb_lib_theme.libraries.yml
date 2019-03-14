@@ -2,14 +2,14 @@ global-styling:
   version: VERSION
   js:
     https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js: { type: external, minified: true }
-    src/js/focus-ring.js: {}
-    src/js/animated-focus-ring.js: {}
-    src/js/global.js: {}
+    js/focus-ring.min.js: { minified: true }
+    js/animated-focus-ring.min.js: { minified: true }
+    js/global.js: {}
   dependencies:
     - core/jquery
   css:
     base:
       '//fonts.googleapis.com/css?family=Source+Sans+Pro': { type: external }
     #theme:
-      #src/css/style.css: {}
+      #dist/css/style.css: {}
       #dist/css/print.css: { media: print }
