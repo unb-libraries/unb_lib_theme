@@ -97,8 +97,8 @@
                     <a class="branding py-2" href="https://lib.unb.ca">
                 {% endif %}
                     <h1 class="m-0">
-                        <img alt="UNB Libraries" class="img-fluid unblib-logo" src="../dist/img/unb-libraries-red-black.png" />
-                        <img alt="UNB Libraries" class="img-fluid unblib-logo-affix" src="../dist/img/unb-libraries-w.png" />
+                        <img alt="UNB Libraries" class="img-fluid unblib-logo" src="/{{ unb_lib_theme_path }}/img/unb-libraries-red-black.png" />
+                        <img alt="UNB Libraries" class="img-fluid unblib-logo-affix" src="/{{ unb_lib_theme_path }}/img/unb-libraries-w.png" />
                     </h1>
                 </{{ (is_front) ? 'div' : 'a' }}>
             </div>
@@ -444,7 +444,7 @@
             </div>
             <div class="col-lg-3 col-md-6 d-none d-md-block unb-logo">
                 <a href="//unb.ca">
-                    <img class="img-fluid" src="../dist/img/unb-logo-primary-w.png" alt="University of New Brunswick: established in 1785">
+                    <img class="img-fluid" src="/{{ unb_lib_theme_path }}/img/unb-logo-primary-w.png" alt="University of New Brunswick: established in 1785">
                 </a>
             </div>
         </div>
