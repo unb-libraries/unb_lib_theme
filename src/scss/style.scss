@@ -54,8 +54,15 @@ a.nav-link[href$="//unb.ca"]::before {
 .branding h1 {
     min-width: 320px;
 }
-.branding img {
-    max-width: 350px;
+@media (max-width: 991px) {
+    .branding img {
+        max-width: 350px;
+    }
+}
+@media (min-width: 992px) {
+    .branding img {
+        max-width: 320px;
+    }
 }
 
 /**
