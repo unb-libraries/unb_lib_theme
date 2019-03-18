@@ -289,7 +289,12 @@ ul[role="menubar"] a[role="button"] {
 .megamenu ul {
     list-style-type: none;
 }
-@media (min-width:992px) {
+@media (max-width: 991px) {
+    ul[role="menubar"] a[role="button"] {
+        color: #fff;
+    }
+}
+@media (min-width: 992px) {
     .megamenu-li {
         margin-left: .5%;
         margin-right: .5%;
@@ -304,7 +309,7 @@ ul[role="menubar"] a[role="button"] {
     height: 200px;
 }
 #hours {
-    background: transparent url(./front-1.jpg) 0 0 no-repeat;
+    /* background: transparent url(./front-1.jpg) 0 0 no-repeat; */
 }
 #hours .row {
     background-color: rgba(0, 0, 0, 0.8);
