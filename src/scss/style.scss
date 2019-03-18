@@ -286,6 +286,9 @@ ul[role="menubar"] a[role="button"] {
     color: $header-link-color;
     font-size: 1.3em;
 }
+.megamenu ul {
+    list-style-type: none;
+}
 @media (min-width:992px) {
     .megamenu-li {
         margin-left: .5%;
