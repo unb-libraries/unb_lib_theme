@@ -288,6 +288,25 @@ ul[role="menubar"] a[role="button"] {
 .megamenu ul {
     list-style-type: none;
 }
+/* Show/Expand Transition */
+.megamenu-li .show .row {
+    -webkit-animation: megamenuexpand .3s;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-name: megamenuexpand;
+}
+@keyframes megamenuexpand {
+    from {
+        opacity: 0;
+        margin-top: -0.5em;
+    }
+    to {
+        animation-timing-function: ease-out;
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+/* END Show/Expand Transition */
 @media (max-width: 991px) {
     ul[role="menubar"] a[role="button"] {
         color: #fff;
