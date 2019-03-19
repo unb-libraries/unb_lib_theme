@@ -290,8 +290,8 @@ ul[role="menubar"] a[role="button"] {
 }
 /* Show/Expand Transition */
 .megamenu-li .show .row {
-    -webkit-animation: megamenu-expand .5s;
-    animation-duration: .5s;
+    -webkit-animation: megamenu-expand .3s;
+    animation-duration: .3s;
     animation-iteration-count: 1;
     animation-name: megamenu-expand;
 }
