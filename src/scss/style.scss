@@ -388,8 +388,8 @@ ul[role="menubar"] a[role="button"] {
 /* END dark-themed tabbed content nav */
 
 /* Add larger breakpoint option for container */
-@media (min-width: 1366px) {
+@media (min-width: 1360px) {
     .container {
-        max-width: 1336px;
+        max-width: 1200px;
     }
 }
