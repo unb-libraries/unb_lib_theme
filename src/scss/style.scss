@@ -290,18 +290,18 @@ ul[role="menubar"] a[role="button"] {
 }
 /* Show/Expand Transition */
 .megamenu-li .show .row {
-    -webkit-animation: megamenuexpand .3s;
+    -webkit-animation: megamenu-expand .5s;
     animation-duration: .5s;
     animation-iteration-count: 1;
-    animation-name: megamenuexpand;
+    animation-name: megamenu-expand;
 }
-@keyframes megamenuexpand {
+@keyframes megamenu-expand {
     from {
-        opacity: 0;
+        animation-timing-function: ease-out;
         margin-top: -0.5em;
+        opacity: 0;
     }
     to {
-        animation-timing-function: ease-out;
         margin-top: 0;
         opacity: 1;
     }
@@ -325,9 +325,6 @@ ul[role="menubar"] a[role="button"] {
 #header-banner {
     border-top: 1px solid $gray-medium;
     height: 200px;
-}
-#hours {
-    /* background: transparent url(./front-1.jpg) 0 0 no-repeat; */
 }
 #hours .row {
     background-color: rgba(0, 0, 0, 0.8);
