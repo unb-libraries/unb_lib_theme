@@ -38,7 +38,7 @@ a:hover {
     border-bottom: 3px solid $link-hover-color;
 }
 a.nav-link[href$="//unb.ca"]::before {
-    background-image: url(themes/contrib/unb_lib_theme/img/unb-sail-r.png);
+    background-image: url(/themes/contrib/unb_lib_theme/img/unb-sail-r.png);
     background-size: 18px 18px;
     background-repeat: no-repeat;
     content: '';
