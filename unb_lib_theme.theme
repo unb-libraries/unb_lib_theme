@@ -4,17 +4,39 @@
  * Implements hook_theme_preprocess_page().
  */
 function unb_lib_theme_preprocess_page(&$variables) {
-  $variables['unb_lib_theme_path'] = drupal_get_path('theme', 'unb_lib_theme');
+  $unb_lib_theme_path = drupal_get_path('theme', 'unb_lib_theme');
+  $banner_path = $unb_lib_theme_path . '/img/banner';
+  $banner_extensions = ['gif', 'jpg', 'png'];
 
-  $fids = theme_get_setting('banner_images');
-  if ($fids != null) {
-    $file_storage = \Drupal::entityTypeManager()->getStorage('file');
-    shuffle($fids);
-    $rand_banner_image = $file_storage->load($fids[0]);
-    // Verify image file exists.
-    if (!empty($rand_banner_image)) {
-      $variables['header_banner_img'] = $rand_banner_image->url();
+  $variables['unb_lib_theme_path'] = $unb_lib_theme_path;
+  $variables['banner_image'] = _unb_lib_theme_get_random_file($banner_path, $banner_extensions);
+}
+
+/**
+ * Scans for and returns a random file from a given folder, filtering by the given set of extensions.
+ *
+ * @param string $path
+ *   The path of the folder to search/select a random file from.
+ *  @param array $extensions
+ *   An array containing a list of desired file extensions to select from.
+ *
+ * @return string $random_file
+ *   The path/filename of the randomly selected file.
+ */
+function _unb_lib_theme_get_random_file($path, $extensions) {
+  $files = [];
+  $random_file = null;
+
+  foreach ($extensions as $extension) {
+    foreach (glob("$path/*.$extension") as $file) {
+      $files[] = $file;
     }
   }
 
+  if ($files != null) {
+    shuffle($files);
+    $random_file = $files[0];
+  }
+
+  return $random_file;
 }
