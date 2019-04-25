@@ -13,17 +13,17 @@ function unb_lib_theme_preprocess_page(&$variables) {
 }
 
 /**
- * Scans for and returns a random file from a given folder, filtering by the given set of extensions.
+ * Searches for and returns a random file from a given folder, optionally filtered by extension(s).
  *
  * @param string $path
  *   The path of the folder to search/select a random file from.
  *  @param array $extensions
- *   An array containing a list of desired file extensions to select from.
+ *   Optional: An array containing a list of file extensions to filter by.
  *
  * @return string $random_file
- *   The path/filename of the randomly selected file.
+ *   The path + filename of the randomly selected file if available, else null.
  */
-function _unb_lib_theme_get_random_file($path, $extensions) {
+function _unb_lib_theme_get_random_file($path, $extensions = ['*']) {
   $files = [];
   $random_file = null;
 
