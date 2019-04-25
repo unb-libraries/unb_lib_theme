@@ -8,8 +8,8 @@ function unb_lib_theme_preprocess_page(&$variables) {
   $banner_path = $unb_lib_theme_path . '/img/banner';
   $banner_extensions = ['gif', 'jpg', 'png'];
 
-  $variables['unb_lib_theme_path'] = $unb_lib_theme_path;
-  $variables['banner_image'] = _unb_lib_theme_get_random_file($banner_path, $banner_extensions);
+  $variables['unb_lib_theme_path'] = '/' . $unb_lib_theme_path;
+  $variables['banner_image'] = '/' . _unb_lib_theme_get_random_file($banner_path, $banner_extensions);
 }
 
 /**
