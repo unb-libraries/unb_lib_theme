@@ -1,3 +1,7 @@
 .form-row>fieldset {
   max-width: 100%;
 }
+/* Reduce Bootstrap's large separation between checkmark and label */
+label.form-check {
+  padding-left: .25rem
+}
