@@ -9,7 +9,7 @@ global-styling:
     - core/jquery
   css:
     base:
-      '//fonts.googleapis.com/css?family=Source+Sans+Pro': { type: external }
+      '//unb.ca/webcomps/_css/myfontswebfontskit.css': { type: external }
     #theme:
       #dist/css/style.css: {}
       #dist/css/print.css: { media: print }
