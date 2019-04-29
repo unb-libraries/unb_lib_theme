@@ -12,11 +12,14 @@ html {
 body {
     color: $font-dark;
     background: $white;
-    font-family: 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'ProximaNovaA-Thin', 'Century Gothic', AppleGothic, Arial, sans-serif;
     font-weight: bold;
+}
+body,
+.font-regular {
+    font-family: 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;
 }
 
 /* Links */
@@ -249,7 +252,7 @@ a.nav-link[href$="//unb.ca"]::before {
 }
 ul[role="menubar"] a[role="button"] {
     color: #000;
-    font-weight: bold;
+    font-weight: 500;
     font-size: larger;
 }
 .megamenu-li > .nav-link {
@@ -277,7 +280,7 @@ ul[role="menubar"] a[role="button"] {
 .megamenu-li > .nav-link:focus,
 .megamenu-li > .nav-link:hover {
     border-bottom: 3px solid $header-hover-color;
-    color: $gray-medium;
+    color: $gray-dark;
 }
 .megamenu-li .dropdown-menu {
     margin-top: 0;
