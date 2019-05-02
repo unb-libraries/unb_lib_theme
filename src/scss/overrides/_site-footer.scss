@@ -49,6 +49,7 @@
     transition: border-color .25s;
     max-width: 200px;
 }
+.footer-top .unb-logo a:focus img,
 .footer-top .unb-logo a:hover img {
     border-bottom: 2px outset $navbar-dark-hover;
 }
