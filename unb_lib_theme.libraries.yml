@@ -9,5 +9,6 @@ global-styling:
       '//lib.unb.ca/core/css-2015/unb-lib.css': {type: external }
     theme:
       'css/lib-fixes.css': {}
+      'css/bootstrap-fixes.css': {}
   js:
     '//lib.unb.ca/core/js-2015/back-to-top.js': {type: external}

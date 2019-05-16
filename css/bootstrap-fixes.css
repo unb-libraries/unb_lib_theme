@@ -1,0 +1,9 @@
+/* Fix for Drupal Bootstrap 3.x required.svg 404 */
+.form-required:after {
+    background: none;
+    content: '*';
+    color: #e00;
+    padding-left: .1em;
+    font-size: 1.4em;
+    vertical-align: text-top;
+}
