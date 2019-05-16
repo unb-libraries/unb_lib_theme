@@ -16,6 +16,10 @@ function unb_lib_theme_preprocess_page(&$variables) {
   $banner_path = $unb_lib_theme_path . '/img/banner';
   $banner_extensions = ['gif', 'jpg', 'png'];
   $variables['banner_image'] = '/' . _unb_lib_theme_get_random_file($banner_path, $banner_extensions);
+
+  // Allow to toggle Top Header | User Account Links.
+  $variables['show_top_header_login'] = theme_get_setting('show_top_header_login');
+  $variables['show_top_header_logout'] = theme_get_setting('show_top_header_logout');
 }
 
 /**
