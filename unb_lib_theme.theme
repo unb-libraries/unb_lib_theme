@@ -1,4 +1,10 @@
 <?php
+/**
+ * @file
+ * Functions to support theming in the UNB Libraries theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_theme_preprocess_page().
@@ -10,6 +16,32 @@ function unb_lib_theme_preprocess_page(&$variables) {
   $banner_path = $unb_lib_theme_path . '/img/banner';
   $banner_extensions = ['gif', 'jpg', 'png'];
   $variables['banner_image'] = '/' . _unb_lib_theme_get_random_file($banner_path, $banner_extensions);
+}
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function unb_lib_theme_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  // Override Layout | Region | Top Header settings.
+  unset($form['layout']['region']['top_header']['bootstrap_barrio_region_clean_top_header']);
+  unset($form['layout']['region']['top_header']['bootstrap_barrio_region_class_top_header']);
+  $form['layout']['region']['top_header']['user_account'] = [
+    '#type' => 'details',
+    '#title' => t('User Account'),
+    '#open' => TRUE,
+  ];
+  $form['layout']['region']['top_header']['user_account']['show_top_header_login'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Show Login Link'),
+    '#default_value' => theme_get_setting('show_top_header_login'),
+    '#description'  => t('Check this option if you\'d like to show the <strong>Login</strong> link on the right.'),
+  ];
+  $form['layout']['region']['top_header']['user_account']['show_top_header_logout'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Show Logout Link'),
+    '#default_value' => theme_get_setting('show_top_header_logout'),
+    '#description'  => t('Check this option if you\'d like to show the <strong>Logout</strong> link on the right'),
+  ];
 }
 
 /**
