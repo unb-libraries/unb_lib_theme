@@ -33,7 +33,7 @@
  *   comment/reply/12345).
  *
  * Regions:
- * - page.top_header_meny: Items for the top header menu region.
+ * - page.top_header_menu: Items for the top header menu region.
  * - page.top_header_form: Items for the top header form region.
  * - page.header: Items for the header region.
  * - page.header_form: Items for the header form region.
@@ -69,8 +69,8 @@
 <header id="header" class="header" role="banner" aria-label="Site header">
     <div id="navbar-top" class="d-none d-lg-block py-2">
         <div class="container">
-            <nav role="navigation">
-                <ul class="nav justify-content-start">
+            <nav role="navigation" class="d-flex">
+                <ul class="nav">
                     <li>
                         <a href="https://unb.ca" class="nav-link">UNB</a>
                     </li>
@@ -84,6 +84,19 @@
                         <a href="https://lib.unb.ca/search.php" class="nav-link"><i class="fas fa-search" aria-hidden="true"></i> A-to-Z</a>
                     </li>
                 </ul>
+                {% if show_top_header_login or show_top_header_logout %}
+                    <ul class="nav ml-auto">
+                        {% if logged_in and show_top_header_logout %}
+                            <li>
+                                <a href="/user/logout" class="nav-link"><i class="fas fa-sign-out-alt"></i> Log out</a>
+                            </li>
+                        {% elseif not logged_in and show_top_header_login %}
+                            <li>
+                                <a href="/user/login" class="nav-link"><i class="fas fa-sign-in-alt"></i> Log in</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                {% endif %}
             </nav>
         </div>
     </div>
