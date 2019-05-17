@@ -9,7 +9,7 @@ libraries:
   - unb_lib_theme/global-styling
 
 regions:
-  top_header_menu: 'Top header menu'
+  top_header: 'Top Header'
   header: 'Header'
   header_form: "Header form"
   page_top: 'Page top'
@@ -17,8 +17,8 @@ regions:
   highlighted: 'Highlighted'
   featured_top: 'Featured top'
   breadcrumb: 'Breadcrumb'
-  content: 'Content'
   sidebar_first: 'Sidebar first'
+  content: 'Content'
   sidebar_second: 'Sidebar second'
   featured_bottom_first: 'Featured bottom first'
   featured_bottom_second: 'Featured bottom second'
