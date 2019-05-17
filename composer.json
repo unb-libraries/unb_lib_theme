@@ -2,26 +2,6 @@
   "name": "unb-libraries/unb_lib_theme",
   "description": "Drupal Bootstrap 4.x Base Theme For UNB Libraries Branding.",
   "type": "drupal-theme",
-  "extra": {
-    "enable-patching": true,
-    "patches": {
-      "drupal/bootstrap_barrio": {
-        "Fix CSS library 404": "https://www.drupal.org/files/issues/2019-02-19/3033946-6.patch",
-        "Fix Layout Builder": "https://www.drupal.org/files/issues/2018-06-01/2976934-3.patch"
-      }
-    }
-  },
-  "repositories": {
-    "drupal": {
-      "type": "composer",
-      "url":  "https://packages.drupal.org/8"
-    }
-  },
-  "require": {
-    "cweagans/composer-patches": "1.6.3",
-    "drupal/bootstrap_barrio": "4.22",
-    "drupal/fontawesome": "2.13"
-  },
   "require-dev": {
     "twbs/bootstrap": "~4.1.3"
   },
