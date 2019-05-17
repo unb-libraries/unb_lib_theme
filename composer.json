@@ -11,6 +11,12 @@
       }
     }
   },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+  ],
   "require": {
     "cweagans/composer-patches": "1.6.3",
     "drupal/bootstrap_barrio": "4.22",
