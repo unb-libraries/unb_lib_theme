@@ -1,14 +1,11 @@
 /**
  * @file
- * Subtheme specific CSS.
+ * Base theme CSS.
  */
 
 /* Import Sass files */
 @import 'import';
 
-html {
-    scroll-behavior: smooth;
-}
 body {
     color: $font-dark;
     background: $white;
