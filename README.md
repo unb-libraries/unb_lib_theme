@@ -14,6 +14,10 @@ UNB Libraries Theme.
 - This depends on Bootstrap Barrio theme:
   - https://www.drupal.org/project/bootstrap_barrio
 
+- Currently using Bootstrap version 4.3.1 (see global-styling theme library)
+  - Subthemes compiling sass should add the following `require-dev` package:  
+    "twbs/bootstrap": "~4.3.1",
+
 - Add Font Awesome Icons module, 2.x branch for icons used in Header/Footer:
   - https://www.drupal.org/project/fontawesome
 
