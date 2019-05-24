@@ -121,7 +121,7 @@
                         <button id="btn-menu" class="btn btn-red" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">Menu <span class="fas fa-bars"></span> </button>
                     </li>
                     <li class="nav-item flex-fill text-center">
-                        {% if (is_front) %}
+                        {% if (is_front and is_library) %}
                             <button id="btn-quicklinks" class="btn btn-red" type="button" data-toggle="collapse" data-target="#quicklinks-wrapper" aria-expanded="false" aria-controls="quicklinks-wrapper" aria-label="Toggle QuickLinks">QuickLinks <span class="fas fa-link"></span></button>
                         {% else %}
                             <button id="btn-hours" class="btn btn-red" aria-controls="hours" aria-expanded="false" data-target="#hours" data-toggle="collapse" aria-label="Toggle Hours">Hours <span class="fas fa-clock"></span></button>
