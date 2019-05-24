@@ -87,13 +87,9 @@
                 {% if show_top_header_login or show_top_header_logout %}
                     <ul class="nav ml-auto">
                         {% if logged_in and show_top_header_logout %}
-                            <li>
-                                <a href="/user/logout" class="nav-link"><i class="fas fa-sign-out-alt"></i> Log out</a>
-                            </li>
+                            <li>{{ logout_link }}</li>
                         {% elseif not logged_in and show_top_header_login %}
-                            <li>
-                                <a href="/user/login" class="nav-link"><i class="fas fa-sign-in-alt"></i> Log in</a>
-                            </li>
+                            <li>{{ login_link }}</li>
                         {% endif %}
                     </ul>
                 {% endif %}

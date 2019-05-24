@@ -20,6 +20,22 @@ function unb_lib_theme_preprocess_page(&$variables) {
   // Allow to toggle Top Header | User Account Links.
   $variables['show_top_header_login'] = theme_get_setting('show_top_header_login');
   $variables['show_top_header_logout'] = theme_get_setting('show_top_header_logout');
+
+  $auth_link_options = [
+    'attributes' => [
+      'class' => 'nav-link'
+    ],
+  ];
+  $login_title = [
+    '#markup' => '<i class="fas fa-sign-in-alt"></i>&nbsp' . t('Log in'),
+  ];
+  $login_link = Drupal\Core\Link::createFromRoute($login_title, 'user.login', [], $auth_link_options);
+  $variables['login_link'] = $login_link;
+  $logout_title = [
+    '#markup' => '<i class="fas fa-sign-out-alt"></i>&nbsp' . t('Log out'),
+  ];
+  $logout_link = Drupal\Core\Link::createFromRoute($logout_title, 'user.logout', [], $auth_link_options);
+  $variables['logout_link'] = $logout_link;
 }
 
 /**
