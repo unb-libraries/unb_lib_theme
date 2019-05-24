@@ -26,6 +26,7 @@ a {
 }
 a:focus,
 a:hover {
+    background: none;
     color: $link-hover-color;
 }
 .branding a,
