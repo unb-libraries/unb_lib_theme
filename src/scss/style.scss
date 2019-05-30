@@ -149,6 +149,11 @@ a.focus-ring {
         max-width: 350px;
     }
 }
+@media (max-width: 460px) {
+    .branding img {
+        max-width: 100%;
+    }
+}
 @media (min-width: 992px) {
     .branding img {
         max-width: 320px;
