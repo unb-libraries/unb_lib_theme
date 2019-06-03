@@ -37,7 +37,7 @@ $font-dark: #333;
 @mixin nav-menu-hover-style {
   color: $navbar-dark-hover;
 }
-@mixin transition($property, $duration: .3s, $timing: ease-in-out) {
+@mixin transition($property, $duration, $timing) {
   -webkit-transition: $property, $duration, $timing;
   -moz-transition: $property, $duration, $timing;
   -ms-transition: $property, $duration, $timing;
