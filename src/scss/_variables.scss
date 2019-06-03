@@ -38,11 +38,11 @@ $font-dark: #333;
   color: $navbar-dark-hover;
 }
 @mixin transition($property, $duration, $timing) {
-  -webkit-transition: $property, $duration, $timing;
-  -moz-transition: $property, $duration, $timing;
-  -ms-transition: $property, $duration, $timing;
-  -o-transition: $property, $duration, $timing;
-  transition: $property, $duration, $timing;
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
 }
 @mixin opacity($opacity) {
   opacity: $opacity;
