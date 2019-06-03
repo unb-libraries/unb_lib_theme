@@ -22,7 +22,7 @@ body,
 /* Links */
 a {
     color: $link-color;
-    @include transition(all 0.25s);
+    @include transition(all 0.25s ease-in-out);
 }
 a:focus,
 a:hover {
@@ -67,16 +67,14 @@ a.nav-link[href$="//unb.ca"]::before {
     text-align: center;
     text-decoration: none;
     top: -3.5rem;
-    -webkit-transition: all 1s ease-out;
-    transition: all .7s ease-out;
+    @include transition(all .7s ease-out);
     width: 100%;
     z-index: 1000;
 }
 #skiptocontent a:focus {
     box-shadow: 0 0 5px #000;
     top: 0;
-    -webkit-transition: top .1s ease-in;
-    transition: top .2s linear;
+    @include transition(top .1s ease-in);
 }
 .user-logged-in #skiptocontent a:focus {
     position: relative;
