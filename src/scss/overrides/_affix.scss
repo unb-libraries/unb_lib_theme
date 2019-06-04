@@ -1,8 +1,8 @@
 .affix {
   background: $red;
   box-shadow: 0 4px 4px -1px rgba(17,17,17,0.7);
-  transition: all .25s ease-in;
   position: fixed!important;
+  @include css3-prefix(transition, all .25s ease-in);
 }
 .affix ul[role="menubar"] a[role="button"] {
   color: $white;

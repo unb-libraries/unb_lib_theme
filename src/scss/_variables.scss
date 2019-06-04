@@ -1,7 +1,7 @@
 /* VARIABLES */
 
 /* Colors */
-$red: #d82e3b;
+$red: #900;
 $blue: #007fa3;
 $black: #000;
 $white: #fff;
@@ -24,28 +24,3 @@ $navbar-dark-hover: #fec700;
 
 /* Fonts */
 $font-dark: #333;
-
-@mixin nav-menu-style {
-  color: $white;
-  border: none;
-  display: inline-block;
-  line-height: 190%;
-  padding: 0;
-  text-decoration: none;
-  width: 100%;
-}
-@mixin nav-menu-hover-style {
-  color: $navbar-dark-hover;
-}
-@mixin transition($property, $duration, $timing) {
-  -webkit-transition: $property $duration $timing;
-  -moz-transition: $property $duration $timing;
-  -ms-transition: $property $duration $timing;
-  -o-transition: $property $duration $timing;
-  transition: $property $duration $timing;
-}
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie); // IE8
-}
