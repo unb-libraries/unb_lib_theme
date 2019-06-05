@@ -18,7 +18,7 @@
     @include nav-menu-hover-style;
 }
 .site-footer > div:not(.footer-middle) a.nav-link::after {
-    color: $red;
+    color: $nav-red;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f105";

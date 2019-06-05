@@ -1,5 +1,5 @@
 .affix {
-  background: $red;
+  background: $nav-red;
   box-shadow: 0 4px 4px -1px rgba(17,17,17,0.7);
   position: fixed!important;
   @include css3-prefix(transition, all .25s ease-in);

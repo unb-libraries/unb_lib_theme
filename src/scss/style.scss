@@ -149,10 +149,10 @@ a.nav-link[href$="//unb.ca"]::before {
 /* Mobile Buttons */
 .btn-red {
     color: $white;
-    background-color: $red;
+    background-color: $nav-red;
 }
 #nav-btn {
-    background: $red;
+    background: $nav-red;
 }
 #nav-btn .btn,
 #nav-btn .btn:active {
