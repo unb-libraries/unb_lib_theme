@@ -10,15 +10,13 @@ body {
     color: $font-dark;
     background: $white;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'ProximaNovaA-Thin', 'Century Gothic', AppleGothic, Arial, sans-serif;
-    font-weight: bold;
-}
 body,
 .font-regular {
     font-family: 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;
 }
-
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
 /* Links */
 a {
     color: $link-color;
