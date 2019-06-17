@@ -1,0 +1,41 @@
+#image-hours {
+  height: 200px;
+  border-top: 1px solid #999;
+}
+
+#hours {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: inherit;
+  overflow: hidden;
+  padding: 2%;
+  color: #fff;
+
+  table {
+    margin: 0;
+    padding: 0;
+
+    tr {
+      border: 0;
+
+      td {
+        border: 0;
+        padding: 1px 0;
+        vertical-align: top;
+
+        ul {
+          padding: 0;
+          margin: 0;
+
+          li {
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
