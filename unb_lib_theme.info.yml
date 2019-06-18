@@ -7,7 +7,7 @@ base theme: bootstrap_barrio
 
 libraries:
   - unb_lib_theme/global-styling
-  - calendar_hours_client/calendar-hours
+#  - calendar_hours_client/calendar-hours
 
 regions:
   top_header: 'Top Header'
@@ -32,4 +32,4 @@ regions:
   footer_bottom_second: 'Footer bottom second'
 
 dependencies:
-  - calendar_hours_client
+#  - calendar_hours_client
