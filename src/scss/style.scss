@@ -313,7 +313,7 @@ ul[role="menubar"] a[role="button"] {
 /* END Megamenu */
 
 /* Banner & Hours */
-#header-banner {
+#banner-image {
     background-size: cover;
     border-top: 1px solid $gray-medium;
     height: 200px;
@@ -345,6 +345,16 @@ ul[role="menubar"] a[role="button"] {
 #hours li span {
     display: block;
     margin-left: 40%;
+}
+@media (max-width: 991px) {
+    #banner.front {
+        display: block;
+    }
+}
+@media (min-width: 992px) {
+    #banner {
+        display: block;
+    }
 }
 /* END Banner & Hours */
 /*

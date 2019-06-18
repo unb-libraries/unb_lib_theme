@@ -66,6 +66,14 @@
  * @see html.html.twig
  */
 #}
+{%
+    set banner_classes = [
+    'container',
+    'collapse',
+    'show',
+    is_front ? 'front',
+]
+%}
 <header id="header" class="header" role="banner" aria-label="Site header">
     <div id="navbar-top" class="d-none d-lg-block py-2">
         <div class="container">
@@ -120,7 +128,7 @@
                         {% if (is_front and is_library) %}
                             <button id="btn-quicklinks" class="btn btn-red" type="button" data-toggle="collapse" data-target="#quicklinks-wrapper" aria-expanded="false" aria-controls="quicklinks-wrapper" aria-label="Toggle QuickLinks">QuickLinks <span class="fas fa-link"></span></button>
                         {% else %}
-                            <button id="btn-hours" class="btn btn-red" aria-controls="hours" aria-expanded="false" data-target="#hours" data-toggle="collapse" aria-label="Toggle Hours">Hours <span class="fas fa-clock"></span></button>
+                            <button id="btn-hours" class="btn btn-red" aria-controls="banner" aria-expanded="false" data-target="#banner" data-toggle="collapse" aria-label="Toggle Hours">Hours <span class="fas fa-clock"></span></button>
                         {% endif %}
                     </li>
                     <li class="nav-item flex-fill text-center">
@@ -348,8 +356,8 @@
         </div>
     </nav>
     {% if banner_image %}
-        <div class="container d-none d-md-block">
-            <div id="header-banner" class="row no-gutters" style="background-image: url({{ banner_image }})">
+        <div {{ attributes.addClass(banner_classes) }} id="banner">
+            <div class="row no-gutters" id="banner-image" style="background-image: url({{ banner_image }})">
                 {{ attach_library('calendar_hours_client/calendar-hours') }}
                 <div class="offset-lg-8 col-lg-4 offset-sm-6 col-sm-6 col-xs-12" id="hours">
                     <label>{{ "now"|date("l, F d, Y") }}</label>

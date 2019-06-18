@@ -1,6 +1,6 @@
 /**
  * @file
- * Global utilities.
+ * Global unb_lib_theme utilities.
  *
  */
 (function ($, Drupal) {
@@ -9,9 +9,13 @@
 
   Drupal.behaviors.unb_lib_theme = {
     attach: function (context, settings) {
+      var banner = $("#banner");
       var header = $("#navbar-main");
       var header_logo = $("#navbar-main .branding > *");
       var header_nav_buttons = $("#navbar-main .megamenu-li > a");
+      $(window).resize(function () {
+        setBanner(banner);
+      });
       $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         var width = $(window).innerWidth();
@@ -25,6 +29,15 @@
           header_logo.addClass("py-2");
         }
       });
+      setBanner(banner);
     }
   };
 })(jQuery, Drupal);
+
+var setBanner = function (banner) {
+  var bannerExpanded = jQuery("#btn-hours").attr("aria-expanded");
+  var width = jQuery(window).innerWidth();
+  if (bannerExpanded=='false' && width < 992) {
+    banner.removeClass("show");
+  }
+};
