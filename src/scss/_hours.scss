@@ -1,14 +1,25 @@
-#image-hours {
-  height: 200px;
-  border-top: 1px solid #999;
-}
-
 #hours {
-  background-color: rgba(0, 0, 0, 0.8);
-  height: inherit;
+  background: $black;
+  @include opacity(0.8);
+  @include css3-prefix(transition, opacity 0.25s ease-in-out);
   overflow: hidden;
-  padding: 2%;
-  color: #fff;
+  color: $white;
+
+  a {
+    border-bottom: 1px dotted $gray-light;
+    color: $white;
+    padding-bottom: 2px;
+    &:focus {
+      border-bottom: none;
+      color: $yellow;
+    }
+    &:hover {
+      color: $yellow;
+    }
+  }
+  label {
+    font-weight: bold;
+  }
 
   table {
     margin: 0;
@@ -35,7 +46,7 @@
     }
   }
 
-  &hover {
-    background-color: rgba(0, 0, 0, 0.9);
+  &:hover {
+    @include opacity(0.9);
   }
 }
