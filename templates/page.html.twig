@@ -357,9 +357,9 @@
     </nav>
     {% if banner_image %}
         <div {{ attributes.addClass(banner_classes) }} id="banner">
-            <div class="row no-gutters" id="banner-image" style="background-image: url({{ banner_image }})">
+            <div id="banner-image" style="background-image: url({{ banner_image }})">
                 {{ attach_library('calendar_hours_client/calendar-hours') }}
-                <div class="offset-lg-8 col-lg-4 offset-sm-6 col-sm-6 col-xs-12" id="hours">
+                <div class="col-lg-4 offset-lg-8 col-sm-6 offset-sm-6 col-xs-12 px-3 py-4" id="hours">
                     <label>{{ "now"|date("l, F d, Y") }}</label>
                     <table>
                         <tr><td>Harriet Irving</td><td data-ch-id="hil" data-ch-date="0">Unavailable</td></tr>
