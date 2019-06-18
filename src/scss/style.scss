@@ -317,6 +317,7 @@ ul[role="menubar"] a[role="button"] {
     background-size: cover;
     border-top: 1px solid $gray-medium;
     height: 200px;
+    overflow: hidden;
 }
 @media (max-width: 991px) {
     #banner.front {

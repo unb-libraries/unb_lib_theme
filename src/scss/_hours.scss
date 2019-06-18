@@ -1,9 +1,9 @@
 #hours {
   background: $black;
+  color: $white;
+  height: 199px;
   @include opacity(0.8);
   @include css3-prefix(transition, opacity 0.25s ease-in-out);
-  overflow: hidden;
-  color: $white;
 
   a {
     border-bottom: 1px dotted $gray-light;
