@@ -65,14 +65,14 @@ a.nav-link[href$="//unb.ca"]::before {
     text-align: center;
     text-decoration: none;
     top: -3.5rem;
-    @include css3-prefix(transition, all .7s ease-out);
+    @include css3-prefix(transition, all .5s ease-in);
     width: 100%;
     z-index: 1000;
 }
 #skiptocontent a:focus {
     box-shadow: 0 0 5px #000;
     top: 0;
-    @include css3-prefix(transition, top .1s ease-in);
+    @include css3-prefix(transition, top .25s ease-out);
 }
 .user-logged-in #skiptocontent a:focus {
     position: relative;
