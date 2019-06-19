@@ -2,21 +2,22 @@
   background: $black;
   color: $white;
   height: 199px;
-  @include opacity(0.8);
-  @include css3-prefix(transition, opacity 0.25s ease-in-out);
+  @include opacity(.8);
+  @include css3-prefix(transition, opacity .25s ease-in-out);
 
   a {
     border-bottom: 1px dotted $gray-light;
     color: $white;
-    padding-bottom: 2px;
+    padding: 2px 0;
     &:focus {
       border-bottom: none;
-      color: $yellow;
+      color: $navbar-dark-hover;
     }
     &:hover {
-      color: $yellow;
+      color: $navbar-dark-hover;
     }
   }
+
   label {
     font-weight: bold;
   }
@@ -34,19 +35,18 @@
         vertical-align: top;
 
         ul {
-          padding: 0;
           margin: 0;
+          padding: 0;
 
           li {
-            padding: 0;
             margin: 0;
+            padding: 0;
           }
         }
       }
     }
   }
-
   &:hover {
-    @include opacity(0.9);
+    @include opacity(.9);
   }
 }
