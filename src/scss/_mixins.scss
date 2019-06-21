@@ -11,11 +11,14 @@
   color: $navbar-dark-hover;
 }
 @mixin css3-prefix($property, $value...) {
-  -webkit-#{$property}: $value;
-  -moz-#{$property}: $value;
-  -ms-#{$property}: $value;
-  -o-#{$property}: $value;
-  #{$property}: $value;
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$property}: #{$value};
+  }
+}
+@mixin css3-value-prefix($property, $value...) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$property}: #{$vendor}#{$value};
+  }
 }
 @mixin horizontal-gradient($from, $to, $stop: 100%) {
   /* fallback/image non-cover color */
