@@ -10,6 +10,16 @@ use Drupal\Core\Form\FormStateInterface;
  * Implements hook_theme_preprocess_page().
  */
 function unb_lib_theme_preprocess_page(&$variables) {
+  // Set is_front variable if unset (LIB-118).
+  if (!isset($variables['is_front'])) {
+    try {
+      $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+    }
+    catch (Exception $e) {
+      $variables['is_front'] = FALSE;
+    }
+  }
+
   $unb_lib_theme_path = drupal_get_path('theme', 'unb_lib_theme');
   $variables['unb_lib_theme_path'] = '/' . $unb_lib_theme_path;
 
