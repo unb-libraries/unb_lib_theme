@@ -358,7 +358,7 @@
     {% if banner_image %}
         <div {{ attributes.addClass(banner_classes) }} id="banner">
             <div id="banner-image" style="background-image: url({{ banner_image }})">
-                {# attach_library('calendar_hours_client/calendar-hours') #}
+                {{ attach_library('calendar_hours_client/calendar-hours') }}
                 <div class="col-lg-4 offset-lg-8 col-md-6 offset-md-6 col-sm-12 px-5 px-md-4 py-3" id="hours">
                     <label>{{ "now"|date("l, F d, Y") }}</label>
                     <table>
