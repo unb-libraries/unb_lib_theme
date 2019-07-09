@@ -14,7 +14,7 @@ UNB Libraries Theme.
 - This depends on Bootstrap Barrio theme:
   - https://www.drupal.org/project/bootstrap_barrio
 
-- The banner hours depends on the UNB Libraries Calendar Hours module:
+- The banner hours depends on the UNB Libraries > Calendar Hours > Calendar Hours Client module:
   - https://github.com/unb-libraries/calendar_hours
 
 - Currently using Bootstrap version 4.3.1 (see global-styling theme library)

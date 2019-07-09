@@ -360,14 +360,30 @@
             <div id="banner-image" style="background-image: url({{ banner_image }})">
                 {{ attach_library('calendar_hours_client/calendar-hours') }}
                 <div class="col-lg-4 offset-lg-8 col-md-6 offset-md-6 col-sm-12 px-5 px-md-4 py-3" id="banner-hours">
-                    <label>{{ "now"|date("l, F d, Y") }}</label>
                     <table>
-                        <tr><td><a href="#">Harriet Irving</a></td><td class="ch-nd" data-ch-id="hil" data-ch-days="0">Unavailable</td></tr>
-                        <tr><td><a href="#">Science &amp; Forestry</a></td><td class="ch-nd" data-ch-id="sfl" data-ch-days="0">Unavailable</td></tr>
-                        <tr><td><a href="#">Engineering &amp; CS</a></td><td class="ch-nd" data-ch-id="ecsl" data-ch-days="0">Unavailable</td></tr>
-                        <tr><td><a href="#">Saint John</a></td><td class="ch-nd" data-ch-id="hwkc" data-ch-days="0">Unavailable</td></tr>
-                        <tr><td><a href="#">Law</a></td><td class="ch-nd" data-ch-id="law" data-ch-days="0">Unavailable</td></tr>
-                        <tr><td colspan="2"><a href="#"><i class="fas fa-clock"></i>&nbsp;Complete Hours</a></td></tr>
+                        <caption>{{ "now"|date("l, F j, Y") }}</caption>
+                        <tr>
+                            <th scope="row"><a href="#">Harriet Irving</a></th>
+                            <td class="ch-nd" data-ch-id="hil" data-ch-days="0">Unavailable</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">Science &amp; Forestry</a></th>
+                            <td class="ch-nd" data-ch-id="sfl" data-ch-days="0">Unavailable</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">Engineering &amp; CS</a></th>
+                            <td class="ch-nd" data-ch-id="ecsl" data-ch-days="0">Unavailable</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">Saint John</a></th>
+                            <td class="ch-nd" data-ch-id="hwkc" data-ch-days="0">Unavailable</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">Law</a></th>
+                            <td class="ch-nd" data-ch-id="law" data-ch-days="0">Unavailable</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><a href="#"><i class="fas fa-clock"></i>&nbsp;Complete Hours</a></td></tr>
                     </table>
                 </div>
             </div>
