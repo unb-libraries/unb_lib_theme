@@ -9,6 +9,7 @@
   a {
     border-bottom: 1px dotted $gray-light;
     color: $white;
+    font-weight: normal;
     padding: 2px 0;
     &:focus {
       border-bottom: none;
@@ -27,11 +28,19 @@
     margin: 0;
     padding: 0;
 
+    caption {
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: .5rem;
+      padding: 0;
+    }
     tr {
-      border: 0;
+      border: none;
 
-      td {
-        border: 0;
+      td,
+      th {
+        border: none;
+        font-weight: normal;
         padding: 1px 0;
         vertical-align: top;
 
