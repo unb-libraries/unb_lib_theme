@@ -339,30 +339,163 @@ ul[role="menubar"] a[role="button"] {
  * END Header
  */
 
-/* Dark-themed tabbed content nav */
-.tabs-theme-dark ul,
-.tabs-theme-dark .card-header {
-    background: $table-dark-bg;
+/* Dark-themed content */
+.theme-dark {
+    .tabs-accordian {
+        flex-wrap: wrap;
+
+        .nav-tabs {
+            a {
+                &:focus,
+                &:hover {
+                    background-color: $gray-444;
+                }
+            }
+        }
+    }
+
+    ul,
+    .card-header {
+        background: $table-dark-bg;
+    }
+
+    .nav-tabs {
+        border-bottom: none;
+
+        .nav-item {
+            margin-bottom: 0;
+            z-index: 9;
+
+            .nav-link {
+                border-radius: 0;
+                color: $white;
+                padding-left: 1rem;
+                padding-right: 1rem;
+
+                &:focus,
+                &:hover {
+                    background: $black;
+                    border-color: transparent;
+                    color: $yellow;
+                }
+            }
+
+            .nav-link.active {
+                background-color: $yellow;
+                border-color: $yellow;
+                color: $black;
+                cursor: default;
+            }
+        }
+    }
+
+    .tab-pane {
+        .card-header {
+            a {
+                background-color: $table-dark-bg;;
+                color: $white;
+
+                &:focus,
+                &:hover {
+                    color: $navbar-dark-hover;
+                }
+            }
+            a[aria-expanded="true"] {
+                background-color: $gray-444;
+                color: $navbar-dark-hover;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+        }
+
+        .card-body {
+            p,
+            .form-check-label {
+                line-height: 1rem;
+            }
+
+            .divider {
+                border-top: 1px solid $yellow;
+                margin: 1rem 0;
+                max-width: 16rem;
+            }
+
+            .btn-primary {
+                color: $white;
+                background-color: #363636;
+                @include horizontal-gradient(#444, #222);
+                border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+
+                &:focus,
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        }
+    }
+
+    form {
+        .btn,
+        .btn-primary:not(:disabled):not(.disabled):active {
+            background-color: $black;
+            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+            color: $white;
+
+            &:hover {
+                color: $yellow;
+            }
+        }
+        .btn[value="Clear"] {
+            color: $font-dark;
+            background-color: $white;
+            border-color: $gray-light;
+
+            &:hover {
+                background-color: $gray-200;
+                border-color: $gray-500;
+            }
+        }
+    }
 }
-.tabs-theme-dark a.nav-link {
-    color: $white;
+@media(max-width: 991px) {
+    .tabs-accordian {
+        border: none;
+
+        #tabs {
+            display: none;
+        }
+
+        .tab-content > .tab-pane {
+            display: block !important;
+            // Override fade '0' opacity.
+            @include opacity(1);
+        }
+    }
 }
-.tabs-theme-dark .nav-tabs .nav-link {
-    border-radius: 0;
+@media(min-width: 992px) {
+    .tabs-accordian {
+        border: 1px solid $gray-dark;
+        min-height: 300px;
+
+        .card {
+            border: none;
+
+            .collapse {
+                display: block;
+            }
+
+            .card-header {
+                display: none;
+            }
+        }
+
+        .nav-tabs {
+            display: flex;
+        }
+    }
 }
-.tabs-theme-dark .nav-tabs .nav-link:focus,
-.tabs-theme-dark .nav-tabs .nav-link:hover,
-.tabs-theme-dark .tab-pane .card-header a[aria-expanded="true"],
-.tabs-theme-dark .tab-pane .card-header a:focus,
-.tabs-theme-dark .tab-pane .card-header a:hover {
-    color: $navbar-dark-hover;
-}
-.tabs-theme-dark .nav-tabs .nav-link.active {
-    background: $yellow;
-    color: $black;
-    cursor: default;
-}
-/* END dark-themed tabbed content nav */
+/* END dark-themed content */
 
 /* Add larger breakpoint option for container */
 @media (min-width: 1360px) {
