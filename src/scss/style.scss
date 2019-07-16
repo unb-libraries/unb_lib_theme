@@ -435,9 +435,10 @@ ul[role="menubar"] a[role="button"] {
         }
     }
 
-    form {
+    .form-actions {
         .btn,
-        .btn-primary:not(:disabled):not(.disabled):active {
+        .btn-primary:not(:disabled):not(.disabled):active,
+        .webform-button--submit {
             background-color: $black;
             border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
             color: $white;
@@ -446,7 +447,8 @@ ul[role="menubar"] a[role="button"] {
                 color: $yellow;
             }
         }
-        .btn[value="Clear"] {
+        .btn[value="Clear"],
+        .webform-button--reset {
             color: $font-dark;
             background-color: $white;
             border-color: $gray-light;
@@ -454,6 +456,7 @@ ul[role="menubar"] a[role="button"] {
             &:hover {
                 background-color: $gray-200;
                 border-color: $gray-500;
+                color: inherit;
             }
         }
     }

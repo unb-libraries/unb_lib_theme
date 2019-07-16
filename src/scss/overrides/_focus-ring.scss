@@ -9,3 +9,9 @@ a.focus-ring,
 :focus:not(.focus-ring) {
   outline: none;
 }
+.btn-dark,
+.btn-warning {
+  &:focus {
+    @include css3-prefix(box-shadow, 0 0 0 0.2rem rgba(0, 123, 255, 0.25));
+  }
+}
