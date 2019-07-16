@@ -3,12 +3,15 @@
 }
 
 .btn-warning {
-  &:focus {
+  &:focus,
+  &:hover {
     background-color: #e0a800;
+    color: inherit;
   }
 }
 
 .btn-dark {
+  &:hover,
   &:focus {
     background-color: rgb(35, 39, 43);
   }

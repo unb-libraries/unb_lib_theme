@@ -436,9 +436,9 @@ ul[role="menubar"] a[role="button"] {
     }
 
     .form-actions {
-        .btn,
-        .btn-primary:not(:disabled):not(.disabled):active,
-        .webform-button--submit {
+        .btn-primary,
+        .webform-button--submit,
+        .webform-button--submit:active {
             background-color: $black;
             border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
             color: $white;
@@ -449,7 +449,8 @@ ul[role="menubar"] a[role="button"] {
             }
         }
         .btn[value="Clear"],
-        .webform-button--reset {
+        .webform-button--reset,
+        .webform-button--reset:active {
             color: $font-dark;
             background-color: $white;
             border-color: $gray-light;
