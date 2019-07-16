@@ -443,6 +443,7 @@ ul[role="menubar"] a[role="button"] {
             border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
             color: $white;
 
+            &:focus,
             &:hover {
                 color: $yellow;
             }
@@ -453,6 +454,7 @@ ul[role="menubar"] a[role="button"] {
             background-color: $white;
             border-color: $gray-light;
 
+            &:focus,
             &:hover {
                 background-color: $gray-200;
                 border-color: $gray-500;
