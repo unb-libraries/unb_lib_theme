@@ -2,7 +2,8 @@
   background: rgba(192, 192, 192, 0.2);
   transition: top 0.25s, left 0.25s, width 0.25s, height 0.25s, opacity 0.125s;
 }
-a.focus-ring {
+a.focus-ring,
+.breadcrumb a[href="/"].focus-ring:after {
   outline: 1px dashed $gray-light;
 }
 :focus:not(.focus-ring) {
