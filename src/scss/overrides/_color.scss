@@ -1,3 +1,9 @@
 .bg-dark {
   background-color: $navbar-dark;
 }
+.btn-warning {
+  &:focus {
+    background-color: #e0a800;
+    @include css3-prefix(box-shadow, 0 0 0 0.2rem rgba(0, 123, 255, 0.25));
+  }
+}
