@@ -354,9 +354,17 @@ ul[role="menubar"] a[role="button"] {
         }
     }
 
+    thead th[scope="col"],
     ul,
     .card-header {
         background: $table-dark-bg;
+
+        a {
+            &:focus,
+            &:hover {
+                color: $yellow;
+            }
+        }
     }
 
     .nav-tabs {
