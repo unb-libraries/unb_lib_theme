@@ -13,13 +13,14 @@
       var header = $("#navbar-main");
       var header_logo = $("#navbar-main .branding > *");
       var header_nav_buttons = $("#navbar-main .megamenu-li > a");
+
       $(window).resize(function () {
         setBanner(banner);
       });
+
       $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
-        var width = $(window).innerWidth();
-        if (scroll >= 130 && width >= 991) {
+        let scroll = $(window).scrollTop();
+        if (scroll >= 130 && window.width >= 977) {
           header.addClass("affix");
           header_nav_buttons.removeClass("py-lg-4");
           header_logo.removeClass("py-2");
@@ -35,9 +36,9 @@
 })(jQuery, Drupal);
 
 var setBanner = function (banner) {
+  window.width = jQuery(window).width();
   var bannerExpanded = jQuery("#btn-hours").attr("aria-expanded");
-  var width = jQuery(window).innerWidth();
-  if (bannerExpanded=='false' && width < 992) {
+  if (bannerExpanded=='false' && window.width < 978) {
     banner.removeClass("show");
   }
 };
