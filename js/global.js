@@ -31,6 +31,12 @@
         }
       });
       setBanner(banner);
+
+      // set and refresh banner date
+      setBannerDate();
+      setInterval(function() {
+        setBannerDate();
+      }, 60000);
     }
   };
 })(jQuery, Drupal);
@@ -41,4 +47,9 @@ var setBanner = function (banner) {
   if (bannerExpanded=='false' && window.width < 978) {
     banner.removeClass("show");
   }
+};
+
+var setBannerDate = function() {
+  var date = moment().format('dddd, MMMM D, Y');
+  jQuery('#banner-hours .current-date').html(date);
 };

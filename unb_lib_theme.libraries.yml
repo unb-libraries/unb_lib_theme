@@ -7,9 +7,10 @@ global-styling:
     js/global.js: {}
   dependencies:
     - core/jquery
+    - calendar_hours_client/calendar-hours
   css:
     base:
       '//unb.ca/webcomps/_css/myfontswebfontskit.css': { type: external }
-    #theme:
+      #theme:
       #dist/css/style.css: {}
       #dist/css/print.css: { media: print }
