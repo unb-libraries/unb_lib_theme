@@ -21,6 +21,17 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $link-color;
     @include css3-prefix(transition, all 0.25s ease-in-out);
+
+    .external {
+        &:after {
+            content: '\f35d';
+            display: inline-block;
+            font-family: "Font Awesome 5 Free";
+            font-size: .8rem;
+            font-weight: 900;
+            margin-left: .25rem;
+        }
+    }
 }
 a:focus,
 a:hover {
