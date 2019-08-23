@@ -455,32 +455,30 @@ ul[role="menubar"] a[role="button"] {
         }
     }
 
-    .form-actions {
-        .btn-primary,
-        .webform-button--submit,
-        .webform-button--submit:active {
-            background-color: $black;
-            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-            color: $white;
+    .btn-primary,
+    .webform-button--submit,
+    .webform-button--submit:active {
+        background-color: $black;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        color: $white;
 
-            &:focus,
-            &:hover {
-                color: $yellow;
-            }
+        &:focus,
+        &:hover {
+            color: $yellow;
         }
-        .btn[value="Clear"],
-        .webform-button--reset,
-        .webform-button--reset:active {
-            color: $font-dark;
-            background-color: $white;
-            border-color: $gray-light;
+    }
+    .btn[value="Clear"],
+    .webform-button--reset,
+    .webform-button--reset:active {
+        color: $font-dark;
+        background-color: $white;
+        border-color: $gray-light;
 
-            &:focus,
-            &:hover {
-                background-color: $gray-200;
-                border-color: $gray-500;
-                color: inherit;
-            }
+        &:focus,
+        &:hover {
+            background-color: $gray-200;
+            border-color: $gray-500;
+            color: inherit;
         }
     }
 }
