@@ -1,7 +1,8 @@
 #banner-hours {
   background: $black;
+  box-sizing: initial;
   color: $white;
-  height: 199px;
+  height: inherit;
   padding-left: 1.35rem;
   @include opacity(.8);
   @include css3-prefix(transition, opacity .25s ease-in-out);
