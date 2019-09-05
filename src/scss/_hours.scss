@@ -35,13 +35,21 @@
       margin-bottom: .5rem;
       padding: 0;
     }
+
+    tbody {
+      td,
+      th {
+        font-size: .86rem;
+        font-weight: normal;
+      }
+    }
+
     tr {
       border: none;
 
       td,
       th {
         border: none;
-        font-weight: normal;
         padding: 1px 0;
         vertical-align: top;
 
