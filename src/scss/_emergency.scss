@@ -1,0 +1,32 @@
+#emergency-banner {
+  background-image: repeating-linear-gradient(-45deg,
+    $emergency-banner-primary,
+    $emergency-banner-primary 20px,
+    $emergency-banner-secondary 20px,
+    $emergency-banner-secondary 40px);
+  background-image: repeating-linear-gradient(-45deg,
+    $emergency-banner-primary 0 20px,
+    $emergency-banner-secondary 20px 40px);
+  text-align: center;
+
+  .alert {
+    padding: 20px 10px;
+    margin: 0;
+    border-bottom: 5px solid $navbar-dark;
+    border-radius: 0;
+
+    .alert-title {
+      font-family: 'ProximaNovaA-Bold', 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;
+
+      &:before {
+        font-family: "Font Awesome 5 Free";
+        content: '\f06a';
+        margin-right: 5px;
+      }
+    }
+  }
+
+  :last-child {
+    border-bottom: 0;
+  }
+}
