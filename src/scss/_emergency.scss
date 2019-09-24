@@ -9,17 +9,21 @@
     $emergency-banner-secondary 20px 40px);
 
   .alert {
-    padding: 20px 50px;
-    margin: 0;
     border-bottom: 5px solid $navbar-dark;
     border-radius: 0;
+    margin: 0;
+    padding: 1rem 2rem;
+
+    .alert-msg.warnBody {
+      margin: 0;
+    }
 
     .alert-title {
       font-family: 'ProximaNovaA-Bold', 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;
 
       &:before {
-        font-family: "Font Awesome 5 Free";
         content: '\f06a';
+        font-family: "Font Awesome 5 Free";
         margin-right: 5px;
       }
     }
