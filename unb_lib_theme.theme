@@ -25,7 +25,8 @@ function unb_lib_theme_preprocess_page(&$variables) {
 
   $active_theme_path = \Drupal::service('theme.manager')->getActiveTheme()->getPath();
   $banner_subdir = '/img/banner';
-  $banner_path = $active_theme_path . $banner_subdir;
+  // Allow for special front page banners.
+  $banner_path = $variables['is_front'] ? $active_theme_path . $banner_subdir . '/front' : $active_theme_path . $banner_subdir;
   $banner_extensions = ['gif', 'jpg', 'png'];
   $banner_image = _unb_lib_theme_get_random_file($banner_path, $banner_extensions);
   if ($banner_image == NULL) {
