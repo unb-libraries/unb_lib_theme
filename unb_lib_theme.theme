@@ -58,7 +58,7 @@ function unb_lib_theme_preprocess_page(&$variables) {
   $banner_image = _unb_lib_theme_get_random_file($banner_path, $banner_extensions);
   if ($banner_image == NULL) {
     // Base theme banner fallback.
-    $banner_path = $base_theme_path . $banner_subdir;
+    $banner_path = $base_theme_path . BANNER_SUBDIR;
     $variables['banner_image'] = '/' . _unb_lib_theme_get_random_file($banner_path, $banner_extensions);
   }
   else {
