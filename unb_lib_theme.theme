@@ -20,12 +20,22 @@ function unb_lib_theme_preprocess_page(&$variables) {
     }
   }
 
-  $unb_lib_theme_path = drupal_get_path('theme', 'unb_lib_theme');
-  $variables['unb_lib_theme_path'] = '/' . $unb_lib_theme_path;
+  $base_theme_path = drupal_get_path('theme', 'unb_lib_theme');
+  $variables['unb_lib_theme_path'] = '/' . $base_theme_path;
 
-  $banner_path = $unb_lib_theme_path . '/img/banner';
+  $active_theme_path = \Drupal::service('theme.manager')->getActiveTheme()->getPath();
+  $banner_subdir = '/img/banner';
+  $banner_path = $active_theme_path . $banner_subdir;
   $banner_extensions = ['gif', 'jpg', 'png'];
-  $variables['banner_image'] = '/' . _unb_lib_theme_get_random_file($banner_path, $banner_extensions);
+  $banner_image = _unb_lib_theme_get_random_file($banner_path, $banner_extensions);
+  if ($banner_image == NULL) {
+    // Base theme banner fallback.
+    $banner_path = $base_theme_path . $banner_subdir;
+    $variables['banner_image'] = '/' . _unb_lib_theme_get_random_file($banner_path, $banner_extensions);
+  }
+  else {
+    $variables['banner_image'] = '/' . $banner_image;
+  }
 
   // Allow to toggle Top Header | User Account Links.
   $variables['show_top_header_login'] = theme_get_setting('show_top_header_login');
@@ -96,14 +106,13 @@ function unb_lib_theme_form_system_theme_settings_alter(&$form, FormStateInterfa
  */
 function _unb_lib_theme_get_random_file($path, $extensions = ['*']) {
   $files = [];
-  $random_file = null;
-
   foreach ($extensions as $extension) {
     foreach (glob("$path/*.$extension") as $file) {
       $files[] = $file;
     }
   }
 
+  $random_file = null;
   if ($files != null) {
     shuffle($files);
     $random_file = $files[0];
