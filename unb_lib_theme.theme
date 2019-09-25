@@ -5,6 +5,9 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\Finder\Finder;
+
+const BANNER_SUBDIR = '/img/banner';
 
 /**
  * Implements hook_theme_preprocess_page().
@@ -23,10 +26,34 @@ function unb_lib_theme_preprocess_page(&$variables) {
   $base_theme_path = drupal_get_path('theme', 'unb_lib_theme');
   $variables['unb_lib_theme_path'] = '/' . $base_theme_path;
 
-  $active_theme_path = \Drupal::service('theme.manager')->getActiveTheme()->getPath();
-  $banner_subdir = '/img/banner';
-  // Allow for special front page banners.
-  $banner_path = $variables['is_front'] ? $active_theme_path . $banner_subdir . '/front' : $active_theme_path . $banner_subdir;
+  $active_theme_path = \Drupal::service('theme.manager')
+    ->getActiveTheme()
+    ->getPath();
+  if ($variables['is_front']) {
+    // Allow for special front page banners.
+    $banner_path = $active_theme_path . BANNER_SUBDIR . '/front';
+  }
+  else {
+    $banner_path = $active_theme_path . BANNER_SUBDIR;
+    // Use special banner folder if folder name matches word in current base path.
+    $current_uri = explode('/', \Drupal::request()->getRequestUri());
+    $uri_base_path = $current_uri[1];
+    $finder = new Finder();
+    $dirs = $finder
+      ->directories()
+      ->in($banner_path)
+      ->depth('== 0')
+      ->exclude('front')
+      ->exclude('disabled');
+    foreach($dirs->getIterator() as $iterator) {
+      $dir = $iterator->getRelativePathname();
+      $special_banner_pattern = '\b' . $dir . '\b';
+      if (preg_match("/$special_banner_pattern/", $uri_base_path)) {
+        $banner_path .= '/' . $dir;
+      }
+    }
+  }
+
   $banner_extensions = ['gif', 'jpg', 'png'];
   $banner_image = _unb_lib_theme_get_random_file($banner_path, $banner_extensions);
   if ($banner_image == NULL) {
