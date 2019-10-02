@@ -35,21 +35,23 @@ function unb_lib_theme_preprocess_page(&$variables) {
   }
   else {
     $banner_path = $active_theme_path . BANNER_SUBDIR;
-    // Use special banner folder if folder name matches word in current base path.
-    $current_uri = explode('/', \Drupal::request()->getRequestUri());
-    $uri_base_path = $current_uri[1];
-    $finder = new Finder();
-    $dirs = $finder
-      ->directories()
-      ->in($banner_path)
-      ->depth('== 0')
-      ->exclude('front')
-      ->exclude('disabled');
-    foreach($dirs->getIterator() as $iterator) {
-      $dir = $iterator->getRelativePathname();
-      $special_banner_pattern = '\b' . $dir . '\b';
-      if (preg_match("/$special_banner_pattern/", $uri_base_path)) {
-        $banner_path .= '/' . $dir;
+    if (file_exists($banner_path) && is_dir($banner_path)) {
+      // Use special banner folder if folder name matches word in current base path.
+      $current_uri = explode('/', \Drupal::request()->getRequestUri());
+      $uri_base_path = $current_uri[1];
+      $finder = new Finder();
+      $dirs = $finder
+        ->directories()
+        ->in($banner_path)
+        ->depth('== 0')
+        ->exclude('front')
+        ->exclude('disabled');
+      foreach($dirs->getIterator() as $iterator) {
+        $dir = $iterator->getRelativePathname();
+        $special_banner_pattern = '\b' . $dir . '\b';
+        if (preg_match("/$special_banner_pattern/", $uri_base_path)) {
+          $banner_path .= '/' . $dir;
+        }
       }
     }
   }
