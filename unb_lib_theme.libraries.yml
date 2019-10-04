@@ -14,3 +14,4 @@ global-styling:
     '//lib.unb.ca/core/js-2015/back-to-top.js': {type: external}
   dependencies:
     - calendar_hours_client/calendar-hours
+    - alert_scheduler_client/alerts

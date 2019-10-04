@@ -12,7 +12,7 @@ define('UNB_LIB_THEME_DEFAULT_REFRESH_URI', 'https://lib.unb.ca/core/inc-2015/he
  * Implements hook_preprocess_page().
  */
 function unb_lib_theme_preprocess_page(&$variables) {
-  _unb_lib_theme_check_update_header();
+//  _unb_lib_theme_check_update_header();
 }
 
 /**
