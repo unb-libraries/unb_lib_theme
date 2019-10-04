@@ -12,3 +12,5 @@ global-styling:
       'css/bootstrap-fixes.css': {}
   js:
     '//lib.unb.ca/core/js-2015/back-to-top.js': {type: external}
+  dependencies:
+    - calendar_hours_client/calendar-hours

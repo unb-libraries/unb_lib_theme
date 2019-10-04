@@ -61,6 +61,7 @@
         <title>{{ head_title|safe_join(' | ') }}</title>
         <css-placeholder token="{{ placeholder_token|raw }}">
         <js-placeholder token="{{ placeholder_token|raw }}">
+        {{ attach_library('calendar_hours_client/calendar-hours') }}
     </head>
     <body{{ attributes.addClass(body_classes) }}>
         {{ page_top }}
