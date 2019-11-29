@@ -17,7 +17,9 @@
       color: $navbar-dark-hover;
     }
     &:hover {
+      border-color: $navbar-dark-hover;
       color: $navbar-dark-hover;
+      text-decoration: none;
     }
   }
 
