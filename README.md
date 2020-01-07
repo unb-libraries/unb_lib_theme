@@ -19,7 +19,7 @@ UNB Libraries Theme.
 
 - Currently using Bootstrap version 4.3.1 (see global-styling theme library)
   - Subthemes compiling sass should add the following `require-dev` package:  
-    "twbs/bootstrap": "~4.3.1",
+    "twbs/bootstrap": "~4.4.1",
 
 - Add Font Awesome Icons module, 2.x branch for icons used in Header/Footer:
   - https://www.drupal.org/project/fontawesome
