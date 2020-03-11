@@ -1,8 +1,9 @@
+// Default variables.
+@import "default-variables";
+
 // Bootstrap Framework.
 @import '../../../../../vendor/twbs/bootstrap-sass/assets/stylesheets/bootstrap';
 
-// Default variables.
-@import "default-variables";
 @import "variables";
 @import "overrides";
 @import "component/mixins";
