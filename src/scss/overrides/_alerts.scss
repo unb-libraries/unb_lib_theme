@@ -4,7 +4,7 @@
 .alert-info {
   a {
     color: $alert-info;
-	border: 1px dotted $alert-info;
+	border-bottom: 1px dotted $alert-info;
   }
 }
 .alert-wrapper {
