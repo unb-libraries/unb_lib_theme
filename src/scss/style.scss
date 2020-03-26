@@ -187,20 +187,20 @@ a.nav-link[href$="//unb.ca"]::before {
     ul[role="menubar"] {
         background: $navbar-dark;
     }
-    ul[role="menubar"] a[role="button"] {
+    ul[role="menubar"] a[aria-haspopup="true"] {
         color: $white;
     }
-    #header ul[role="menubar"] a[role="button"]:focus,
-    #header ul[role="menubar"] a[role="button"]:hover {
+    #header ul[role="menubar"] a[aria-haspopup="true"]:focus,
+    #header ul[role="menubar"] a[aria-haspopup="true"]:hover {
         color: $white;
     }
-    #header li.show > a[role="button"]:first-child {
+    #header li.show > a[aria-haspopup="true"]:first-child {
         color: $black;
     }
     #navbar-main div.container {
         max-width: 100%;
     }
-    #header .navbar-nav a[role="button"]:after,
+    #header .navbar-nav a[aria-haspopup="true"]:after,
     #discovery-search .card-header a:after {
         float: right;
         font-family: "Font Awesome 5 Free";
@@ -250,7 +250,7 @@ a.nav-link[href$="//unb.ca"]::before {
 .megamenu-li {
     position: static;
 }
-ul[role="menubar"] a[role="button"] {
+ul[role="menubar"] a[aria-haspopup="true"] {
     color: #000;
     font-weight: 500;
     font-size: larger;
@@ -312,7 +312,7 @@ ul[role="menubar"] a[role="button"] {
 }
 /* END Show/Expand Transition */
 @media (max-width: 991px) {
-    ul[role="menubar"] a[role="button"] {
+    ul[role="menubar"] a[aria-haspopup="true"] {
         color: #fff;
     }
 }

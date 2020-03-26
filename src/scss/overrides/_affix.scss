@@ -4,10 +4,10 @@
   position: fixed!important;
   @include css3-prefix(transition, all .25s ease-in);
 }
-.affix ul[role="menubar"] a[role="button"] {
+.affix ul[role="menubar"] a[aria-haspopup="true"] {
   color: $white;
 }
-.affix ul[role="menubar"] .show a[role="button"] {
+.affix ul[role="menubar"] .show a[aria-haspopup="true"] {
   color: $black;
 }
 #header .affix li.show > .nav-link,
