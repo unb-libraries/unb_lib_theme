@@ -1,0 +1,7 @@
+/* Bootstrap Barrio fixes */
+/* Alerts */
+.alert-success::before,
+.alert-warning::before,
+.alert-danger::before {
+  display: none;
+}
