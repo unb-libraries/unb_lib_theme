@@ -5,3 +5,11 @@
 .alert-danger::before {
   display: none;
 }
+
+/* Fix Barrio custom-control class applied to label */
+.custom-control {
+  label.custom-control {
+    display: inline-block;
+    padding-left: 0;
+  }
+}
