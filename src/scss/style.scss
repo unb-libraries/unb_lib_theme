@@ -573,6 +573,11 @@ ul[role="menubar"] a[aria-haspopup="true"] {
 }
 /* END dark-themed content */
 
+/* Utility Classes */
+.text-red {
+    color: $red;
+}
+
 /* Add larger breakpoint option for container */
 @media (min-width: 1360px) {
     .container {
