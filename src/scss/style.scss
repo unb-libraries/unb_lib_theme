@@ -91,17 +91,7 @@ a:hover {
     box-shadow: none;
     color: $link-hover-color;
 }
-.branding a,
-.branding h1,
-.megamenu-li a {
-    border-bottom: 3px solid transparent;
-}
-.branding a:focus,
-.branding a:hover,
-.megamenu-li a:focus,
-.megamenu-li a:hover {
-    border-bottom: 3px solid $link-hover-color;
-}
+
 a.nav-link[href$="//unb.ca"]::before {
     background-image: url(/themes/contrib/unb_lib_theme/img/unb-sail-r.png);
     background-size: 18px 18px;

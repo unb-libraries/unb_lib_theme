@@ -191,8 +191,8 @@ ul[role="menubar"] a[aria-haspopup="true"] {
 }
 .branding a:focus,
 .branding a:hover,
-.megamenu-li a:focus,
-.megamenu-li a:hover {
+.megamenu-li > a:focus,
+.megamenu-li > a:hover {
   border-bottom: 3px solid $link-hover-color;
 }
 /* END Megamenus */
