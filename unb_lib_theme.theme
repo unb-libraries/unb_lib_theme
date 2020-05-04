@@ -23,6 +23,10 @@ function unb_lib_theme_preprocess_page(&$variables) {
     }
   }
 
+  // Add boolean variable to flag main lib site.
+  $host = \Drupal::request()->getHost();
+  $variables['is_lib'] = preg_match('/^[\w-]*lib.unb.ca$/', $host) ? TRUE : FALSE;
+
   $base_theme_path = drupal_get_path('theme', 'unb_lib_theme');
   $variables['unb_lib_theme_path'] = '/' . $base_theme_path;
 
