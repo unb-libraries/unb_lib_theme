@@ -1,7 +1,7 @@
 .alert {
   margin-top: 1em;
 
-  a {
+  a:not(.btn) {
     color: $alert-link;
     border-bottom: 1px dotted $alert-link;
   }
@@ -9,7 +9,7 @@
 .alert-light {
   color: $alert-light-wcag;
 
-  a {
+  a:not(.btn) {
     border-bottom-color: $link-color;
     color: $link-color;
   }
