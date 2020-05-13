@@ -1,15 +1,16 @@
-/* VARIABLES */
-
-/* Colors */
-$red: #900;
+/* Color Overrides */
+$bg-color: $dark;
 $blue: #007fa3;
-$black: #000;
-$white: #fff;
+$red: #900;
+
+/* Custom colors */
 $gray-444: #444;
 $gray-light: #ccc;
 $gray-medium: #999;
 $gray-dark: #373f44;
-$nav-red: #d82e3b;
+$unb-red: #d82e3b;
+
+/* Region colors */
 $navbar-dark: #1B2125;
 $header-link-color: #ddd;
 $header-hover-color: #bd0000;
@@ -26,9 +27,12 @@ $link-hover-decoration: none;
 $skip-link-bg: #bf1722;
 $navbar-dark-hover: #fec700;
 
-/* Fonts */
-$font-dark: #333;
-
 /* Bootstrap */
 $alert-light-wcag: #515153;
 $alert-link: #394446;
+
+/* Custom theme colors */
+$theme-colors: (
+  black: $black,
+  unb-red: $unb-red
+);

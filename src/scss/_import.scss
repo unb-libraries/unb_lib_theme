@@ -1,11 +1,21 @@
-/* Bootstrap 4.x base
-  * Require twbs/bootstrap, version 4.4.1 in project's composer.json.
-  */
-@import '../../../../../vendor/twbs/bootstrap/scss/bootstrap.scss';
+/* Bootstrap customization components */
+@import "../../../../../vendor/twbs/bootstrap/scss/functions";
+@import "../../../../../vendor/twbs/bootstrap/scss/variables";
 
-/* Other Sass Imports */
-@import 'variables';
-@import 'mixins';
+/* Bootstrap customizations */
+@import 'custom/variables';
+
+/* Bootstrap v4.x */
+@import "../../../../../vendor/twbs/bootstrap/scss/bootstrap.scss";
+
+/* Custom mixins */
+@import 'custom/mixins';
+
+/* Base theme components */
+@import 'custom/buttons';
+@import 'custom/emergency';
+@import 'custom/hours';
+@import 'custom/navbar-main';
 @import 'overrides/affix';
 @import 'overrides/alerts';
 @import 'overrides/barrio';
@@ -17,7 +27,3 @@
 @import 'overrides/sidebar';
 @import 'overrides/site-footer';
 @import 'overrides/table';
-@import 'custom/navbar-main';
-@import 'custom/hours';
-@import 'custom/emergency';
-
