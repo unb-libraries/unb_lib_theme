@@ -210,7 +210,7 @@ a.nav-link[href$="//unb.ca"]::before {
             a {
                 &:focus,
                 &:hover {
-                    background-color: $gray-444;
+                    background-color: $gray-700;
                 }
             }
         }
@@ -271,7 +271,7 @@ a.nav-link[href$="//unb.ca"]::before {
                 }
             }
             a[aria-expanded="true"] {
-                background-color: $gray-444;
+                background-color: $gray-700;
                 color: $navbar-dark-hover;
             }
             h3 {
