@@ -1,4 +1,4 @@
-/* Color Overrides */
+/* Bootstrap variable color overrides */
 $bg-color: $dark;
 $blue: #007fa3;
 $red: #900;
@@ -14,16 +14,10 @@ $footer-heading: #f4f4f4;
 $gray-light: #ccc;
 $gray-medium: #999;
 $gray-dark: #373f44;
-$unb-red: #d82e3b;
-
-/* Region colors */
-$navbar-dark: #1B2125;
 $header-link-color: #ddd;
 $header-hover-color: #bd0000;
-$footer-bg: #393e44;
-$footer-heading: #f4f4f4;
-$emergency-banner-primary: #fce585;
-$emergency-banner-secondary: #fbdf64;
+$navbar-dark: #1B2125;
+$unb-red: #d82e3b;
 
 /* Links */
 $link-color: #00607a;
@@ -32,6 +26,7 @@ $link-hover-color: #900;
 $link-hover-decoration: none;
 $skip-link-bg: #bf1722;
 $navbar-dark-hover: #fec700;
+/* END Custom variables */
 
 /* Bootstrap */
 $alert-light-wcag: #515153;
