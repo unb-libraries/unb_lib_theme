@@ -1,0 +1,32 @@
+/* BEGIN Action Button Links */
+.btn-action-add {
+  &:before {
+    @include link-fa-icon('\f067', right, .75rem);
+  }
+}
+.btn-action-delete {
+  &:before {
+    @include link-fa-icon('\f2ed', right, .75rem);
+  }
+}
+.btn-action-edit {
+  &:before {
+    @include link-fa-icon('\f303', right, .75rem);
+  }
+}
+.btn-action-view {
+  &:before {
+    @include link-fa-icon('\f06e', right, .75rem);
+  }
+}
+.btn-action-add,
+.btn-action-delete,
+.btn-action-edit,
+.btn-action-view {
+  &:not(.btn-sm) {
+    &:before {
+      vertical-align: text-top;
+    }
+  }
+}
+/* END Action Button Links */
