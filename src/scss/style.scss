@@ -6,10 +6,6 @@
 /* Import Sass files */
 @import 'import';
 
-body {
-    color: $font-dark;
-    background: $white;
-}
 body,
 .font-regular {
     font-family: 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;
@@ -84,12 +80,13 @@ a {
             vertical-align: text-bottom;
         }
     }
-}
-a:focus,
-a:hover {
-    background: none;
-    box-shadow: none;
-    color: $link-hover-color;
+
+    &:focus,
+    &:hover {
+        background: none;
+        box-shadow: none;
+        color: $link-hover-color;
+    }
 }
 
 a.nav-link[href$="//unb.ca"]::before {
