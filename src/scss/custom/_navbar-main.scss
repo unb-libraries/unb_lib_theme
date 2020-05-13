@@ -22,10 +22,10 @@
 /* Mobile Buttons */
 .btn-red {
   color: $white;
-  background-color: $nav-red;
+  background-color: $unb-red;
 }
 #nav-btn {
-  background: $nav-red;
+  background: $unb-red;
 }
 #nav-btn .btn,
 #nav-btn .btn:active {
@@ -135,7 +135,7 @@ ul[role="menubar"] a[aria-haspopup="true"] {
 .megamenu li .nav-link:focus,
 .megamenu li .nav-link:hover {
   @include nav-menu-hover-style;
-  background: $font-dark;
+  background: $dark;
 }
 .megamenu-li > .nav-link:focus,
 .megamenu-li > .nav-link:hover {
