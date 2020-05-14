@@ -372,6 +372,13 @@ a.nav-link[href$="//unb.ca"]::before {
 /* END dark-themed content */
 
 /* Utility Classes */
+.hover-grow {
+    &:focus,
+    &:hover {
+        @include css3-prefix(transition, transform .3s ease-in-out);
+        @include css3-prefix(transform, scale(1.02));
+    }
+}
 .text-red {
     color: $red;
 }
