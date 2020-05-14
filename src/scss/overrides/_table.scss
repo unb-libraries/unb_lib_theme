@@ -1,3 +1,13 @@
 .table-striped tr {
   background: $white;
 }
+
+table {
+  .thead-dark {
+    /* Table dark header sticky fix */
+    th {
+      color: $white;
+      background-color: $dark;
+    }
+  }
+}
