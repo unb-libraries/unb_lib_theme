@@ -373,9 +373,10 @@ a.nav-link[href$="//unb.ca"]::before {
 
 /* Utility Classes */
 .hover-grow {
+    @include css3-prefix(transition, transform .3s ease-in-out);
+
     &:focus,
     &:hover {
-        @include css3-prefix(transition, transform .3s ease-in-out);
         @include css3-prefix(transform, scale(1.02));
     }
 }
