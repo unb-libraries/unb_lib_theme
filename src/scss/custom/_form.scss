@@ -82,16 +82,6 @@ form {
       }
     }
 
-    .is-disabled,
-    .form-disabled input[type="submit"] {
-      text-decoration: line-through;
-
-      &:hover {
-        color: $white;
-        cursor: not-allowed;
-      }
-    }
-
     & > fieldset {
       margin-bottom: 1.5rem;
 
@@ -172,7 +162,19 @@ form {
   }
 }
 
-/* Form actions w/ theme-dark - class not required on form element */
-.theme-dark .form-actions {
-  text-align: center;
+/* Misc rules - ANY child of theme-dark classed container */
+.theme-dark {
+  .form-actions {
+    text-align: center;
+  }
+
+  .is-disabled,
+  .form-disabled input[type="submit"] {
+    text-decoration: line-through;
+
+    &:hover {
+      color: $white;
+      cursor: not-allowed;
+    }
+  }
 }
