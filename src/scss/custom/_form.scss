@@ -7,6 +7,73 @@ form {
     display: block;
     padding: 20px 25px 0px;
 
+    /* Alerts */
+    .alert-danger {
+      &:not(.no-icon):before {
+        content: '\f06a';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        vertical-align: top;
+      }
+
+      /* Inline form error fix+style */
+      .wrapper-list-comma-list {
+        display: inline-block;
+
+        ul {
+          margin: 0;
+
+          li {
+            display: inline-block;
+            margin-right: .25rem;
+            padding: 0;
+
+            &:not(:last-child):after {
+              content: ',';
+            }
+          }
+        }
+      }
+
+      a {
+        border-bottom: 1px dotted $gray-dark;
+        color: $black;
+
+        &:focus,
+        &:hover {
+          color: $red;
+          border-bottom-color: transparent;
+        }
+      }
+    }
+    .alert-success {
+      padding: 0;
+
+      p {
+        padding: .5rem;
+
+        &.h6 {
+          background: #155724;
+          border-top-left-radius: .25rem;
+          color: $white;
+          font-weight: bold;
+          padding: .9rem .75rem;
+
+          .fas {
+            margin-top: -1px;
+            vertical-align: top;
+          }
+        }
+      }
+      &.alert-dismissible {
+        padding-right: 3.5rem;
+
+        .close {
+          background: rgba(21, 87,36, 0.1);
+        }
+      }
+    }
+
     .form-group {
       & > label {
         color: $gray-700;
