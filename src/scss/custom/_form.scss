@@ -145,6 +145,24 @@ form {
       background-image: none;
     }
 
+    /* INLINE / SIDE-BY-SIDE ELEMENTS */
+    .one-column,
+    .two-column,
+    .three-column {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+
+    .one-column {
+      column-count: 1;
+    }
+    .two-column {
+      column-count: 2;
+    }
+    .three-column {
+      column-count: 3;
+    }
+
     .form-options-display-side-by-side,
     .webform-options-display-side-by-side {
       /* Emulate Bootstrap 4 custom-control-inline w/ Webform > Options display > Side by side */
