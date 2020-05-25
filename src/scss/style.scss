@@ -399,6 +399,19 @@ a.nav-link[href$="//unb.ca"]::before {
 .text-red {
     color: $red;
 }
+ol, ul {
+    &.mt-md-li {
+        li {
+            margin-top: .5rem;
+        }
+    }
+
+    &.mt-lg-li {
+        li {
+            margin-top: 1rem;
+        }
+    }
+}
 
 /* Add larger breakpoint option for container */
 @media (min-width: 1360px) {
