@@ -5,9 +5,9 @@ form {
     border: 1px solid #cdcdcd;
     @include css3-prefix(border-radius, 6px);
     display: block;
-    padding: 20px 25px 0px;
+    padding: 20px 25px 0;
 
-    /* Alerts */
+    /* ALERTS */
     .alert-danger {
       &:not(.no-icon):before {
         content: '\f06a';
@@ -16,7 +16,7 @@ form {
         vertical-align: top;
       }
 
-      /* Inline form error fix+style */
+      /* Inline form error fix */
       .wrapper-list-comma-list {
         display: inline-block;
 
@@ -46,6 +46,7 @@ form {
         }
       }
     }
+
     .alert-success {
       padding: 0;
 
@@ -65,6 +66,7 @@ form {
           }
         }
       }
+
       &.alert-dismissible {
         padding-right: 3.5rem;
 
@@ -74,6 +76,7 @@ form {
       }
     }
 
+    /* GROUPS / FIELDSETS */
     .form-group {
       & > label {
         color: $gray-700;
@@ -105,6 +108,7 @@ form {
       }
     }
 
+    /* INLINE FORM ERRORS */
     fieldset.has-error,
     div.custom-control {
       .invalid-feedback {
@@ -141,12 +145,6 @@ form {
       background-image: none;
     }
 
-    .message-privacy {
-      font-size: .88rem;
-      margin-top: 2.5rem;
-      text-align: center;
-    }
-
     .form-options-display-side-by-side,
     .webform-options-display-side-by-side {
       /* Emulate Bootstrap 4 custom-control-inline w/ Webform > Options display > Side by side */
@@ -155,14 +153,10 @@ form {
         margin-right: 1rem;
       }
     }
-
-    .webform-element--title-inline > label {
-      padding-right: 0;
-    }
   }
 }
 
-/* Misc rules - ANY child of theme-dark classed container */
+/* MISC - any child of theme-dark wrapper, i.e. not just form */
 .theme-dark {
   .form-actions {
     text-align: center;
@@ -176,5 +170,16 @@ form {
       color: $white;
       cursor: not-allowed;
     }
+  }
+
+  .message-privacy {
+    font-size: .88rem;
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+
+  /* Legacy webform rule used somewhere on lib */
+  .webform-element--title-inline > label {
+    padding-right: 0;
   }
 }
