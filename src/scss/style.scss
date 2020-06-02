@@ -317,6 +317,8 @@ a.nav-link[href$="//unb.ca"]::before {
             color: $yellow;
         }
     }
+    .btn[id="edit-cancel"],
+    .btn[value="Cancel"],
     .btn[value="Clear"],
     .webform-button--reset,
     .webform-button--reset:active {
