@@ -6,7 +6,7 @@ a.focus-ring,
 .breadcrumb a[href="/"].focus-ring:after {
   outline: 1px dashed $gray-light;
 }
-:focus:not(.focus-ring) {
+:focus:not(.focus-ring):not(.form-control-file) {
   outline: none;
 }
 .btn-dark,
