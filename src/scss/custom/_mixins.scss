@@ -42,19 +42,6 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$to}', endColorstr='#{$from}', GradientType=1 );
 }
 
-@mixin link-icon($content, $color: inherit, $margin: 'left') {
-  background: none;
-  color: $color;
-  content: $content;
-  font-family: "Font Awesome 5 Free";
-  font-size: 1rem;
-  @if $margin == left {
-    margin-right: .25rem;
-  } @else {
-    margin-left: .25rem;
-  }
-}
-
 @mixin nav-menu-style {
   color: $white;
   border: none;

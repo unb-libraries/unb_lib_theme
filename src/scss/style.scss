@@ -403,12 +403,12 @@ a.nav-link[href$="//unb.ca"]::before {
     button {
         &[aria-expanded="false"] {
             &:before {
-                @include link-icon('\f150', '', left);
+                @include link-fa-icon('\f150', right);
             }
         }
         &[aria-expanded="true"] {
             &:before {
-                @include link-icon('\f151', '', left);
+                @include link-fa-icon('\f151', '', right);
             }
         }
     }
