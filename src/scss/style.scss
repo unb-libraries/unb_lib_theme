@@ -398,6 +398,21 @@ a.nav-link[href$="//unb.ca"]::before {
         @include css3-prefix(transform, scale(1, 1.03));
     }
 }
+/* Toggle Icons */
+.icon-caret-h {
+    button {
+        &[aria-expanded="false"] {
+            &:before {
+                @include link-icon('\f150', '', left);
+            }
+        }
+        &[aria-expanded="true"] {
+            &:before {
+                @include link-icon('\f151', '', left);
+            }
+        }
+    }
+}
 .text-red {
     color: $red;
 }
