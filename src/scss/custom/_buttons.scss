@@ -30,3 +30,13 @@
   }
 }
 /* END Action Button Links */
+
+/* Improve btn-link btn-block accessibility */
+.btn-link {
+  &.btn-block {
+    &:focus {
+      border-color: rgba(0,0,0,0.1);
+      box-shadow: 0 0 0 0.2rem rgba(216,217,219,0.5);
+    }
+  }
+}
