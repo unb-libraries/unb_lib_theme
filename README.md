@@ -14,16 +14,15 @@ UNB Libraries Theme.
 - This depends on Bootstrap Barrio theme:
   - https://www.drupal.org/project/bootstrap_barrio
 
+- As of Barrio 8.x-4.30, the following patches should be installed in your build > composer.json
+  - Layout Builder fix: https://www.drupal.org/files/issues/2019-10-04/bootstrap_barrio-disable_default_layouts-2976934-38.patch
+
 - The banner hours depends on the UNB Libraries > Calendar Hours > Calendar Hours Client module:
   - https://github.com/unb-libraries/calendar_hours
 
-- Currently using Bootstrap version 4.3.1 (see global-styling theme library)
+- Currently using Bootstrap version 4.4.1 (see global-styling theme library)
   - Subthemes compiling sass should add the following `require-dev` package:  
     "twbs/bootstrap": "~4.4.1",
 
 - Add Font Awesome Icons module, 2.x branch for icons used in Header/Footer:
   - https://www.drupal.org/project/fontawesome
-
-- As of 8.x-4.17, the following patches should be installed in your build > composer.json
-  - Fix 404: https://www.drupal.org/project/bootstrap_barrio/issues/2979684
-  - Fix logo theme setting: https://www.drupal.org/project/bootstrap_barrio/issues/2996094
