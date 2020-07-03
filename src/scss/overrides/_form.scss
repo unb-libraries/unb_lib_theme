@@ -3,7 +3,7 @@
 }
 
 fieldset {
-  input + span.description {
+  input + .description {
     display: block;
     margin-top: .25rem;
   }
