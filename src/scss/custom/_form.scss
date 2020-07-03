@@ -114,6 +114,7 @@ form {
     div.custom-control {
       .invalid-feedback {
         display: block;
+        margin-bottom: .25rem;
 
         &:before {
           font-family: "Font Awesome 5 Free";
