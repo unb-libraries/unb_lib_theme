@@ -2,6 +2,13 @@
   max-width: 100%;
 }
 
+fieldset {
+  input + span.description {
+    display: block;
+    margin-top: .25rem;
+  }
+}
+
 label {
   /* Reduce Bootstrap's large separation between checkmark and label */
   & .form-check {
