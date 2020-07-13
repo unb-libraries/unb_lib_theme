@@ -36,9 +36,6 @@ function unb_lib_theme_preprocess_page(&$variables) {
   else {
     $banner_path = $active_theme_path . BANNER_SUBDIR;
     if (file_exists($banner_path) && is_dir($banner_path)) {
-      // Use special banner folder if folder name matches word in current base path.
-      $current_uri = explode('/', \Drupal::request()->getRequestUri());
-      $uri_base_path = $current_uri[1];
       $finder = new Finder();
       $dirs = $finder
         ->directories()
@@ -46,11 +43,35 @@ function unb_lib_theme_preprocess_page(&$variables) {
         ->depth('== 0')
         ->exclude('front')
         ->exclude('disabled');
-      foreach($dirs->getIterator() as $iterator) {
-        $dir = $iterator->getRelativePathname();
-        $special_banner_pattern = '\b' . $dir . '\b';
-        if (preg_match("/$special_banner_pattern/", $uri_base_path)) {
-          $banner_path .= '/' . $dir;
+
+      // Special banner folders - page path > base path > default.
+      $current_uri = explode('/', \Drupal::request()->getRequestUri());
+      $uri_base_path = $current_uri[1];
+      $found_page_match = false;
+      $uri_page_path = false;
+      if (count($current_uri) > 2) {
+        $uri_page_path =  $current_uri[array_key_last($current_uri)];
+      }
+
+      if ($uri_page_path) {
+        foreach ($dirs->getIterator() as $iterator) {
+          $dir = $iterator->getRelativePathname();
+          $special_banner_pattern = '\b' . $dir . '\b';
+          if (preg_match("/$special_banner_pattern$/", $uri_page_path)) {
+            $banner_path .= '/' . $dir;
+            $found_page_match = true;
+            break;
+          }
+        }
+      }
+      if (!$found_page_match) {
+        foreach ($dirs->getIterator() as $iterator) {
+          $dir = $iterator->getRelativePathname();
+          $special_banner_pattern = '\b' . $dir . '\b';
+          if (preg_match("/^$special_banner_pattern/", $uri_base_path)) {
+            $banner_path .= '/' . $dir;
+            break;
+          }
         }
       }
     }
