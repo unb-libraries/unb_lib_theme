@@ -86,6 +86,7 @@ form {
     }
 
     & > fieldset,
+    & > .form-subform > fieldset,
     & > .webform-elements > fieldset {
       margin-bottom: 1.5rem;
 
