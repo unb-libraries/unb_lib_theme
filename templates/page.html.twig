@@ -355,9 +355,9 @@
         <div {{ attributes.addClass(banner_classes) }} id="banner">
             <div id="banner-image" style="background-image: url({{ banner_image }})">
                 {{ attach_library('calendar_hours_client/calendar-hours') }}
-                <div class="col-lg-4 col-md-6 col-xs-12 offset-lg-8 offset-md-6 py-3" id="banner-hours">
+                <div class="col-lg-4 col-md-6 col-xs-12 offset-lg-8 offset-md-6 p-0" id="banner-hours">
                     <table>
-                        <caption class="mb-4">
+                        <caption class="pb-2 px-3 pt-3">
                             <span class="sr-only">Library hours for</span><span class="current-date">{{ "now"|date("l, F j, Y") }}</span>
                         </caption>
                         {#
@@ -391,13 +391,13 @@
                         </tr>
                         #}
                         <tr>
-                            <td>
+                            <td class="px-3 pt-1">
                                 <p class="h4 text-warning">ONLINE SUPPORT</p>
-                                <p class="pr-4" style="font-size: 0.82rem">
+                                <p>
                                     Libraries remain closed for in-person access.<br>
                                     The HIL and HWK Commons reopen Sept. 8.
                                 </p>
-                                <p class="pr-4" style="font-size: 0.82rem">
+                                <p>
                                     View <a class="font-weight-bold" href="https://lib.unb.ca/about/hours">Fall 2020 hours</a>.<br>
                                     Please contact <a class="font-weight-bold" href="https://lib.unb.ca/help/ask-us">Ask Us</a> for support.
                                 </p>
