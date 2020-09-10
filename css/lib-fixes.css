@@ -26,8 +26,11 @@ input[type="checkbox"] {
 #banner-hours {
     padding: 0;
 }
+#banner-hours table {
+    margin: 0;
+}
 #banner-hours table caption {
-    margin: 1rem 0
+    margin: 1rem 0;
     padding: 0 1.5rem;
 }
 #banner-hours table tr td,
