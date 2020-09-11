@@ -35,7 +35,7 @@ input[type="checkbox"] {
 }
 #banner-hours table tbody tr td,
 #banner-hours table tbody tr th {
-    font-size: .96rem;
+    font-size: 99%;
     padding: .25rem 1.5rem;
 }
 
