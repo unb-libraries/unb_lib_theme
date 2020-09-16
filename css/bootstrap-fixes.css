@@ -8,7 +8,8 @@
     vertical-align: text-top;
 }
 /* Fix for Drupal Bootstrap 3.x file link lists */
-li a.file {
+li a.file,
+p a.file {
     display: inline;
     font-size: inherit;
     font-weight: inherit;
