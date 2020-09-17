@@ -149,21 +149,35 @@ form {
     }
 
     /* INLINE / SIDE-BY-SIDE ELEMENTS */
-    .one-column,
-    .two-column,
-    .three-column {
-      display: inline-block;
-      margin-bottom: 0;
-    }
-
     .one-column {
       column-count: 1;
+      margin-bottom: 0;
+    }
+    .two-column,
+    .three-column {
+      display: flex!important;
+      -ms-flex-pack: justify!important;
+      justify-content: space-between!important;
+      margin-bottom: 0;
     }
     .two-column {
       column-count: 2;
     }
     .three-column {
       column-count: 3;
+
+      & > .form-group {
+        width: 33%;
+      }
+    }
+    @media (max-width: 767px) {
+      .two-column,
+      .three-column {
+        flex-direction: column!important;
+      }
+      .three-column > .form-group {
+        width: 100%;
+      }
     }
 
     .form-options-display-side-by-side,
