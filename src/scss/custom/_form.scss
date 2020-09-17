@@ -217,4 +217,9 @@ form {
   .webform-element--title-inline > label {
     padding-right: 0;
   }
+
+  /* Match BS4 select top margin with input.form-text */
+  label + select.form-select {
+    margin-top: .25rem;
+  }
 }
