@@ -13,3 +13,31 @@
     padding-left: 0;
   }
 }
+
+/* Undo Bootstrap Barrio table overrides */
+table {
+  margin-top: inherit;
+
+  caption {
+    caption-side: top;
+    font-weight: bold;
+  }
+
+  tr {
+    background: inherit;
+    border-color: inherit;
+    border-style: inherit;
+    border-width: inherit;
+
+    td,
+    th {
+      background: inherit;
+      border-color: inherit;
+      border-style: inherit;
+      border-width: inherit;
+      color: inherit;
+      font-size: 1rem;
+      padding: inherit;
+    }
+  }
+}
