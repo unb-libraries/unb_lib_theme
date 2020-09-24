@@ -87,7 +87,8 @@ form {
 
     & > fieldset,
     & > .form-subform > fieldset,
-    & > .webform-elements > fieldset {
+    & > .webform-elements > fieldset,
+    & > .webform-elements > .form-wrapper > fieldset {
       margin-bottom: 1.5rem;
 
       & > legend {
