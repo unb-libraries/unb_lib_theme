@@ -219,8 +219,9 @@ form {
     padding-right: 0;
   }
 
-  /* Match BS4 select top margin with input.form-text */
-  label + select.form-select {
+  /* Match BS4 select/autocomplete top margin with input.form-text */
+  label + .form-autocomplete,
+  label + .form-select {
     margin-top: .25rem;
   }
 }
