@@ -3,7 +3,7 @@
   "description": "Drupal Bootstrap 4.x Base Theme For UNB Libraries Branding.",
   "type": "drupal-theme",
   "require-dev": {
-    "twbs/bootstrap": "~4.4.1"
+    "twbs/bootstrap": "~4.5.3"
   },
   "license": "MIT",
   "minimum-stability": "stable",
