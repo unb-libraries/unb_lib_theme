@@ -1,7 +1,12 @@
 global-styling:
   version: VERSION
   js:
-    https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js: { type: external, minified: true }
+    https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js:
+      type: external
+      attributes:
+        integrity: 'sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7'
+        crossorigin: anonymous
+      minified: true
     js/focus-ring.min.js: { minified: true }
     js/animated-focus-ring.min.js: { minified: true }
     js/global.js: {}
