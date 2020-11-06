@@ -13,6 +13,25 @@ const BANNER_SUBDIR = '/img/banner';
  * Implements hook_theme_preprocess_page().
  */
 function unb_lib_theme_preprocess_page(&$variables) {
+  // Domain indicator variable.
+  $domain = (explode('-', \Drupal::request()->getHost()))[0];
+  switch ($domain) {
+    case 'dev':
+      $variables['env_indicator'] = 'Development Server';
+      $variables['env_indicator_bg_color'] = 'warning';
+      $variables['env_indicator_txt_color'] = 'black';
+      break;
+
+    case 'local':
+      $variables['env_indicator'] = 'Local Container';
+      $variables['env_indicator_bg_color'] = 'primary';
+      $variables['env_indicator_txt_color'] = 'white';
+      break;
+
+    default:
+      $variables['env_indicator'] = null;
+  }
+
   // Set is_front variable if unset (LIB-118).
   if (!isset($variables['is_front'])) {
     try {
