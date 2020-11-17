@@ -214,7 +214,7 @@ a.nav-link[href$="//unb.ca"]::before {
  * END Header
  */
 
-/* Dark-themed content */
+/* Dark-themed custom content */
 .theme-dark {
     .tabs-accordian {
         flex-wrap: wrap;
@@ -371,7 +371,7 @@ a.nav-link[href$="//unb.ca"]::before {
         .card {
             border: none;
 
-            .collapse {
+            & > .collapse {
                 display: block;
             }
 
