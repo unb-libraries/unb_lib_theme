@@ -216,7 +216,8 @@ a.nav-link[href$="//unb.ca"]::before {
 
 /* Dark-themed custom content */
 .theme-dark {
-    .tabs-accordian {
+    .tabs-accordian,
+    .tabs-accordion {
         flex-wrap: wrap;
 
         .nav-tabs {
@@ -349,7 +350,8 @@ a.nav-link[href$="//unb.ca"]::before {
     }
 }
 @media(max-width: 991px) {
-    .tabs-accordian {
+    .tabs-accordian,
+    .tabs-accordion {
         border: none;
 
         #tabs {
@@ -364,7 +366,8 @@ a.nav-link[href$="//unb.ca"]::before {
     }
 }
 @media(min-width: 992px) {
-    .tabs-accordian {
+    .tabs-accordian,
+    .tabs-accordion {
         border: 1px solid $gray-dark;
         min-height: 300px;
 
