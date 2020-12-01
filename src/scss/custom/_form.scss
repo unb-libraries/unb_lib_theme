@@ -145,10 +145,6 @@ form {
       }
     }
 
-    .form-control.is-invalid {
-      background-image: none;
-    }
-
     /* INLINE / SIDE-BY-SIDE ELEMENTS */
     .one-column {
       column-count: 1;
@@ -223,5 +219,14 @@ form {
   label + .form-autocomplete,
   label + .form-select {
     margin-top: .25rem;
+  }
+}
+
+/* Inline form errors: prevent text input width shift */
+.form-row {
+  .form-group {
+    .form-text {
+      padding-right: calc(1.5em + 0.5rem);
+    }
   }
 }
