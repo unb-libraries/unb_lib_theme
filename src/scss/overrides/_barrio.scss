@@ -64,3 +64,14 @@ ul {
     padding-inline-start: 1.5rem;
   }
 }
+
+/* Barrio + inline form invalid + inline form-action */
+.form-row {
+  @media (min-width: 992px) {
+    .has-error {
+      & + .form-actions {
+        align-self: center;
+      }
+    }
+  }
+}
