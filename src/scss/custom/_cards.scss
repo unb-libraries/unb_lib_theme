@@ -1,3 +1,18 @@
+.accordion {
+  .card {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125)!important;
+    margin-bottom: .5rem;
+
+    .card-header {
+      padding: 0;
+
+      .card-title {
+        margin: 0;
+      }
+    }
+  }
+}
+
 .card-group-col-3 {
   @media (min-width: 577px) and (max-width: 767px) {
     & > .card {
