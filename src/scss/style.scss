@@ -273,6 +273,19 @@ a.nav-link[href$="//unb.ca"]::before {
         }
     }
 
+    .card-header {
+        button.btn-dark {
+            color: $white;
+
+            &:focus,
+            &:hover {
+                color: $navbar-dark-hover;
+            }
+        }
+        button.btn-dark[aria-expanded="true"] {
+            color: $navbar-dark-hover;
+        }
+    }
     .tab-pane {
         .card-header {
             a {
