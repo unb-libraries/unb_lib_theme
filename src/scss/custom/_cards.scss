@@ -1,3 +1,4 @@
+/* Tighten BS4 card header/card-title whitespace */
 .accordion {
   .card {
     border-bottom: 1px solid rgba(0, 0, 0, 0.125)!important;
@@ -25,5 +26,21 @@
       margin-left: 1rem;
       margin-right: 1rem
     }
+  }
+}
+
+/* BS4 card header collapse/expand FA icons */
+.header-icons .card-header {
+  button[data-toggle="collapse"]:after {
+    float: right;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+
+  button[aria-expanded="true"]:after {
+    content: "\f077";
+  }
+  button[aria-expanded="false"]:after {
+    content: "\f078";
   }
 }
