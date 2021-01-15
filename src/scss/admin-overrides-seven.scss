@@ -285,3 +285,16 @@ tr.drag {
         padding: 0 .63rem;
     }
 }
+
+/* Consistent Node form|Authoring Info sections */
+.node-form-author .field--type-created {
+    .form-item {
+        margin-top: .15rem;
+    }
+
+    .label {
+        color: inherit;
+        font-size: inherit;
+        text-transform: uppercase;
+    }
+}
