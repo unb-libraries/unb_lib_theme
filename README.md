@@ -11,11 +11,8 @@ UNB Libraries Theme.
 
 
 ## Notes
-- This depends on Bootstrap Barrio theme:
+- This depends on Bootstrap Barrio theme, 5.x branch:
   - https://www.drupal.org/project/bootstrap_barrio
-
-- As of Barrio 8.x-4.30, the following patches should be installed in your build > composer.json
-  - Layout Builder fix: https://www.drupal.org/files/issues/2019-10-04/bootstrap_barrio-disable_default_layouts-2976934-38.patch
 
 - The banner hours depends on the UNB Libraries > Calendar Hours > Calendar Hours Client module:
   - https://github.com/unb-libraries/calendar_hours
