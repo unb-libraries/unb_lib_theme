@@ -16,8 +16,8 @@ rules are primary intended for UNB Libraries projects - should you use <i>Seven<
 project's administration theme and want to incorporate these overrides one method to do so is
 as follows:
 - create an <code>admin-style.scss</code> files inside your subtheme's <code>src/scss</code> folder
-- add the following import at the top of this file:<br><br>
-  <kbd>@import '../../../../../vendor/unb-libraries/unb_lib_theme/src/scss/admin-overrides-seven.scss';</kbd><br><br>
+- add the following import at the top of this file:
+<pre><code>@import '../../../../../vendor/unb-libraries/unb_lib_theme/src/scss/admin-overrides-seven.scss';</code></pre>
   This will compile (minimized) to <code>dist/css/admin-style.css</code>.
 - <b>note</b>: should you wish to add additional project-specific administration rules simply add them after this
   import line
