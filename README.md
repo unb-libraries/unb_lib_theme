@@ -17,9 +17,9 @@ UNB Libraries Theme.
 - The banner hours depends on the UNB Libraries > Calendar Hours > Calendar Hours Client module:
   - https://github.com/unb-libraries/calendar_hours
 
-- Currently using Bootstrap version 4.4.1 (see global-styling theme library)
+- Currently using Bootstrap version 4.5.3 (see global-styling theme library)
   - Subthemes compiling sass should add the following `require-dev` package:  
-    "twbs/bootstrap": "~4.4.1",
+    "twbs/bootstrap": "~4.5.3",
 
 - Add Font Awesome Icons module, 2.x branch for icons used in Header/Footer:
   - https://www.drupal.org/project/fontawesome
