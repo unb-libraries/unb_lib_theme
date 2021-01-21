@@ -1,6 +1,7 @@
 /* Port lib.unb.ca webform theme-dark rules */
 form {
-  &.theme-dark {
+  .theme-dark,
+  &.theme-dark, {
     background: #f8f9fa;
     border: 1px solid #cdcdcd;
     @include css3-prefix(border-radius, 6px);
