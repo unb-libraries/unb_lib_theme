@@ -1,6 +1,6 @@
 /* Port lib.unb.ca webform theme-dark rules */
 form {
-  .theme-dark,
+  .theme-dark.js-form-wrapper,
   &.theme-dark, {
     background: #f8f9fa;
     border: 1px solid #cdcdcd;
