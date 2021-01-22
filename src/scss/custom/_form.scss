@@ -87,6 +87,7 @@ form {
     }
 
     & > fieldset,
+    & .webform-section-wrapper > fieldset,
     & > .form-subform > fieldset,
     & > .webform-elements > fieldset,
     & > .webform-elements > .form-wrapper > fieldset {
