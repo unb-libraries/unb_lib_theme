@@ -1,0 +1,33 @@
+/* Webform customizations */
+.webform-submission-form {
+  .form-actions {
+    text-align: center;
+  }
+
+  .is-disabled,
+  .form-disabled input[type="submit"] {
+    text-decoration: line-through;
+
+    &:hover {
+      color: $white;
+      cursor: not-allowed;
+    }
+  }
+
+  .message-privacy {
+    font-size: .88rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  /* Legacy webform rule used somewhere on lib */
+  .webform-element--title-inline > label {
+    padding-right: 0;
+  }
+
+  /* Match BS4 select/autocomplete top margin with input.form-text */
+  label + .form-autocomplete,
+  label + .form-select {
+    margin-top: .25rem;
+  }
+}
