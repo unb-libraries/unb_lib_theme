@@ -79,6 +79,10 @@ form {
 
     /* GROUPS / FIELDSETS */
     .form-group {
+      &.form-actions {
+        margin-bottom: 0;
+      }
+
       & > label {
         color: $gray-700;
         font-weight: bold;
