@@ -31,3 +31,13 @@
     margin-top: .25rem;
   }
 }
+
+/* Page Wizard form actions buttons */
+.webform-actions-center.form-actions {
+  .webform-button--next:focus,
+  .webform-button--previous:focus,
+  .webform-button--next:hover,
+  .webform-button--previous:hover {
+    color: $text-yellow;
+  }
+}
