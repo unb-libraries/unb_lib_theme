@@ -44,3 +44,7 @@ as follows:
 
 - Add Font Awesome Icons module, 2.x branch for icons used in Header/Footer:
   - https://www.drupal.org/project/fontawesome
+  - load only the <b>free</b> icon subset, i.e. the <b>Solid</b> and <b>Brand</b> icons <i>(else the non-free icon font
+    may take precedence and not display)</i>
+     - this in done via the Font Awesome Settings > Partial File Configuration admin config form: 
+       <kbd>/admin/config/content/fontawesome</kbd>
