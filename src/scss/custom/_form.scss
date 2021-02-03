@@ -5,7 +5,6 @@ form {
     background: #f8f9fa;
     border: 1px solid #cdcdcd;
     @include css3-prefix(border-radius, 6px);
-    display: block;
     padding: 1.5rem;
 
     /* ALERTS */
