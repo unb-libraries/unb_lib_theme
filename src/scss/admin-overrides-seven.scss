@@ -272,6 +272,7 @@ tr.drag {
 /* Paragraph entity's chosen selection dropdown */
 .chosen-container {
     border: none;
+    min-width: 140px;
 }
 
 .draggable {
