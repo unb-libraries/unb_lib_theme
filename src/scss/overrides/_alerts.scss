@@ -18,3 +18,11 @@
   position: initial;
   z-index: auto;
 }
+
+/* Remove horizontal padding header > emergency banner > alerts */
+#emergency-banner {
+  .alert {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
