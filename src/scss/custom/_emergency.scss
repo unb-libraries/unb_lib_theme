@@ -9,14 +9,11 @@
     $emergency-banner-secondary 20px 40px);
 
   .alert {
-    border-bottom: 5px solid $navbar-dark;
     border-radius: 0;
     margin: 0;
-    padding: 1rem 2rem;
-
+    padding: 1rem 0;
 
     a {
-      text-decoration: underline;
       font-weight: bold;
     }
 
@@ -35,7 +32,7 @@
     }
   }
 
-  :last-child {
-    border-bottom: 0;
+  &.alert:not(last-child) {
+    border-bottom: 5px solid $navbar-dark;
   }
 }
