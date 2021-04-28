@@ -11,10 +11,19 @@
   .alert {
     border-radius: 0;
     margin: 0;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
+
+    p {
+      margin-bottom: .5rem;
+    }
 
     a {
       font-weight: bold;
+
+      &:focus,
+      &:hover {
+        border-bottom-style: solid;
+      }
     }
 
     .alert-msg.warnBody {
