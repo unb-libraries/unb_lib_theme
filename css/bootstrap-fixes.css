@@ -15,3 +15,6 @@ p a.file {
     font-size: inherit;
     font-weight: inherit;
 }
+.text-nowrap {
+    white-space: nowrap;
+}
