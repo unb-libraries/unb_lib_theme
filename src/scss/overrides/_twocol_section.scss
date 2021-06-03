@@ -1,0 +1,19 @@
+.layout--twocol-section {
+  &.layout--twocol-section--50-50 {
+    @media (min-width: 768px) {
+      .layout__region:first-child {
+        padding-right: 2rem;
+      }
+      .layout__region:last-child {
+        padding-left: 2rem;
+      }
+    }
+
+    & > .layout__region {
+      @media (max-width: 767px) {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
