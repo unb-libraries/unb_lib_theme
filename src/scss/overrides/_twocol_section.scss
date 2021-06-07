@@ -2,10 +2,10 @@
   &.layout--twocol-section--50-50 {
     @media (min-width: 768px) {
       .layout__region:first-child {
-        padding-right: 2rem;
+        padding-right: $twocol-padding-size;
       }
       .layout__region:last-child {
-        padding-left: 2rem;
+        padding-left: $twocol-padding-size;
       }
     }
 
