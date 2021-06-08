@@ -458,6 +458,14 @@ ol, ul {
         }
     }
 }
+.list-colcount-2 {
+  column-count: 2;
+  padding-inline-start: 1.15rem;
+
+  li {
+    margin-right: 1rem;
+  }
+}
 
 /* Add larger breakpoint option for container */
 @media (min-width: 1360px) {
