@@ -1,0 +1,18 @@
+.block-facet--checkbox ul {
+  padding-left: 1rem;
+}
+
+.facet-item {
+
+  list-style: none;
+
+  input[type="checkbox"] {
+    float: left;
+    margin-right: 0.2em;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0;
+  }
+}
