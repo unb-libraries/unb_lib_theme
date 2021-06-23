@@ -52,6 +52,7 @@
   width: 100%;
 }
 @mixin nav-menu-hover-style {
+  background: $dark;
   color: $navbar-dark-hover;
 }
 
