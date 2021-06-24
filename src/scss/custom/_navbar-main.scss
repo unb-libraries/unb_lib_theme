@@ -92,32 +92,11 @@
 }
 /* END Top-level Menu */
 
-/* MegaMenu */
-.megamenu {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-  padding: 15px;
-  background: $gray-dark;
-}
-/*.megamenu .row {
-  width: 100%;
-}*/
-
-.megamenu ul {
-  padding: 0;
-}
-
 ul[role="menubar"] a[aria-haspopup="true"] {
   color: #000;
   font-weight: 500;
   font-size: larger;
 }
-
-/*.megamenu ul {
-  list-style-type: none;
-}*/
 
 @media (max-width: 991px) {
   ul[role="menubar"] a[aria-haspopup="true"] {
@@ -132,17 +111,18 @@ ul[role="menubar"] a[aria-haspopup="true"] {
   }
 }
 
+/* Branding */
 .branding a,
-.branding h1,
-.megamenu-li a {
+.branding h1 {
   border-bottom: 3px solid transparent;
 }
 .branding a:focus,
-.branding a:hover,
-.megamenu-li > a:focus,
-.megamenu-li > a:hover {
+.branding a:hover {
   border-bottom: 3px solid $link-hover-color;
 }
+/* END Branding */
+
+/* Megamenu */
 .megamenu-li {
   position: static;
 
@@ -156,11 +136,26 @@ ul[role="menubar"] a[aria-haspopup="true"] {
     }
   }
 
-  .dropdown-menu {
-    margin-top: 0;
-  }
-
   .megamenu {
+    background: $gray-dark;
+    margin-top: 0;
+    padding: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    /* Multi-row megamenu */
+    & > div {
+      background: rgb(55 63 68);
+      border-bottom: 1px ridge $dark;
+    }
+    &.multi-row {
+      .container:first-child {
+        border-bottom-width: 1px;
+      }
+    }
+
     h3 {
       color: $header-link-color;
       font-size: 1.3em;
@@ -171,15 +166,6 @@ ul[role="menubar"] a[aria-haspopup="true"] {
 
       li {
         margin-bottom: .5rem;
-
-        .nav-link {
-          @include nav-menu-style;
-
-        &:focus,
-        &:hover {
-          @include nav-menu-hover-style;
-          background: $dark;
-        }
 
         .fa-li {
           color: $unb-red;
@@ -192,7 +178,14 @@ ul[role="menubar"] a[aria-haspopup="true"] {
         }
 
         a {
+          @include nav-menu-style;
           line-height: 1.4rem;
+
+          &:focus,
+          &:hover {
+            @include nav-menu-hover-style;
+            background: $dark;
+          }
 
           &:before {
             content: none;
@@ -202,4 +195,4 @@ ul[role="menubar"] a[aria-haspopup="true"] {
     }
   }
 }
-/* END Megamenus */
+/* END Megamenu */
