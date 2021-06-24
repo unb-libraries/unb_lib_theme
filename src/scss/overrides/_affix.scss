@@ -2,7 +2,7 @@
   background: $unb-red;
   box-shadow: 0 4px 4px -1px rgba(17,17,17,0.7);
   position: fixed!important;
-  @include css3-prefix(transition, all .25s ease-in);
+  @include css3-prefix(transition, background-color .25s ease-in-out);
 }
 .affix ul[role="menubar"] a[aria-haspopup="true"] {
   color: $white;
