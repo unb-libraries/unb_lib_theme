@@ -460,6 +460,7 @@ ol, ul {
         }
     }
 }
+
 .list-colcount-2 {
     column-count: 2;
     padding-inline-start: 1.15rem;
@@ -468,6 +469,16 @@ ol, ul {
       margin-bottom: .25rem;
       margin-right: 1rem;
     }
+}
+/* Breakpoint fix: 2-col list in 33% sidebar */
+.layout--twocol-section {
+  &.layout--twocol-section--67-33 {
+    @media(max-width: 1199px) {
+      .list-colcount-2 {
+        column-count: 1;
+      }
+    }
+  }
 }
 
 /* Add larger breakpoint option for container */
