@@ -381,5 +381,14 @@ ul[role="menubar"] a[aria-haspopup="true"] {
       }
     }
   }
+
+  /* Megamenu multi-row + 4 column desktop override */
+  @media (min-width: 992px) {
+    .multi-row {
+      .flex-lg-row > div {
+        width: 25%;
+      }
+    }
+  }
 }
 /* END Megamenu */
