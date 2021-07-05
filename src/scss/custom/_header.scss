@@ -297,7 +297,8 @@ ul[role="menubar"] a[aria-haspopup="true"] {
     border-right: none;
     border-left: none;
     border-bottom: 3px solid transparent;
-    color: $white;
+    color: $black;
+    line-height: 1.4;
     height: 100%;
     margin: 0;
     text-align: left;
@@ -310,7 +311,7 @@ ul[role="menubar"] a[aria-haspopup="true"] {
     &:focus,
     &:hover {
       border-bottom: 3px solid $header-hover-color;
-      color: $gray-300;
+      color: $dark;
     }
 
     span.text-nowrap {
