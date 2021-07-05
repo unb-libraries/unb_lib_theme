@@ -143,7 +143,7 @@
 
       .navbar-nav {
         a {
-          @include css3-prefix(transition, all .15s ease-out)
+          @include css3-prefix(transition, all .15s ease-out);
           line-height: 1.4;
         }
 
