@@ -144,6 +144,9 @@
       .navbar-nav {
         a {
           @include css3-prefix(transition, all .15s ease-out);
+        }
+
+        button {
           line-height: 1.4;
         }
 
