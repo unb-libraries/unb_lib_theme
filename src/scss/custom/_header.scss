@@ -300,7 +300,9 @@ ul[role="menubar"] a[aria-haspopup="true"] {
     color: $black;
     line-height: 1.4;
     height: 100%;
-    margin: 0;
+    margin: 1px 0 0 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
     text-align: left;
     width: 100%;
 
