@@ -5,7 +5,9 @@
   display: inline;
 }
 
-/* Affix: swap unb lib logo img visibility. */
+#navbar-main.affix {
+  max-width: 100%;
+}
 .affix {
   background-color: $unb-red;
   box-shadow: 0 4px 4px -1px rgba(17, 17, 17, 0.7);
@@ -25,10 +27,10 @@
     color: $black;
   }
 
+  /* Swap unb lib branding img visibility. */
   .unblib-logo {
     display: none;
   }
-
   .unblib-logo-affix {
     display: inline;
   }

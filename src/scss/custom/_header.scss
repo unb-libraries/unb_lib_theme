@@ -14,15 +14,6 @@
     }
   }
 
-  /* OVERRIDE - to do: remove original affix */
-  #header .affix li.show > .nav-link,
-  #header .affix .megamenu-li > .nav-link:focus,
-  #header .affix .megamenu-li > .nav-link:hover,
-  .affix .branding a:focus,
-  .affix .branding a:hover {
-    border-bottom-color: $white;
-  }
-
   button[data-target="#navbar"][aria-expanded="false"]:after {
     @include link-fa-icon('\f0c9', left);
   }
@@ -99,20 +90,13 @@
       line-height: normal;
     }
   }
-  #navbar-main:not(.affix) {
+  #navbar-main {
     #navbar-main-content {
-      @include css3-prefix(transition, background-color .35s ease-in);
-      border-left: 1px solid transparent;
-      border-right: 1px solid transparent;
       padding-bottom: 1px;
     }
+  }
 
-    &:hover {
-      #navbar-main-content {
-        background-color: rgb(55 63 68 / 99%);
-      }
-    }
-
+  #navbar-main:not(.affix) {
     .branding h1 {
       min-width: auto;
     }
