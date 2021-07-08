@@ -9,6 +9,8 @@
   max-width: 100%;
 }
 .affix {
+  animation-name: slideDown;
+  animation-duration: $duration-slow;
   background-color: $unb-red;
   box-shadow: 0 4px 4px -1px rgba(17, 17, 17, 0.7);
   position: fixed !important;

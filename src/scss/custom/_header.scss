@@ -275,7 +275,7 @@ ul[role="menubar"] a[aria-haspopup="true"] {
   position: static;
 
   button.nav-link {
-    @include css3-prefix(transition, all .3s ease-in-out);
+    @include css3-prefix(transition, background-color $duration-slow ease-in-out, border-bottom $duration-default ease-in-out);
     background: none;
     border-top: none;
     border-right: none;
