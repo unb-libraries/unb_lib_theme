@@ -16,11 +16,6 @@
         font-size: 1.1em;
     }
 
-    .block {
-        border: none;
-        margin: 0;
-    }
-
     & > div:not(.footer-middle) a.nav-link::after {
         color: $unb-red;
         font-family: "Font Awesome 5 Free";
@@ -30,6 +25,11 @@
         opacity: .9;
         padding-right: 2px;
         vertical-align: middle;
+    }
+
+    .block {
+        border: none;
+        margin: 0;
     }
 
     .footer-top {
@@ -43,6 +43,9 @@
 
         .unb-logo {
             text-align: right;
+            @media (max-width: 981px) {
+                width: 100%;
+            }
 
             a {
                 display: block;
