@@ -11,6 +11,10 @@
         opacity: 1;
         visibility: visible;
       }
+
+      button {
+        color: $black;
+      }
     }
   }
 
@@ -34,6 +38,7 @@
   @media (max-width: 991px) {
     #navbar-main #navbar {
       button {
+        color: $white;
         font-size: 1.3rem;
 
         &:after {
@@ -129,7 +134,6 @@
         }
 
         button {
-          color: $black;
           line-height: 1.4;
         }
 
