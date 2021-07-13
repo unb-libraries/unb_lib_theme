@@ -324,7 +324,7 @@ ul[role="menubar"] a[aria-haspopup="true"] {
 
     /* Multi-row megamenu (borrow BS4 dropdown menu border) */
     & > div {
-      background: rgb(55 63 68);
+      background: $gray-dark;
 
       &:first-child {
         border-top: 1px solid rgb(0 0 0 / 18%);
