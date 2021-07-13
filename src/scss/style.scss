@@ -119,6 +119,9 @@ a.nav-link[href$="//unb.ca"]::before {
  * Accessibility
  */
 /* Skip link */
+#back-top span#button {
+    opacity: .7;
+}
 #skiptocontent a {
     background: $skip-link-bg;
     color: $white;
@@ -466,7 +469,7 @@ ol, ul {
     padding-inline-start: 1.15rem;
 
     li {
-      margin-bottom: .25rem;
+      margin-bottom: .5rem;
       margin-right: 1rem;
     }
 }
