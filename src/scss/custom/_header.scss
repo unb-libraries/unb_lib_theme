@@ -1,7 +1,7 @@
 #header {
   @media (min-width: 992px) {
     .megamenu {
-      @include css3-prefix(transition, all $duration-default ease-in);
+      @include css3-prefix(transition, all $duration-default ease-in-out);
       background: none;
       display: initial;
       opacity: 0;
