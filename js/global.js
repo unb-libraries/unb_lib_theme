@@ -22,12 +22,12 @@
         let scroll = $(window).scrollTop();
         if (scroll >= 130 && window.width >= 977) {
           header.addClass("affix");
-          header_nav_buttons.removeClass("py-lg-4");
-          header_logo.removeClass("py-2");
+          // header_nav_buttons.removeClass("py-lg-4");
+          // header_logo.removeClass("py-2");
         } else {
           header.removeClass("affix");
-          header_nav_buttons.addClass("py-lg-4");
-          header_logo.addClass("py-2");
+          // header_nav_buttons.addClass("py-lg-4");
+          // header_logo.addClass("py-2");
         }
       });
       setBanner(banner);
