@@ -1,7 +1,7 @@
 #header {
   @media (min-width: 992px) {
     .megamenu {
-      @include css3-prefix(transition, all .35s ease-in);
+      @include css3-prefix(transition, all $duration-default ease-in);
       background: none;
       display: initial;
       opacity: 0;
@@ -130,7 +130,7 @@
 
       .navbar-nav {
         a {
-          @include css3-prefix(transition, all .15s ease-out);
+          @include css3-prefix(transition, all $duration-fast ease-out);
         }
 
         button {
@@ -277,7 +277,11 @@ ul[role="menubar"] a[aria-haspopup="true"] {
   position: static;
 
   button.nav-link {
-    @include css3-prefix(transition, background-color $duration-slow ease-in-out, border-bottom $duration-default ease-in-out);
+    @include css3-prefix(transition,
+      background-color $duration-default ease-in-out,
+      border-bottom $duration-default ease-in-out,
+      color $duration-default ease-in-out
+    );
     background: none;
     border-top: none;
     border-right: none;
