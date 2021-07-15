@@ -1,0 +1,23 @@
+/* Colors */
+$bg-color: $dark;
+$blue: #007fa3;
+$red: #900;
+
+/* Breakpoints */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1194px,
+  xxl: 1366px,
+  xxxl: 1536px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1152px,
+  xxl: 1334px,
+  xxxl: 1430px
+);

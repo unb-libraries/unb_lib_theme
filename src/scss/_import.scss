@@ -2,16 +2,15 @@
 @import "../../../../../vendor/twbs/bootstrap/scss/functions";
 @import "../../../../../vendor/twbs/bootstrap/scss/variables";
 
-/* Bootstrap customizations */
-@import 'custom/variables';
+/* BS4 variable customizations */
+@import "custom/variables";
+@import "overrides/variables";
 
-/* Bootstrap v4.x */
+/* Override BS4 !default vars with var customizations above */
 @import "../../../../../vendor/twbs/bootstrap/scss/bootstrap.scss";
 
-/* Custom mixins */
-@import 'custom/mixins';
-
 /* Base theme components */
+@import 'custom/mixins';
 @import 'custom/animations';
 @import 'custom/breadcrumb';
 @import 'custom/buttons';
