@@ -1,9 +1,3 @@
-/* Bootstrap variable color overrides */
-$bg-color: $dark;
-$blue: #007fa3;
-$red: #900;
-
-/* BEGIN Custom variables */
 /* Colors */
 $alert-light-wcag: #515153;
 $alert-link: #394446;
@@ -27,17 +21,17 @@ $link-hover-color: #900;
 $link-hover-decoration: none;
 $skip-link-bg: #bf1722;
 $navbar-dark-hover: #fec700;
-/* END Custom variables */
+
+/* Transition timings */
+$duration-slow: .5s;
+$duration-default: .35s;
+$duration-fast: .2s;
 
 /* Layout Builder */
 $twocol-padding-size: 2.5rem;
 
-/* Bootstrap theme color customizations */
+/* Custom them color names */
 $theme-colors: (
   black: $black,
   unb-red: $unb-red
 );
-
-$duration-slow: .5s;
-$duration-default: .35s;
-$duration-fast: .2s;

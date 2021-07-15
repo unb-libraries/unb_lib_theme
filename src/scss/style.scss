@@ -484,10 +484,3 @@ ol, ul {
     }
   }
 }
-
-/* Add larger breakpoint option for container */
-@media (min-width: 1360px) {
-    .container {
-        max-width: 1230px;
-    }
-}
