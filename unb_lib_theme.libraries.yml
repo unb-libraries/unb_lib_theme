@@ -9,7 +9,7 @@ global-styling:
       minified: true
     js/focus-ring.min.js: { minified: true }
     js/animated-focus-ring.min.js: { minified: true }
-    js/global.js: {}
+    js/global.min.js: { minified: true }
   dependencies:
     - core/jquery
     - calendar_hours_client/calendar-hours
