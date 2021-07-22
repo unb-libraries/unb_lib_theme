@@ -339,7 +339,9 @@ a.nav-link[href$="//unb.ca"]::before {
         color: $white;
 
         &:focus,
-        &:hover {
+        &:hover,
+        &:not(:disabled):not(.disabled):active {
+            background: $gray-900;
             color: $yellow;
             border-color: rgba(0, 0, 0, 0.8);
         }
