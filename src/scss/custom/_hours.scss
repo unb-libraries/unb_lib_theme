@@ -7,22 +7,6 @@
   @include opacity(.8);
   @include css3-prefix(transition, opacity .25s ease-in-out);
 
-  a {
-    border-bottom: 1px dotted $gray-light;
-    color: $white;
-    font-weight: normal;
-    padding: 2px 0;
-    &:focus {
-      border-bottom: none;
-      color: $navbar-dark-hover;
-    }
-    &:hover {
-      border-color: $navbar-dark-hover;
-      color: $navbar-dark-hover;
-      text-decoration: none;
-    }
-  }
-
   label {
     font-weight: bold;
   }
@@ -35,8 +19,7 @@
       caption-side: top;
       color: #fff;
       font-family: 'ProximaNovaA-Bold', 'Century Gothic', AppleGothic, Arial, sans-serif;
-      font-size: .9rem;
-      font-weight: bold;
+      font-size: 1rem;
       margin: 1.75rem 1.75rem .5rem 1.75rem;
       padding: 0;
     }
@@ -44,7 +27,7 @@
     tbody {
       td,
       th {
-        font-size: .86rem;
+        font-size: .96rem;
         font-weight: normal;
       }
     }
@@ -59,6 +42,23 @@
         padding-right: 1.75rem;
         padding-top: .25rem;
         vertical-align: top;
+
+        a {
+          border-bottom: 1px dotted $gray-light;
+          color: $white;
+          font-weight: normal;
+          padding: 2px 0;
+
+          &:focus {
+            border-bottom: none;
+            color: $navbar-dark-hover;
+          }
+          &:hover {
+            border-color: $navbar-dark-hover;
+            color: $navbar-dark-hover;
+            text-decoration: none;
+          }
+        }
 
         ul {
           list-style-type: none;
