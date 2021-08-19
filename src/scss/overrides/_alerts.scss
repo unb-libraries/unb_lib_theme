@@ -4,6 +4,12 @@
   a:not(.btn) {
     color: $alert-link;
     border-bottom: 1px dotted $alert-link;
+    text-decoration: none!important;
+
+    &:focus,
+    &:hover {
+      border-bottom-style: solid;
+    }
   }
 }
 .alert-light {
