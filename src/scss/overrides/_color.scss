@@ -2,6 +2,21 @@
   background-color: $navbar-dark;
 }
 
+/* Buttons */
+.btn-dark {
+  &:hover,
+  &:focus {
+    background-color: rgb(35, 39, 43);
+  }
+}
+
+.btn-primary {
+  &:focus,
+  &:hover {
+    color: $text-yellow;
+  }
+}
+
 .btn-warning {
   &:focus,
   &:hover {
@@ -9,10 +24,4 @@
     color: inherit;
   }
 }
-
-.btn-dark {
-  &:hover,
-  &:focus {
-    background-color: rgb(35, 39, 43);
-  }
-}
+/* END Buttons */

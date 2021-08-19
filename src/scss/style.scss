@@ -334,21 +334,6 @@ a.nav-link[href$="//unb.ca"]::before {
         }
     }
 
-    .btn-primary,
-    .webform-button--submit,
-    .webform-button--submit:active {
-        background-color: $black;
-        border-color: rgba(0, 0, 0, 0.5);
-        color: $white;
-
-        &:focus,
-        &:hover,
-        &:not(:disabled):not(.disabled):active {
-            background: $gray-900;
-            color: $yellow;
-            border-color: rgba(0, 0, 0, 0.8);
-        }
-    }
     .btn[id="edit-cancel"],
     .btn[value="Cancel"],
     .btn[value="Clear"],
