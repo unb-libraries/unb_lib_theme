@@ -61,7 +61,7 @@ function _unb_lib_theme_get_header_uri_setting() {
  *   The refresh URI.
  */
 function _unb_lib_theme_get_header_write_path() {
-  $path = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
+  $path = \Drupal::service('file_system')->realpath(\Drupal::config('system.file')->get('default_scheme') . "://");
   return !empty(theme_get_setting('header_write_path')) ? theme_get_setting('header_write_path') : "{$path}/head-nav.html.twig";
 }
 
@@ -71,7 +71,7 @@ function _unb_lib_theme_get_header_write_path() {
 function _unb_lib_theme_update_header() {
   $client = \Drupal::httpClient();
   $res = $client->get(_unb_lib_theme_get_header_uri_setting());
-  $path = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
+  $path = \Drupal::service('file_system')->realpath(\Drupal::config('system.file')->get('default_scheme') . "://");
   file_put_contents(_unb_lib_theme_get_header_write_path(), $res->getBody());
   drupal_flush_all_caches();
 }
