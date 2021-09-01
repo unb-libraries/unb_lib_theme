@@ -69,3 +69,14 @@ p:last-child,
     margin-top: 0;
   }
 }
+
+// unb-lib.css
+@media screen and (min-width: 1000px) {
+  .fhmm .navbar-nav > li > a {
+    border: 3px solid transparent;
+    display: inherit;
+    height: inherit;
+    line-height: normal;
+    vertical-align: middle;
+  }
+}
