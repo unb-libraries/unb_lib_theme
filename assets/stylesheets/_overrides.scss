@@ -114,3 +114,10 @@ p:last-child,
     margin-top: .75rem;
   }
 }
+// Propagate navbar adjustments to affixed version.
+nav.affix .navbar-nav > li > a {
+    height: inherit;
+    line-height: normal;
+    padding-bottom: .25rem;
+    padding-top: .25rem;
+}
