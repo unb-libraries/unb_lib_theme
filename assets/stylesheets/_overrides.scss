@@ -77,13 +77,10 @@ p:last-child,
 }
 
 // unb-lib.css fixes.
-@media screen and (min-width: 1000px) {
-  .fhmm .navbar-nav > li > a {
-    border: 3px solid transparent;
-    display: inherit;
-    height: inherit;
-    line-height: normal;
-    vertical-align: middle;
+// Navbar logo breakpoint position.
+@media screen and (min-width: 992px) and (max-width: 1000px) {
+  .navbar-default .UNBLib-logo {
+    width: 100%;
   }
 }
 nav.affix .navbar-nav > li > a {
