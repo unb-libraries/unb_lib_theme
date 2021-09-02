@@ -86,3 +86,9 @@ p:last-child,
     vertical-align: middle;
   }
 }
+nav.affix .navbar-nav > li > a {
+    height: inherit;
+    line-height: normal;
+    padding-bottom: .25rem;
+    padding-top: .25rem;
+}
