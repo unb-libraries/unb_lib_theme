@@ -83,9 +83,23 @@ p:last-child,
     width: 100%;
   }
 }
-nav.affix .navbar-nav > li > a {
+// Navbar adjustment (while logo/navbar nav on separate rows).
+@media screen and (max-width: 1000px) {
+  .navbar-default #defaultmenu .dropdown a.dropdown-toggle {
+    border: 3px solid transparent;
     height: inherit;
     line-height: normal;
     padding-bottom: .25rem;
     padding-top: .25rem;
+  }
+}
+// Navbar adjustment (after logo/navbar nav on same row).
+@media screen and (min-width: 1001px) {
+  .navbar-default #defaultmenu .dropdown a.dropdown-toggle {
+    border: 3px solid transparent;
+    display: inherit;
+    height: inherit;
+    line-height: normal;
+    vertical-align: middle;
+  }
 }
