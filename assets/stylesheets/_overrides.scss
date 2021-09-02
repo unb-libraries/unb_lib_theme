@@ -125,4 +125,11 @@ nav.affix .navbar-nav > li > a {
 // Navbar main button text adjustment: mobile=no wrapping, >mobile=controlled wrap.
 #defaultmenu .dropdown a span.text-nowrap {
   display: inline;
+
+  @media (min-width: 768px) {
+    &:after {
+      content: "\a";
+      white-space: pre;
+    }
+  }
 }
