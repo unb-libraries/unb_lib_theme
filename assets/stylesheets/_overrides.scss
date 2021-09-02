@@ -103,3 +103,14 @@ p:last-child,
     vertical-align: middle;
   }
 }
+// Mobile Navbar main button adjustments.
+@media screen and (max-width: 767px) {
+  .navbar-default #defaultmenu .dropdown a.dropdown-toggle {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  #defaultmenu .dropdown > a::after {
+    margin-bottom: .75rem;
+    margin-top: .75rem;
+  }
+}
