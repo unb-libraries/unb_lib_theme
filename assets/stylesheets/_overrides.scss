@@ -15,7 +15,7 @@
 @import 'component/tabs';
 @import 'component/toolbar';
 
-// jQuery UI style overrides.
+// jQuery UI style overrides
 @import 'jquery-ui/autocomplete';
 
 ol,
@@ -27,12 +27,12 @@ ul {
   }
 }
 
-// Page header.
+// Page header
 .page-header {
   margin-top: 0;
 }
 
-// Footer.
+// Footer
 .footer {
   margin-top: 45px;
   padding-top: 35px;
@@ -40,14 +40,14 @@ ul {
   border-top: 1px solid #E5E5E5;
 }
 
-// Paragraphs.
+// Paragraphs
 p:last-child,
 .form-group:last-child,
 .panel:last-child {
   margin-bottom: 0;
 }
 
-// Help region.
+// Help region
 .region-help {
   > .glyphicon {
     font-size: $font-size-large;
@@ -71,7 +71,7 @@ p:last-child,
 }
 
 
-// Previously newspapers 'navbar-header'.
+// Previously newspapers 'navbar-header'
 .navbar-default {
   background-color: $white;
   font-family: 'Source Sans Pro',"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -94,6 +94,13 @@ p:last-child,
           background: inherit!important;
           margin-bottom: 0;
           text-align: left;
+
+          &:focus,
+          &:hover,
+          &:active {
+            font-weight: normal;
+            text-decoration: none;
+          }
 
           &:after {
             content: '\f077';
@@ -207,9 +214,9 @@ p:last-child,
   }
 }
 
-// Navbar logo breakpoint position.
+// Navbar logo breakpoint position
 @media screen and (min-width: 768px) and (max-width: 1000px) {
-  /* Premature Affix fix */
+  // Premature Affix fix
   .container nav.affix {
     margin-left: -15px;
     margin-right: -15px;
@@ -242,32 +249,32 @@ p:last-child,
   }
 }
 
-/* Center unb logo between affix trigger/large width */
+// Center unb logo between affix trigger/large width
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   .navbar-default .UNBLib-logo {
     width: 100%;
   }
 }
 
-/* Remove unb-lib nav bottom border */
+// Remove unb-lib nav bottom border
 .navbar.fhmm.affix-top {
   border-bottom: none;
 }
 
-// Main navbar multiple megamenu rows.
+// Main navbar multiple megamenu rows
 .dropdown-menu .row:not(:last-child) {
   border-bottom: 1px solid rgba(0,0,0,0.18);
   padding-bottom: 1rem;
 }
 
-// unb-lib.css fixes.
-// Navbar logo breakpoint position.
+// BEGIN unb-lib.css fixes.
+// Navbar logo breakpoint position
 @media screen and (min-width: 992px) and (max-width: 1000px) {
   .navbar-default .UNBLib-logo {
     width: 100%;
   }
 }
-// Navbar adjustment (while logo/navbar nav on separate rows).
+// Navbar adjustment (while logo/navbar nav on separate rows)
 @media screen and (max-width: 1000px) {
   .navbar-default #defaultmenu .dropdown a.dropdown-toggle {
     border: 3px solid transparent;
@@ -277,7 +284,7 @@ p:last-child,
     padding-top: .25rem;
   }
 }
-// Navbar adjustment (after logo/navbar nav on same row).
+// Navbar adjustment (after logo/navbar nav on same row)
 @media screen and (min-width: 1001px) {
   .navbar-default #defaultmenu .dropdown a.dropdown-toggle {
     border: 3px solid transparent;
@@ -287,7 +294,7 @@ p:last-child,
     vertical-align: middle;
   }
 }
-// Mobile Navbar main button adjustments.
+// Mobile Navbar main button adjustments
 @media screen and (max-width: 767px) {
   .navbar-default #defaultmenu .dropdown a.dropdown-toggle {
     padding-bottom: 1rem;
@@ -298,7 +305,7 @@ p:last-child,
     margin-top: .75rem;
   }
 }
-// Propagate navbar adjustments to affixed version.
+// Propagate navbar adjustments to affixed version
 nav.affix .navbar-nav > li > a {
     height: inherit;
     line-height: normal;
@@ -306,7 +313,7 @@ nav.affix .navbar-nav > li > a {
     padding-top: .25rem;
 }
 
-// Navbar main button text adjustment: mobile=no wrapping, >mobile=controlled wrap.
+// Navbar main button text adjustment: mobile=no wrapping, >mobile=controlled wrap
 #defaultmenu .dropdown a span.text-nowrap {
   display: inline;
 
