@@ -324,3 +324,30 @@ nav.affix .navbar-nav > li > a {
     }
   }
 }
+
+// Footer
+footer {
+  #bigFooter,
+  #subBigFooter {
+    li {
+      line-height: inherit;
+      margin-bottom: 1rem;
+
+      a:after {
+        display: inline-block;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    #subBigFooter .row,
+    .joinConver {
+      & > div,
+      & > div#pushRight {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
+// END unb-lib.css fix
