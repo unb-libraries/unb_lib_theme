@@ -16,6 +16,11 @@
     color: $text-yellow;
   }
 }
+// Differentiate Reset from Submit
+input[data-drupal-selector="edit-reset"].btn-primary {
+    background: $white;
+    color: $black;
+}
 
 .btn-warning {
   &:focus,
