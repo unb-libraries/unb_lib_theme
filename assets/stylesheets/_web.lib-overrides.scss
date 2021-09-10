@@ -59,7 +59,9 @@ $white: #fff;
         }
       }
 
-      &.open {
+      &.open,
+      &:focus,
+      &:hover {
         background-image: -webkit-linear-gradient(top,#dbdbdb 0,#e2e2e2 100%);
         background-image: -o-linear-gradient(top,#dbdbdb 0,#e2e2e2 100%);
         background-image: -webkit-gradient(linear,left top,left bottom,from(#dbdbdb),to(#e2e2e2));
