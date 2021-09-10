@@ -80,6 +80,7 @@ p:last-child,
   #defaultmenu {
     padding-left: 0;
     padding-right: 0;
+
     @media screen and (min-width: 768px) {
       padding-left: 1px;
       padding-right: 1px;
@@ -305,12 +306,34 @@ p:last-child,
     margin-top: .75rem;
   }
 }
+
+// Main Navbar md+ breakpint
+@media (min-width: 768px) {
+  #defaultmenu {
+    & > ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      & > li {
+        display: block;
+        width: 100%;
+
+        & > a {
+          padding-bottom: 1.9rem;
+          padding-top: 1.9rem;
+        }
+      }
+    }
+  }
+}
+
 // Propagate navbar adjustments to affixed version
-nav.affix .navbar-nav > li > a {
+nav.affix #defaultmenu .navbar-nav > li > a {
     height: inherit;
     line-height: normal;
-    padding-bottom: .25rem;
-    padding-top: .25rem;
+    padding-bottom: .33rem;
+    padding-top: .33rem;
 }
 
 // Navbar main button text adjustment: mobile=no wrapping, >mobile=controlled wrap
