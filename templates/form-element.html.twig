@@ -53,9 +53,6 @@
         {% set wrapperclass = "custom-control custom-checkbox" %}
         {% set labelclass = "custom-control-label" %}
         {% set inputclass = "custom-control-input" %}
-        {% if input_attributes.hasClass('custom-control-inline') %}
-            {% set wrapperclass = wrapperclass ~ ' custom-control-inline' %}
-        {% endif %}
     {% elseif customtype == 'switch' %}
         {% set wrapperclass = "custom-control custom-switch" %}
         {% set labelclass = "custom-control-label" %}
@@ -72,9 +69,6 @@
         {% set wrapperclass = "custom-control custom-radio" %}
         {% set labelclass = "custom-control-label" %}
         {% set inputclass = "custom-control-input" %}
-        {% if input_attributes.hasClass('custom-control-inline') %}
-            {% set wrapperclass = wrapperclass ~ ' custom-control-inline' %}
-        {% endif %}
     {% else %}
         {% set wrapperclass = "form-check" %}
         {% set labelclass = "form-check-label" %}
@@ -117,7 +111,7 @@
                 {{ input_title | raw }}
             </label>
         {% endif %}
-        <input{{ input_attributes.addClass(inputclass).removeClass('custom-control-inline') }}>
+        <input{{ input_attributes.addClass(inputclass) }}>
         {% if label_display == 'after' %}
             <label {{ label_attributes.addClass(labelclass).setAttribute('for', input_attributes.id) }}>
                 {{ input_title | raw }}
