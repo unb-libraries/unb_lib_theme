@@ -29,3 +29,8 @@ label {
     margin-right: 1rem;
   }
 }
+
+// Asterisk replaced by text (required) in form-element-label/datetime-wrapper templates
+.form-required::after {
+  content: none;
+}
