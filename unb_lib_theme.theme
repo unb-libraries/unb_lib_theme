@@ -10,6 +10,15 @@ use Symfony\Component\Finder\Finder;
 const BANNER_SUBDIR = '/img/banner';
 
 /**
+ * Implements template_preprocess_radios().
+ */
+function unb_lib_theme_preprocess_radios(&$variables) {
+  if (count($variables['element']['#options']) < 5) {
+    $variables['custom_inline'] = TRUE;
+  }
+}
+
+/**
  * Implements hook_theme_preprocess_page().
  */
 function unb_lib_theme_preprocess_page(&$variables) {
