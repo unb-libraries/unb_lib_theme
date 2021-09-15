@@ -10,13 +10,22 @@ fieldset {
 }
 
 label {
-  /* Reduce Bootstrap's large separation between checkmark and label */
+  // Reduce Bootstrap's large separation between checkmark and label
   & .form-check {
     padding-left: .25rem
   }
 
-  /* Better vertical alignment for radio/checkbox inputs and adjacent label */
+  // Better vertical alignment for radio/checkbox inputs and adjacent label
   & .custom-control {
     padding-top: 1px;
+  }
+}
+
+// Mimic BS4.x|form|custom-control-inline with single parent-level class
+.custom-control-wrapper-inline {
+  & > div {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-right: 1rem;
   }
 }
