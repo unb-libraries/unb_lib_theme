@@ -1,0 +1,16 @@
+.wrapper-list-inline {
+  ul {
+    li {
+      display: inline-block;
+
+      &:not(:last-child):after {
+        color: #999;
+        content: '|';
+      }
+
+      a {
+        margin-right: .25rem;
+      }
+    }
+  }
+}
