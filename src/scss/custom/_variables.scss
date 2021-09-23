@@ -12,6 +12,7 @@ $header-link-color: #ddd;
 $header-hover-color: #bd0000;
 $navbar-dark: #1B2125;
 $text-yellow: #ffc107;
+$unb-light: #f5f5f5;
 $unb-red: #d82e3b;
 
 /* Links */
@@ -33,5 +34,6 @@ $twocol-padding-size: 2.5rem;
 /* Custom them color names */
 $theme-colors: (
   black: $black,
+  unb-light: $unb-light,
   unb-red: $unb-red
 );
