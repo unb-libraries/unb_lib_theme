@@ -6,3 +6,12 @@
     top: 0;
   }
 }
+
+@keyframes slideDownToolbar {
+  from {
+    top: -2.5rem;
+  }
+  to {
+    top: $admin-toolbar-height;
+  }
+}

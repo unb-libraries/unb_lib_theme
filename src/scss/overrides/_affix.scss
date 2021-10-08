@@ -37,6 +37,12 @@
     display: inline;
   }
 }
+#toolbar-administration + div {
+  #navbar-main.affix {
+    animation-name: slideDownToolbar;
+    top: $admin-toolbar-height;
+  }
+}
 
 #header .affix li.show > .nav-link,
 #header .affix .megamenu-li > .nav-link:focus,
