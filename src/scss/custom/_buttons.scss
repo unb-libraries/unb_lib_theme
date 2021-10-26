@@ -40,3 +40,15 @@
     }
   }
 }
+
+// Custom disabled button.
+input {
+  &.is-disabled {
+    text-decoration: line-through;
+
+    &:hover {
+      cursor: not-allowed;
+      text-decoration: line-through;
+    }
+  }
+}

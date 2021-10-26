@@ -11,8 +11,8 @@
 }
 
 .btn-primary {
-  &:focus,
-  &:hover {
+  &:not(.is-disabled):focus,
+  &:not(.is-disabled):hover {
     color: $text-yellow;
   }
 }
