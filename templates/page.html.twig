@@ -76,6 +76,7 @@
 %}
 {% set footer_classes = 'site-footer p-0' %}
 
+{% block header %}
 <header id="header" class="header" aria-label="Site header">
     {{ attach_library('alert_scheduler_client/alerts') }}
     <div id="emergency-banner"><div class="container" data-alerts-container></div></div>
@@ -168,6 +169,7 @@
         </div>
     {% endif %}
 </header>
+{% endblock %}
 
 {% block content %}
     <div id="main" class="my-2 {{ container }}">
