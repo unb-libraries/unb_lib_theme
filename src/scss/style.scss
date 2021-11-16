@@ -400,49 +400,7 @@ a.nav-link[href$="//unb.ca"]::before {
 }
 /* END dark-themed content */
 
-/* Utility Classes */
-.hover-grow {
-    @include css3-prefix(transition, transform .3s ease-in-out);
-
-    &:focus,
-    &:hover {
-        @include css3-prefix(transform, scale(1.03));
-    }
-}
-.hover-grow-h {
-    @include css3-prefix(transition, transform .3s ease-in-out);
-
-    &:focus,
-    &:hover {
-        @include css3-prefix(transform, scale(1.03 ,1));
-    }
-}
-.hover-grow-v {
-    @include css3-prefix(transition, transform .3s ease-in-out);
-
-    &:focus,
-    &:hover {
-        @include css3-prefix(transform, scale(1, 1.03));
-    }
-}
-/* Toggle Icons */
-.icon-caret-h {
-    button {
-        &[aria-expanded="false"] {
-            &:before {
-                @include link-fa-icon('\f150', right);
-            }
-        }
-        &[aria-expanded="true"] {
-            &:before {
-                @include link-fa-icon('\f151', '', right);
-            }
-        }
-    }
-}
-.text-red {
-    color: $red;
-}
+/* Misc rules */
 ol, ul {
     &.mt-md-li {
         li {
