@@ -3,6 +3,12 @@
 }
 
 table {
+  &.admin-operations {
+    td:last-child {
+      width: 16%;
+    }
+  }
+
   .thead-dark {
     /* Table dark header sticky fix */
     th {
