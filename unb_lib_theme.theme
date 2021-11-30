@@ -81,11 +81,12 @@ function unb_lib_theme_preprocess_page(&$variables) {
         ->exclude('front')
         ->exclude('disabled');
 
-      // Special banner folders - page path > base path > default.
-      $current_uri = explode('/', \Drupal::request()->getRequestUri());
-      $uri_base_path = $current_uri[1];
       $found_page_match = false;
       $uri_page_path = false;
+
+      // Special banner folders - page path > base path > default.
+      $current_uri = explode('/', \Drupal::request()->getRequestUri());
+
       if (count($current_uri) > 2) {
         $uri_page_path =  $current_uri[array_key_last($current_uri)];
       }
@@ -94,20 +95,29 @@ function unb_lib_theme_preprocess_page(&$variables) {
         foreach ($dirs->getIterator() as $iterator) {
           $dir = $iterator->getRelativePathname();
           $special_banner_pattern = '\b' . $dir . '\b';
+
           if (preg_match("/$special_banner_pattern$/", $uri_page_path)) {
             $banner_path .= '/' . $dir;
             $found_page_match = true;
-            break;
           }
         }
       }
+
       if (!$found_page_match) {
         foreach ($dirs->getIterator() as $iterator) {
           $dir = $iterator->getRelativePathname();
           $special_banner_pattern = '\b' . $dir . '\b';
-          if (preg_match("/^$special_banner_pattern/", $uri_base_path)) {
-            $banner_path .= '/' . $dir;
-            break;
+
+          // Use deepest-level subpath banner override.
+          for ($i = count($current_uri) - 1; $i > 0;  $i--) {
+            if (preg_match("/^$special_banner_pattern/", $current_uri[$i])) {
+              $found_page_match = true;
+              $banner_path .= '/' . $dir;
+              break;
+            }
+          }
+          if ($found_page_match) {
+           break;
           }
         }
       }
