@@ -69,9 +69,9 @@ function unb_lib_theme_preprocess_page(&$variables) {
   if ($variables['is_front']) {
     // Allow for special front page banners.
     $banner_path = $active_theme_path . BANNER_SUBDIR . '/front';
-  }
-  else {
+  } else {
     $banner_path = $active_theme_path . BANNER_SUBDIR;
+    $banner_path_subdirs = [];
     if (file_exists($banner_path) && is_dir($banner_path)) {
       $finder = new Finder();
       $dirs = $finder
@@ -80,45 +80,25 @@ function unb_lib_theme_preprocess_page(&$variables) {
         ->depth('== 0')
         ->exclude('front')
         ->exclude('disabled');
-
-      $found_page_match = false;
-      $uri_page_path = false;
-
-      // Special banner folders - page path > base path > default.
-      $current_uri = explode('/', \Drupal::request()->getRequestUri());
-
-      if (count($current_uri) > 2) {
-        $uri_page_path =  $current_uri[array_key_last($current_uri)];
+      foreach ($dirs->getIterator() as $iterator) {
+        $banner_path_subdirs[] = $iterator->getRelativePathname();
       }
+      $banner_path_subdirs = array_flip($banner_path_subdirs);
 
-      if ($uri_page_path) {
-        foreach ($dirs->getIterator() as $iterator) {
-          $dir = $iterator->getRelativePathname();
-          $special_banner_pattern = '\b' . $dir . '\b';
+      $current_url = parse_url(\Drupal::request()->getRequestUri(), PHP_URL_PATH);
+      $current_url_paths = explode('/', $current_url);
 
-          if (preg_match("/$special_banner_pattern$/", $uri_page_path)) {
-            $banner_path .= '/' . $dir;
-            $found_page_match = true;
-          }
-        }
-      }
+      // Reverse url paths array order: deepest to shallowest.
+      $current_url_paths = array_reverse($current_url_paths);
 
-      if (!$found_page_match) {
-        foreach ($dirs->getIterator() as $iterator) {
-          $dir = $iterator->getRelativePathname();
-          $special_banner_pattern = '\b' . $dir . '\b';
+      // Remove empty array element from explode().
+      array_pop($current_url_paths);
 
-          // Use deepest-level subpath banner override.
-          for ($i = count($current_uri) - 1; $i > 0;  $i--) {
-            if (preg_match("/^$special_banner_pattern/", $current_uri[$i])) {
-              $found_page_match = true;
-              $banner_path .= '/' . $dir;
-              break;
-            }
-          }
-          if ($found_page_match) {
-           break;
-          }
+      // Return banner for deepest url subpath found.
+      foreach ($current_url_paths as $sub_path) {
+        if (isset($banner_path_subdirs[$sub_path])) {
+          $banner_path .= '/' . $sub_path;
+          break;
         }
       }
     }
