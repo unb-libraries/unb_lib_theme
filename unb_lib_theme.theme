@@ -83,21 +83,18 @@ function unb_lib_theme_preprocess_page(&$variables) {
       foreach ($dirs->getIterator() as $iterator) {
         $banner_path_subdirs[] = $iterator->getRelativePathname();
       }
-      $banner_path_subdirs = array_flip($banner_path_subdirs);
 
       $current_url = parse_url(\Drupal::request()->getRequestUri(), PHP_URL_PATH);
-      $current_url_paths = explode('/', $current_url);
+      $url_path_segments = explode('/', $current_url);
 
-      // Reverse url paths array order: deepest to shallowest.
-      $current_url_paths = array_reverse($current_url_paths);
-
-      // Remove empty array element from explode().
-      array_pop($current_url_paths);
+      // Remove empty array element from explode() then order path segments from last to first.
+      array_shift($url_path_segments);
+      $url_path_segments = array_reverse($url_path_segments);
 
       // Return banner for deepest url subpath found.
-      foreach ($current_url_paths as $sub_path) {
-        if (isset($banner_path_subdirs[$sub_path])) {
-          $banner_path .= '/' . $sub_path;
+      foreach ($url_path_segments as $path_segment) {
+        if (in_array($path_segment, $banner_path_subdirs)) {
+          $banner_path .= '/' . $path_segment;
           break;
         }
       }
@@ -115,7 +112,7 @@ function unb_lib_theme_preprocess_page(&$variables) {
     $variables['banner_image'] = '/' . $banner_image;
   }
 
-  // Allow to toggle Top Header | User Account Links.
+  // Allow toggling Top Header | User Account Links.
   $variables['show_top_header_login'] = theme_get_setting('show_top_header_login');
   $variables['show_top_header_logout'] = theme_get_setting('show_top_header_logout');
 
