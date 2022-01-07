@@ -42,7 +42,7 @@
   }
 
   .container {
-    .alert:not(:last-child) {
+    .alert[style="display: inherit"]:not(:last-child) {
       border-bottom: 5px solid $navbar-dark;
     }
   }
