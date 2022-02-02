@@ -18,8 +18,14 @@
 }
 // Differentiate Reset from Submit
 input[data-drupal-selector="edit-reset"].btn-primary {
-    background: $white;
+  background: $white;
+  color: $black;
+
+  &:focus,
+  &:hover {
+    background: $gray-200;
     color: $black;
+  }
 }
 
 .btn-warning {
