@@ -40,6 +40,27 @@
   }
 }
 
+/* Linked images */
+.img-link a,
+a.img-link {
+  div {
+    display: inline-block;
+    margin: 0!important;
+  }
+
+  img {
+    @include opacity(1);
+    @include css3-prefix(transition, opacity .3s);
+    margin: 0;
+  }
+  &:focus,
+  &:hover {
+    img {
+      @include opacity(.75);
+    }
+  }
+}
+
 /* Opacity utility classes, including BS5.1.0 values */
 $opacities: 25, 50, 75, 80, 85, 90, 95;
 @each $value in $opacities {
