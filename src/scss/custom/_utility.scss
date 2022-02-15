@@ -41,6 +41,14 @@
 }
 
 /* Linked images */
+.img-link {
+  @include css3-prefix(transition, border-color .3s);
+
+  &:focus,
+  &:hover {
+    border-color: $gray-500;
+  }
+}
 .img-link a,
 a.img-link {
   div {
