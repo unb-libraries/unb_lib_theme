@@ -5,6 +5,6 @@
   "license": "MIT",
   "homepage": "https://github.com/unb-libraries/unb_lib_theme",
   "require": {
-    "twbs/bootstrap-sass": "^3.4.1"
+    "twbs/bootstrap-sass": "3.4.1"
   }
 }
