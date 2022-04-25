@@ -12,7 +12,8 @@
 
 .btn-primary {
   &:not(.is-disabled):focus,
-  &:not(.is-disabled):hover {
+  &:not(.is-disabled):hover,
+  &:not(:disabled):not(.disabled):active {
     color: $text-yellow;
   }
 }
@@ -21,6 +22,10 @@ input[data-drupal-selector="edit-reset"].btn-primary {
   background: $white;
   color: $black;
 
+  &:not(:disabled):not(.disabled):active {
+    background: $gray-200;
+    color: $black;
+  }
   &:focus,
   &:hover {
     background: $gray-200;
