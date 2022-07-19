@@ -13,9 +13,3 @@ global-styling:
   dependencies:
     - core/jquery
     - calendar_hours_client/calendar-hours
-  css:
-    base:
-      '//unb.ca/webcomps/_css/myfontswebfontskit.css': { type: external }
-      #theme:
-      #dist/css/style.css: {}
-      #dist/css/print.css: { media: print }
