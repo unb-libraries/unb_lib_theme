@@ -1,72 +1,68 @@
-# unb_lib_theme
-## Drupal 8+ Theme Based on Bootstrap.
-
-UNB Libraries Theme.
+# UNB Libraries Theme.
+Drupal 8 and 9 theme based on Bootstrap Barrio 5.1.x theme (https://www.drupal.org/project/bootstrap_barrio).<br>
+Note the theme branch <kbd>9.x</kbd> segment refers to Drupal 9.x while the <kbd>4.x</kbd> segment refers
+to Bootstrap 4. The <kbd>dev-8.x-4.x</kbd> branch is intended to use for projects using Drupal 8.x.
 
 ## License
 - unb_lib_theme is licensed under the MIT License:
   - http://opensource.org/licenses/mit-license.html
+
 - Attribution is not required, but much appreciated:
   - `unb_lib_theme by UNB Libraries`
 
 
 ## How to Use
-- This theme is not intended to be used directly but instead as a base theme that provides UNB Libraries branded
-  header/footer/assets etc. for a project's subtheme.
+This theme is not intended to be used directly but instead as a **parent theme** that provides UNB Libraries-branded
+header/footer/assets etc. for a project's subtheme. Requirements/dependencies are as follows:
 
-- add both `Bootstrap Barrio`, `UNB Libraries theme`, `UNB Libraries Banner Alerts` and
-  `UNB Libraries Calendar Hours Client` to your project repo <kbd>build/composer.json</kbd> file's require section<br> 
-  &NewLine;  
-  Example:<blockquote>
-  "require": {<br>
-    &nbsp;&nbsp;"drupal/bootstrap_barrio": "5.1.7",<br>
-    &nbsp;&nbsp;"unb-libraries/alert_scheduler": "dev-8.x-1.x",<br>
-    &nbsp;&nbsp;"unb-libraries/calendar_hours": "dev-9.x-1.x",<br>
-    &nbsp;&nbsp;"unb-libraries/unb_lib_theme": "dev-9.x-4.x",<br>
-    &nbsp;&nbsp;&hellip;<br>
-  }</blockquote>   
-  <b>Note:</b> The <i>emergency banner</i> and <i>banner image library hours</i> sections of the default page
+- add `Bootstrap Barrio`, `UNB Libraries Calendar Hours Client` and `UNB Libraries Banner Alerts`, along with `UNB Libraries theme`
+  to your project repo <kbd>build/composer.json</kbd> file's require section:
+  <pre><code>"require": {
+    &hellip;
+    "drupal/bootstrap_barrio": "5.1.10",
+    "unb-libraries/alert_scheduler": "dev-8.x-1.x",
+    "unb-libraries/calendar_hours": "dev-9.x-1.x",
+    "unb-libraries/unb_lib_theme": "dev-9.x-4.x",
+    &hellip;
+  }</code></pre>
+
+  The <i>emergency banner</i> and <i>banner image library hours</i> sections of the default page
   template header section depend on UNB Libraries' <i>Alert Scheduler</i> and <i>Calendar Hours Client</i> 
-  projects to function as intended. For more information visit
-  https://github.com/unb-libraries/alert-scheduler and https://github.com/unb-libraries/calendar_hours
-  respectively.<br>
-  &NewLine;  
-  <b>Note 2:</b> The theme branch <kbd>9.x</kbd> segment refers to Drupal 9.x while the <kbd>4.x</kbd> segment refers
-  to Bootstrap 4.<br>
-  The dev-8.x-4.x branch would be intended to use on a project still using Drupal 8.x.
+  projects respectively to function as intended.<br><br>
+  For more information visit https://github.com/unb-libraries/alert-scheduler and https://github.com/unb-libraries/calendar_hours
+  <br><br>
 
-- add `Twitter Bootstrap` to your project repo's root `composer.json` file's `require-dev` section. This will provide
-  the SASS code necessary for your subtheme dev environment for extending/overriding Bootstrap
-  variables/functions/etc.<br>
-  &NewLine;  
-  Example:<blockquote>
-  "require": {<br>
-    &nbsp;&nbsp;"twbs/bootstrap": "~4.5.3",<br>
-    &nbsp;&nbsp;&hellip;<br>
-  }
-</blockquote>
+- add `Twitter Bootstrap` <kbd>4.5.x</kbd> to your **project repo's** root `composer.json` file's `require-dev` section. This will provide
+  the SASS code necessary (within the `vendor` folder) for your subtheme dev environment for extending/overriding Bootstrap
+  variables/functions/etc. Example:
+  <pre><code>"require": {
+    &hellip;
+    "twbs/bootstrap": "~4.5.3",
+    &hellip;
+  }</code></pre>
 
-## Administration theme
-This theme contains various stylistic improvements to Drupal core's <i>Seven</i> administration
+Note that the <kbd>4.5.3</kbd> branch was selected to match the version used by Bootstrap Barrio 5.1.x.
+
+## UNB Libraries Administration Theme Enhancements
+This theme contains various stylistic improvements to Drupal core's `Seven` administration
 theme defined in the <code>src/scss/admin-overrides-seven.scss</code> Sass file. These style
-rules are primary intended for UNB Libraries projects - should you use <i>Seven</i> as your
-project's administration theme and want to incorporate these overrides one method to do so is
-as follows:
+rules are primary intended for UNB Libraries projects. Should you use `Seven` as your
+project's administration theme and want to incorporate these overrides please proceed as follows:
 - create an <code>admin-style.scss</code> files inside your subtheme's <code>src/scss</code> folder
 - add the following import at the top of this file:
-<pre><code>@import '../../../../../vendor/unb-libraries/unb_lib_theme/src/scss/admin-overrides-seven.scss';</code></pre>
-  This will compile (minimized) to <code>dist/css/admin-style.css</code>.
-- <b>note</b>: should you wish to add additional project-specific administration rules simply add them after this
-  import line
-- next, define a library for the administration styles in your subtheme's <code>SUBTHEMENAME.libraries.yml</code> file:
-<pre><code>admin-styling:
-  version: VERSION
-  css:
-    theme:
-      dist/css/admin-style.css: { minified: true }
-</code></pre>
+  <pre><code>@import '../../../../../vendor/unb-libraries/unb_lib_theme/src/scss/admin-overrides-seven.scss';</code></pre>
+- define a library for the administration styles in your subtheme's <code>SUBTHEMENAME.libraries.yml</code> file:
+  <pre><code>admin-styling:
+    version: VERSION
+    css:
+      theme:
+        dist/css/admin-style.css: { minified: true }
+  </code></pre>
 - finally, you may attach the admin library assets to an administration form in code using:
 <code>$form['#attached']['library'][] = 'lib_unb_ca/admin-styling';</code>
+
+This will compile (minimized) to <code>dist/css/admin-style.css</code>. If you wish to add additional project-specific
+administration rules simply add them **after** your <code>@import</code> line.
 
 ## Notes
 - This subtheme uses Bootstrap Barrio as a base theme, specifically the 5.1.x branch which, in turn, employs Bootstrap 4 (Barrio 5.5.x uses Bootstrap v5):
