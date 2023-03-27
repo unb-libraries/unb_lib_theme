@@ -1,3 +1,4 @@
+![UNB Libraries Search](documentation/images/unb-libraries-screenshot.png)
 # UNB Libraries Theme.
 Drupal 8 and 9 theme based on Bootstrap Barrio 5.1.x theme (https://www.drupal.org/project/bootstrap_barrio).<br>
 Note the theme branch <kbd>9.x</kbd> segment refers to Drupal 9.x while the <kbd>4.x</kbd> segment refers
@@ -63,6 +64,26 @@ project's administration theme and want to incorporate these overrides please pr
 
 This will compile (minimized) to <code>dist/css/admin-style.css</code>. If you wish to add additional project-specific
 administration rules simply add them **after** your <code>@import</code> line.
+
+## Style Guide Suggestions
+### Webforms
+- UNB Libraries forms adopt a standardized look and feel for attributes such as background, border, button colors, etc - 
+  this is done by wrapping the form field (including form action buttons)) inside a container with a
+  <code>theme-dark</code> class applied to it:
+  ![Sample UNB Libraries webform](documentation/images/webform-sample.png)<br><br>
+
+- <b>Note:</b> to implement this using Webform UI, add a parent <i>Container</i> element, edit it, switch to the
+  <i>Advanced</i> tab and expand the <i>Element Attributes</i> section. Next, choose the <i>custom</i> element
+  CSS class and enter <kbd>theme-dark</kbd> in the conditional field. Finally, save the change.
+
+  ![Sample UNB Libraries webform](documentation/images/webform-container-class.png)<br><br>
+
+- The <b>Privacy</b> footer is used across most webforms and is implemented using a Bootstrap alert:
+  <pre><code>&lt;div class="alert alert-info" role="alert"&gt;
+    &lt;strong&gt;Privacy: </strong> UNB Libraries will only use the comments you send to
+    improve our website and services. We are not storing any personal information.
+  &lt;/div&gt;
+  </code></pre>
 
 ## Notes
 - This subtheme uses Bootstrap Barrio as a base theme, specifically the 5.1.x branch which, in turn, employs Bootstrap 4 (Barrio 5.5.x uses Bootstrap v5):
