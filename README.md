@@ -65,6 +65,27 @@ project's administration theme and want to incorporate these overrides please pr
 This will compile (minimized) to <code>dist/css/admin-style.css</code>. If you wish to add additional project-specific
 administration rules simply add them **after** your <code>@import</code> line.
 
+### Utility Classes
+Several utility classes are available for use for your convenience <kbd>(see src/scss/custom/_utility.scss)</kbd>:
+
+- <i>Hover Grow</i>
+  - To transitionally scale an element by 3% on hover/focus, apply <code>hover-grow</code> class to the element<br>
+    Example: <code>&lt;div class="card bg-light border border-unb-red hover-grow text-center"&gt;</code><br>
+    See: https://lib.unb.ca/copyright
+  - To transitionally scale an element <b>horizontally</b> (i.e. width) by 3% on hover/focus, apply <code>hover-grow-h</code> class to the element<br>
+    Example: <code>&lt;div class="card bg-light border border-unb-red hover-grow-h text-center"&gt;</code>
+  - To transitionally scale an element <b>vertically</b> (i.e. height) by 3% on hover/focus, apply <code>hover-grow-v</code> class to the element<br>
+    Example: <code>&lt;div class="card bg-light border border-unb-red hover-grow-v text-center"&gt;</code><
+- <i>Expanded/Collapsed Icons</i>
+  - To add a Font Awesome square caret (i.e. upward/downward-facing arrow) icon to the left of toggle buttons to
+  indicate expandable/collapsible sections simply apply a <kbd>header-icon-h</kbd> class to the parent element of
+  the buttons.
+
+     Example: <code>&lt;div class="accordion header-icon-h" id="accordion-example"&gt;</code><br>
+
+     Note this feature relies on the <b>aria-expanded</b> attribute - for info on Bootstrap buttons + aria see:
+     https://getbootstrap.com/docs/4.6/components/collapse/#accordion-example) <br>
+
 ## Style Guide Suggestions
 ### Webforms
 - UNB Libraries forms adopt a standardized look and feel for attributes such as background, border, button colors, etc - 
@@ -89,7 +110,7 @@ administration rules simply add them **after** your <code>@import</code> line.
 - This subtheme uses Bootstrap Barrio as a base theme, specifically the 5.1.x branch which, in turn, employs Bootstrap 4 (Barrio 5.5.x uses Bootstrap v5):
   - https://www.drupal.org/project/bootstrap_barrio
 
-- As of Bootstrap Barrio v5.1.7, Bootstrap v4.5.x is specifically bundled (i.e. do not use v4.6.x - see global-styling theme library)
+- As of Bootstrap Barrio v5.1.10, Bootstrap v4.5.x is specifically bundled (i.e. do not use v4.6.x - see global-styling theme library)
   - Subthemes compiling sass should add the following `require-dev` package to `composer.jason`:  
     "twbs/bootstrap": "~4.5.3",
 
