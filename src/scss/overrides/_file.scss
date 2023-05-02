@@ -1,6 +1,9 @@
-.file--text {
-  background-image: none;
-}
-.form-managed-file .form-control {
-  padding-top: .33rem;
+.form-managed-file {
+  .file {
+    background-image: none;
+  }
+
+  .form-control {
+    padding-top: .33rem;
+  }
 }
