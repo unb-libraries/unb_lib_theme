@@ -3,7 +3,8 @@
 }
 
 fieldset {
-  .form-control + .description {
+  .form-control + .description,
+  .form-textarea-wrapper + .description {
     display: block;
     margin-top: .25rem;
   }
