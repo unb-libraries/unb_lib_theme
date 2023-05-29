@@ -68,23 +68,54 @@ administration rules simply add them **after** your <code>@import</code> line.
 ### Utility Classes
 Several utility classes are available for use for your convenience <kbd>(see src/scss/custom/_utility.scss)</kbd>:
 
-- <i>Hover Grow</i>
+- #### Hover Grow
   - To transitionally scale an element by 3% on hover/focus, apply <code>hover-grow</code> class to the element<br>
-    Example: <code>&lt;div class="card bg-light border border-unb-red hover-grow text-center"&gt;</code><br>
-    See: https://lib.unb.ca/copyright
+    <b>Example:</b> <code>&lt;div class="card bg-light border border-unb-red hover-grow text-center"&gt;</code><br>
+    See: https://lib.unb.ca/copyright <br><br>
+  
   - To transitionally scale an element <b>horizontally</b> (i.e. width) by 3% on hover/focus, apply <code>hover-grow-h</code> class to the element<br>
-    Example: <code>&lt;div class="card bg-light border border-unb-red hover-grow-h text-center"&gt;</code>
+    <b>Example:</b> <code>&lt;div class="card bg-light border border-unb-red hover-grow-h text-center"&gt;</code><br><br>
+
   - To transitionally scale an element <b>vertically</b> (i.e. height) by 3% on hover/focus, apply <code>hover-grow-v</code> class to the element<br>
-    Example: <code>&lt;div class="card bg-light border border-unb-red hover-grow-v text-center"&gt;</code><
-- <i>Expanded/Collapsed Icons</i>
+    Example: <code>&lt;div class="card bg-light border border-unb-red hover-grow-v text-center"&gt;</code><br><br>
+
+- #### Expanded/Collapsed Icons
   - To add a Font Awesome square caret (i.e. upward/downward-facing arrow) icon to the left of toggle buttons to
   indicate expandable/collapsible sections simply apply a <kbd>header-icon-h</kbd> class to the parent element of
-  the buttons.
+  the buttons.<br><br>
 
-     Example: <code>&lt;div class="accordion header-icon-h" id="accordion-example"&gt;</code><br>
+     <b>Example:</b> <code>&lt;div class="accordion header-icon-h" id="accordion-example"&gt;</code><br><br>
 
      Note this feature relies on the <b>aria-expanded</b> attribute - for info on Bootstrap buttons + aria see:
-     https://getbootstrap.com/docs/4.6/components/collapse/#accordion-example) <br>
+     https://getbootstrap.com/docs/4.6/components/collapse/#accordion-example) <br><br>
+
+- #### Linked images
+  - To add a standardized image link visual hover/focus effect, add the <code>img-link</code> class either to the parent
+    <code>&lt;a&gt;</code> tag of the image or to the parent container of the <code>&lt;a&gt;</code> tag itself<br><br>
+    <b>Example</b> <i>(class added to parent tag of &lt;a&gt;)</i>:
+    <code>&lt;div class="img-link"&gt;<br>&lt;a href="#url"&gt;>&lt;img
+    src="/path/img-filename" alt="Logo of external website"&gt;&lt;/a&gt;<br>&lt;/div&gt;</code>
+    <br><br>
+    This will reduce the opacity of the linked image using a 3ms transition effect upon hover and focus.
+
+- #### Custom opacities
+  - To add a transparent quality to a container apply one of UNB Library Theme's custom <kbd>opacity</kbd> classes
+    <br><br>
+    <b>Example:</b> <i>(slightly see the content behind an affixed navbar)</i><br>
+    <code>&lt;nav id="navbar-main" class="navbar navbar-expand-lg px-0 affix opacity-80"&gt;</code>
+    <br><br>
+    ![](documentation/images/opacity-utlility.png)
+    <br><br>
+    Valid class values, from least to most opaque (i.e. most to least translucent), are:
+    - <kbd>opacity-25</kbd>
+    - <kbd>opacity-50</kbd>
+    - <kbd>opacity-75</kbd>
+    - <kbd>opacity-80</kbd>
+    - <kbd>opacity-85</kbd>
+    - <kbd>opacity-90</kbd>
+    - <kbd>opacity-95</kbd>
+    <br><br>
+ 
 
 ## Style Guide Suggestions
 ### Webforms
@@ -105,6 +136,15 @@ Several utility classes are available for use for your convenience <kbd>(see src
     improve our website and services. We are not storing any personal information.
   &lt;/div&gt;
   </code></pre>
+
+- Related fields are typically grouped together as children of a <b>Fieldset</b> element container within the Webform 
+  "Build" UI.
+
+  ![Sample UNB Libraries webform](documentation/images/webform-fieldset-container-wrapper.png)<br><br>
+
+  This triggers custom style attributes for the form display with regards to font-size, font-weight, whitespace, etc
+
+  ![Sample UNB Libraries webform](documentation/images/webform-fieldset-wrapper-display.png)<br><br> 
 
 ## Notes
 - This subtheme uses Bootstrap Barrio as a base theme, specifically the 5.1.x branch which, in turn, employs Bootstrap 4 (Barrio 5.5.x uses Bootstrap v5):
