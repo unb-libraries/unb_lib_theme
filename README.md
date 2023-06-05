@@ -92,10 +92,11 @@ Several utility classes are available for use for your convenience <kbd>(see src
 - #### Linked images
   - To add a standardized image link visual hover/focus effect, add the <code>img-link</code> class either to the parent
     <code>&lt;a&gt;</code> tag of the image or to the parent container of the <code>&lt;a&gt;</code> tag itself<br><br>
-    <b>Example</b> <i>(class added to parent tag of &lt;a&gt;)</i>:
-    <code>&lt;div class="img-link"&gt;<br>&lt;a href="#url"&gt;>&lt;img
-    src="/path/img-filename" alt="Logo of external website"&gt;&lt;/a&gt;<br>&lt;/div&gt;</code>
-    <br><br>
+    <b>Example</b> <i>(class added to parent tag of &lt;a&gt;)</i>:<br>
+    <pre><code>&lt;div class="img-link"&gt;
+      &lt;a href="#url"&gt;>&lt;img src="/path/img-filename" alt="Logo of external website"&gt;&lt;/a&gt;
+    &lt;/div&gt;</code></pre>
+
     This will reduce the opacity of the linked image using a 3ms transition effect upon hover and focus.
 
 - #### Custom opacities
@@ -116,6 +117,21 @@ Several utility classes are available for use for your convenience <kbd>(see src
     - <kbd>opacity-95</kbd>
     <br><br>
  
+- #### Inline lists
+  - To change the default display behaviour of an unordered list from block to inline block, wrap the <kbd>ul</kbd>
+  list element with a container that has the <kbd>wrapper-list-inline</kbd> class applied.
+  <pre><code>&lt;div id="quicklinks-wrapper" class="collapse wrapper-list-inline"&gt;
+    &lt;h3 class="d-inline-block"&gt;Quick Links:&lt;/h3&gt;
+    &lt;ul class="pl-2"&gt;
+      &lt;li&gt;&lt;a href="https://unb.on.worldcat.org/myaccount">Renew Books / My Account&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/services/docdel"&gt;Document Delivery&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/services/recalls"&gt;Recalls&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/about/find-us"&gt;Floor Plans&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/services/tech-tools"&gt;Borrow Tech &amp; Tools&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;  </code></pre>
+
+  ![](documentation/images/list-inline-utility-quicklinks.png)<br>
 
 ## Style Guide Suggestions
 ### Webforms
@@ -132,7 +148,7 @@ Several utility classes are available for use for your convenience <kbd>(see src
 
 - The <b>Privacy</b> footer is used across most webforms and is implemented using a Bootstrap alert:
   <pre><code>&lt;div class="alert alert-info" role="alert"&gt;
-    &lt;strong&gt;Privacy: </strong> UNB Libraries will only use the comments you send to
+    &lt;strong&gt;Privacy:</strong> UNB Libraries will only use the comments you send to
     improve our website and services. We are not storing any personal information.
   &lt;/div&gt;
   </code></pre>
