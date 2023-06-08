@@ -146,6 +146,8 @@ a.nav-link[href$="//unb.ca"]::before {
 }
 #skiptocontent a:focus {
     box-shadow: 0 0 5px #000;
+    outline-style: dotted;
+    outline-offset: -0.5rem;
     top: 0;
     @include css3-prefix(transition, top .25s ease-out);
 }
