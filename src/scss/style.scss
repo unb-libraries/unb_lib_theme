@@ -143,13 +143,14 @@ a.nav-link[href$="//unb.ca"]::before {
     @include css3-prefix(transition, all .5s ease-in);
     width: 100%;
     z-index: 1000;
-}
-#skiptocontent a:focus {
-    box-shadow: 0 0 5px #000;
-    outline-style: dotted;
-    outline-offset: -0.5rem;
-    top: 0;
-    @include css3-prefix(transition, top .25s ease-out);
+
+    &:focus {
+      box-shadow: 0 0 5px #000;
+      outline-style: dotted;
+      outline-offset: -0.33rem;
+      top: 0;
+      @include css3-prefix(transition, top .25s ease-out);
+    }
 }
 .user-logged-in #skiptocontent a:focus {
     position: relative;
