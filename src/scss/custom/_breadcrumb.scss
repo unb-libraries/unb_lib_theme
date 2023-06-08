@@ -1,4 +1,10 @@
 /* ID */
 #block-breadcrumbs {
   margin-bottom: 2rem;
+
+  .breadcrumb-item {
+    &.active {
+      color: $gray-800;
+    }
+  }
 }

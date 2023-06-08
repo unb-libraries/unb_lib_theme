@@ -344,7 +344,7 @@ ul[role="menubar"] a[aria-haspopup="true"] {
       }
     }
 
-    h3 {
+    h3,.h3 {
       color: $header-link-color;
       font-size: 1.3em;
     }

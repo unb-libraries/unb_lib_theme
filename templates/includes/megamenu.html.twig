@@ -1,0 +1,439 @@
+{#
+/**
+* @file
+* UNB Libraries Header Nav Menu.
+*
+* The UNB Libraries Base Theme navbar HTML structure, extracted from the page.html.twig template into a separate file
+* that can be downloaded/included in any UNB Libraries site, as per ticket https://jira.lib.unb.ca/browse/LIB-375.
+*
+* @see page.html.twig
+*/
+#}
+<div id="navbar" class="collapse navbar-collapse" role="menubar">
+  <ul class="navbar-nav p-1 p-lg-0 w-100" role="none">
+    <li class="nav-item dropdown megamenu-li" role="none">
+      <button class="nav-link px-3 px-lg-0 text-lg-center" role="menuitem"
+        aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
+        <span class="text-nowrap">Search &amp;</span> Borrow
+      </button>
+      <div id="menu-search" class="container dropdown-menu megamenu multi-row mx-auto py-0">
+        <div class="d-flex flex-column flex-lg-row justify-content-between pb-3 px-lg-4 w-100">
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="search-search" class="h3 mt-4 mb-3">Search</div>
+            <ul aria-label="Search Topics" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://unb.on.worldcat.org" role="menuitem">Books &amp; Articles (WorldCat)</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/eresources?form_id=eres_databases" role="menuitem">Article Databases</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/eresources?form_id=eres_journals" role="menuitem">Journals &amp; Newspapers</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/eresources?form_id=eres_reference" role="menuitem">e-Reference Materials</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/eresources?form_id=eres_ebooks" role="menuitem">e-Books</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/eresources?form_id=eres_videos" role="menuitem">Videos</a></li>
+            {#
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/eresources?form_id=eres_trials" role="menuitem">Current Trials</a></li>
+            #}
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/research-guides" role="menuitem">Research Guides</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://unbscholar.lib.unb.ca" role="menuitem">UNB Scholar</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://web.lib.unb.ca/reserves" role="menuitem">Reserves</a></li>
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="search-find" class="h3 mt-4 mb-3">Find</div>
+            <ul aria-label="Find" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/archives" role="menuitem">Archives &amp; Special Collections</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/clc" role="menuitem">Eileen Wallace Children's Literature</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/gddm/govdocs" role="menuitem">Government Information</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://loyalist.lib.unb.ca/" role="menuitem">Loyalist Collection</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/253" role="menuitem">Market Research</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/eresources/newspaper-guide" role="menuitem">Newspapers</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/collections/notable-collections" role="menuitem">Notable Collections</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/189" role="menuitem">Patents</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/collections/unb-theses-and-dissertations" role="menuitem">UNB Theses &amp; Dissertations</a></li>
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="search-borrow" class="h3 mt-4 mb-3">Borrow &amp; Request</div>
+            <ul aria-label="Borrow and Request" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/policies/unb-libraries-fredericton-borrowing-policy" role="menuitem">Borrowing Policies</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/docdel" role="menuitem">Document Delivery</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/recalls" role="menuitem">Recalls</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/collections/purchase-suggestion" role="menuitem">Suggest a Purchase</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/tech-tools" role="menuitem">Tech &amp; Tools</a></li>
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-0" role="group">
+            <div id="search-help" class="h3 mt-4 mb-3">Help</div>
+            {% include '@unb_lib_theme/includes/megamenu-help.html.twig' %}
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item dropdown megamenu-li" role="none">
+      <button class="nav-link px-3 px-lg-0 text-lg-center" role="menuitem"
+        aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
+        <span class="text-nowrap">Study &amp;</span> Learn
+      </button>
+      <div id="menu-study" class="container dropdown-menu megamenu multi-row mx-auto py-0">
+        <div class="d-flex flex-column flex-lg-row justify-content-between pb-3 px-lg-4 w-100">
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="study-assignment" class="h3 mt-4 mb-3">Assignment Help</div>
+            <ul aria-label="Assignment Help" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/99" role="menuitem">Getting Started (Research Toolkit)</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/research/video/steps-research-process" role="menuitem">Steps in the Research Process</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/research/video/introduction-unb-worldcat" role="menuitem">Find a Book</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/research/video/how-find-journal-articles" role="menuitem">Find an Article</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/writing-help" role="menuitem">Writing & Citation Help</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/research/video" role="menuitem">Library Help Videos</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/research" role="menuitem">Research Support</a></li>
+            {#
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/206" role="menuitem">Zotero</a></li>
+            #}
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="study-technology" class="h3 mt-4 mb-3">Technology</div>
+            <ul aria-label="Technology" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/printing-scanning-photocopying" role="menuitem">Printing</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/printing-scanning-photocopying" role="menuitem">Scanning</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/tech-tools" role="menuitem">Tech &amp; Tools</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link external" href="https://unb.ca/its/wireless/index.html" role="menuitem">Wireless Access (ITS)</a></li>
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="study-spaces" class="h3 mt-4 mb-3">Spaces</div>
+            <ul aria-label="Spaces" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/bookings" role="menuitem">Book a Study Space</a></li>
+            {#
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/graduate-lounge" role="menuitem">Explore Spaces</a></li>
+            #}
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/find-us" role="menuitem">Floor Plans</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/learning-commons-frequently-asked-questions" role="menuitem">John B. McNair Learning Commons</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/graduate-student-spaces" role="menuitem">Graduate Student Spaces</a></li>
+            {#
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/group-study-rooms" role="menuitem">Group Study Rooms</a></li>
+            #}
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons" role="menuitem">Harriet Irving Research Commons</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/facilities" role="menuitem">Instruction Facilities</a></li>
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-0" role="group">
+            <div id="study-help" class="h3 mt-4 mb-3">Help</div>
+            {% include '@unb_lib_theme/includes/megamenu-help.html.twig' %}
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item dropdown megamenu-li" role="none">
+      <button class="nav-link px-3 px-lg-0 text-lg-center" role="menuitem"
+        aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
+        <span class="text-nowrap">Research &amp;</span> Data
+      </button>
+      <div id="menu-research" class="container dropdown-menu megamenu multi-row mx-auto py-0">
+        <div class="d-flex flex-column flex-lg-row justify-content-between pb-3 px-lg-4 w-100">
+          <div class="px-2 px-lg-0" role="group">
+            <div id="research-research" class="h3 mt-4 mb-3">Research Support</div>
+            <ul aria-label="Research Support" role="menu" class="fa-ul">
+            {#
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/206" role="menuitem">Citation Management</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/139" role="menuitem">Citation Metrics and Scholarly Profiles</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/copyright" role="menuitem">Copyright @ UNB</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://unbscholar.lib.unb.ca" role="menuitem">Deposit to UNB Scholar</a></li>
+            #}
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons" role="menuitem">Harriet Irving Research Commons</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/collections" role="menuitem">Collections</a></li>
+            {#
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/etd" role="menuitem">Electronic Theses &amp; Dissertations Support</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/grants-and-funding" role="menuitem">Grants &amp; Funding</a></li>
+            #}
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/research/knowledge-synthesis" role="menuitem">Knowledge Synthesis &amp; Systematic Reviews</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/research/managing-your-research" role="menuitem">Managing Your Research</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/gddm/maps" role="menuitem">Maps &amp; GIS</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/rdm" role="menuitem">Research Data Management</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/gddm/data" role="menuitem">Statistics &amp; Data</a></li>
+            {#
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/189" role="menuitem">Patents</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/190" role="menuitem">Standards</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/openaccess" role="menuitem">Supporting Open Access</a></li>
+            #}
+            </ul>
+          </div>
+
+          <div class="px-2 px-lg-0" role="group">
+            <div id="research-publishing" class="h3 mt-4 mb-3">Publishing Support</div>
+            <ul aria-label="Publishing Support" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/139" role="menuitem">Citation Metrics and Scholarly Profiles</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/copyright" role="menuitem">Copyright @ UNB</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://dataverse.lib.unb.ca" role="menuitem">Deposit to UNB Dataverse</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://unbscholar.lib.unb.ca" role="menuitem">Deposit to UNB Scholar</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/cds/publishing-services" role="menuitem">Digital Publishing Services</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/etd" role="menuitem">Electronic Theses &amp; Dissertations Support</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/openaccess" role="menuitem">Supporting Open Access</a></li>
+            </ul>
+          {#
+            <h3 class="mt-4 mb-3">Teaching Support</h3>
+            <ul aria-label="" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/copyright/best-practices-teaching-and-copyright" role="menuitem">Copyright in the Classroom</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/faculty/library-instruction-services" role="menuitem">Library Instruction</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/faculty/library-support-new-courses">Library Support for New Courses</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/faculty/manage-course-reserves" role="menuitem">Course Reserves</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/284" role="menuitem">Open Educational Resources</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/99" role="menuitem">Research Toolkit</a></li>
+            </ul>
+          #}
+          </div>
+
+        {#
+          <div class="px-2 pl-lg-0 pr-lg-3">
+            <h3 class="mt-4 mb-3">Spaces</h3>
+            <ul aria-label="" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/active-learning-classroom" role="menuitem">Active Learning Lab</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/facilities/datagis-lab-hil" role="menuitem">Data / GIS Lab</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/digital-scholarship-hub" role="menuitem">Digital Scholarship Hub</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/data-visualization-lab" role="menuitem">Data Visualization Lab</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/event-space" role="menuitem">Event Space</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/innovation-hub" role="menuitem">Innovation Hub</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/facilities/learning-lab-hil" role="menuitem">Learning Lab</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/facilities/milham-room-hil" role="menuitem">Milham Room</a></li>
+            </ul>
+          </div>
+        #}
+
+          <div class="px-2 px-lg-0" role="group">
+            <div id="research-help" class="h3 mt-4 mb-3">Help</div>
+            {% include '@unb_lib_theme/includes/megamenu-help.html.twig' %}
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item dropdown megamenu-li" role="none">
+      <button class="nav-link px-3 px-lg-0 text-lg-center" role="menuitem"
+        aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
+        <span class="text-nowrap">Teaching</span> Resources
+      </button>
+      <div id="menu-teaching" class="container dropdown-menu megamenu multi-row mx-auto py-0">
+        <div class="d-flex flex-column flex-lg-row justify-content-between pb-3 px-lg-4 w-100">
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="teaching-instructional" class="h3 mt-4 mb-3">Instructional Materials</div>
+            <ul aria-label="Instructional Materials" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/copyright/best-practices-teaching-and-copyright" role="menuitem">Copyright in the Classroom</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/faculty/library-support-new-courses">Library Support for New Courses</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/faculty/manage-course-reserves" role="menuitem">Manage Course Reserves</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/284" role="menuitem">Open Educational Resources</a></li>
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="teaching-digital" class="h3 mt-4 mb-3">Digital &amp; Information Literacy</div>
+            <ul aria-label="Digital and Information Literacy" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/faculty/library-instruction-services" role="menuitem">Library Instruction</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/99" role="menuitem">Research Toolkit</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/facilities" role="menuitem">Instruction Facilities</a></li>
+            </ul>
+          </div>
+
+          <div role="group">
+            <div id="teaching-help" class="h3 mt-4 mb-3">Help</div>
+            {% include '@unb_lib_theme/includes/megamenu-help.html.twig' %}
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item dropdown megamenu-li" role="none">
+      <button class="nav-link px-3 px-lg-0 text-lg-center" role="menuitem"
+        aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
+        <span class="text-nowrap">Media &amp;</span> Making
+      </button>
+      <div id="menu-media" class="container dropdown-menu megamenu multi-row mx-auto py-0">
+        <div class="d-flex flex-column flex-lg-row justify-content-between pb-3 px-lg-4 w-100">
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="media-making" class="h3 mt-4 mb-3">Making</div>
+            <ul aria-label="Making" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/fabrication-lab/3d-printing" role="menuitem">3D Printing</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/fabrication-lab/3d-scanning" role="menuitem">3D Scanning</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/fabrication-lab/cricut" role="menuitem">Cricut</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/printing-scanning-photocopying" role="menuitem">Large Format / Poster Printing</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/fabrication-lab/textiles" role="menuitem">Textiles</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/tech-tools" role="menuitem">Tech &amp; Tools</a></li>
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="media-digital" class="h3 mt-4 mb-3">Digital Media Creation</div>
+            <ul aria-label="Digital Media Creation" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/audio-studio" role="menuitem">Audio Studio</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/lightboard-studio" role="menuitem">Lightboard Studio</a></li>
+            {#
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/" role="menuitem">One Button Studio</a></li>
+            #}
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/printing-scanning-photocopying#scanning" role="menuitem">Scanning</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/media-computers" role="menuitem">Media Computers</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/cds/digital-imaging" role="menuitem">Digital Imaging</a></li>
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="media-spaces" class="h3 mt-4 mb-3">Spaces</div>
+            <ul aria-label="Making Spaces" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/data-visualization-lab" role="menuitem">Data Visualization Lab</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/digital-scholarship-hub" role="menuitem">Digital Scholarship Hub</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/fabrication-lab" role="menuitem">Fabrication Lab</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/innovation-hub" role="menuitem">Innovation Hub</a></li>
+            </ul>
+          </div>
+
+          <div role="group">
+            <div id="media-help" class="h3 mt-4 mb-3">Help</div>
+            {% include '@unb_lib_theme/includes/megamenu-help.html.twig' %}
+          </div>
+        </div>
+      </div>
+    </li>
+
+  {#
+    <li class="nav-item dropdown megamenu-li" role="none">
+      <button id="btn-data" class="nav-link px-3 px-lg-0 text-lg-center" role="menuitem"
+        aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
+        <span class="text-nowrap">Data &amp;</span> Visualization
+      </button>
+      <div aria-labelledby="navbar btn-data" class="container dropdown-menu megamenu multi-row mx-auto py-0">
+        <div class="d-flex flex-column flex-lg-row justify-content-between pb-3 px-lg-4 w-100">
+          <div class="px-2 pl-lg-0 pr-lg-3">
+            <h3 class="mt-4 mb-3">Data and Visualization</h3>
+            <ul aria-label="" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/gddm/maps" role="menuitem">Maps &amp; GIS</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/gddm/data" role="menuitem">Statistics &amp; Data</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/rdm" role="menuitem">Research Data Management</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://dataverse.lib.unb.ca" role="menuitem">UNB Dataverse</a></li>
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-3">
+            <h3 class="mt-4 mb-3">Spaces</h3>
+            <ul aria-label="" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/facilities/datagis-lab-hil" role="menuitem">Data / GIS Lab</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/data-visualization-lab" role="menuitem">Data Visualization Lab</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/researchcommons/digital-scholarship-hub" role="menuitem">Digital Scholarship Hub</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="mt-4 mb-3">Help</h3>
+            <ul aria-label="" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/help/ask-us" role="menuitem">Ask Us</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/connect" role="menuitem">Get Specialized Help</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/help/off-campus-access" role="menuitem">Off-campus Access: Proxy and VPN</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/help/status" role="menuitem">Systems Status & Trouble Tickets</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+  #}
+
+    <li class="nav-item dropdown megamenu-li" role="none">
+      <button class="nav-link px-3 px-lg-0 text-lg-center" role="menuitem"
+        aria-haspopup="true" data-toggle="dropdown" aria-expanded="false">
+        <span class="text-nowrap">About &</span> Help
+      </button>
+      <div id="menu-about" class="container dropdown-menu megamenu multi-row mx-auto py-0">
+        <div class="d-flex flex-column flex-lg-row justify-content-between pb-3 px-lg-4 w-100">
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="about-libraries" class="h3 mt-4 mb-3">Libraries</div>
+            <ul aria-label="About the Libraries" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/harriet-irving-library" role="menuitem">Harriet Irving</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/science-forestry-library" role="menuitem">Science &amp; Forestry</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/engineering-computer-science-library" role="menuitem">Engineering &amp; Computer Science</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/hans-w-klohn-commons" role="menuitem">Saint John</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://www.unb.ca/fredericton/law/library" role="menuitem">Gerard V. La Forest Law</a></li>
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="about-contacts" class="h3 mt-4 mb-3">Contacts</div>
+            <ul aria-label="Contacts" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/contact-us" role="menuitem">Contact Us</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/connect" role="menuitem">Get Specialized Help</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/staff-directory" role="menuitem">Staff Directory</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/student-employment" role="menuitem">Student Employment</a></li>
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="about-visit" class="h3 mt-4 mb-3">Visit</div>
+            <ul aria-label="Visit" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/find-us" role="menuitem">Find Us</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/floor-plans" role="menuitem">Floor Plans</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/hours" role="menuitem">Hours</a></li>
+            </ul>
+          </div>
+
+          <div role="group">
+            <div id="about-help" class="h3 mt-4 mb-3">Help</div>
+            <ul aria-label="Help" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/help/ask-us" role="menuitem">Ask Us</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/help/off-campus-access" role="menuitem">Off-campus Access: Proxy and VPN</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/help/status" role="menuitem">Systems Status & Trouble Tickets</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column flex-lg-row justify-content-between pb-3 px-lg-4 w-100">
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="about-services" class="h3 mt-4 mb-3">Services for &hellip;</div>
+            <ul aria-label="Services" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/alumni-services" role="menuitem">Alumni</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/community-services" role="menuitem">Community</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/faculty" role="menuitem">Faculty</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/services-graduate-students" role="menuitem">Graduate Students</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/services-persons-disabilities" role="menuitem">Persons with Disabilities</a></li>
+            {#
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/services/researching-remotely" role="menuitem">Remote Researchers</a></li>
+            #}
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://guides.lib.unb.ca/guide/185" role="menuitem">STU Students</a></li>
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="about-collections" class="h3 mt-4 mb-3">Collections</div>
+            <ul aria-label="Collections" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/collections" role="menuitem">Collections Development</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/cds/projects" role="menuitem">Digital Projects</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/policies/gifts-policy" role="menuitem">Gifts Policy</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/collections/notable-collections" role="menuitem">Notable Collections</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/faculty/working-copyright-and-licensed-resources#" role="menuitem">Permitted use of licensed resources</a></li>
+            </ul>
+          </div>
+
+          <div class="px-2 pl-lg-0 pr-lg-3" role="group">
+            <div id="about-organization" class="h3 mt-4 mb-3">Our Organization</div>
+            <ul aria-label="Our Organization" role="menu" class="fa-ul">
+            {#
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="/about/memberships" role="menuitem">Memberships</a></li>
+            #}
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/policies" role="menuitem">Policies</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/contact-us#units" role="menuitem">Units and Departments</a></li>
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/faculty/liaison-librarians/institution" role="menuitem">UNB Libraries Departmental Representatives</a></li>
+            </ul>
+          </div>
+
+        {#
+          <div>
+            <h3 class="mt-4 mb-3">Get Involved</h3>
+            <ul aria-label="" role="menu" class="fa-ul">
+              <li role="none"><span class="fa-li"><i class="fas fa-chevron-right fa-sm" aria-hidden="true"></i></span><a class="nav-link" href="https://lib.unb.ca/about/" role="menuitem">Donate to the Library</a></li>
+            </ul>
+          </div>
+        #}
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

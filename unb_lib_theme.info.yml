@@ -3,7 +3,7 @@ type: theme
 description: 'UNB Libraries Drupal 8 base theme constructed from Bootstrap Barrio.'
 # version: VERSION
 core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 base theme: bootstrap_barrio
 
 libraries:
