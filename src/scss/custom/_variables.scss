@@ -16,8 +16,10 @@ $unb-light: #f5f5f5;
 $unb-red: #d82e3b;
 
 /* Links */
-$link-color: #00607a;
+$link-color: #006C8A;
 $link-decoration: none;
+$link-text-decoration-color-fallback: $link-color;
+$link-text-decoration-color: rgb(0 96 122 / 33%);
 $link-hover-color: #900;
 $link-hover-decoration: none;
 $skip-link-bg: #bf1722;
