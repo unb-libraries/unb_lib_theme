@@ -85,3 +85,12 @@ ul {
 .js-form-item.form-group {
   margin: 0 0 1rem 0;
 }
+
+/* Views pagination */
+.pagination {
+  .page-item {
+    span.page-link:hover {
+      color: inherit;
+    }
+  }
+}
