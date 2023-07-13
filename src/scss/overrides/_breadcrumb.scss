@@ -8,14 +8,16 @@
     width: 1rem;
 
     &:after {
-      font-family: "Font Awesome 5 Free";
       content: "\f015";
-      font-size: .85rem;
-      font-weight: 900;
+      display: inline-block;
+      font-size: 80%;
+      font: var(--fa-font-solid);
       height: 100%;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
       position: absolute;
       right: -9999px;
-      top: 0;
+      top: 5px;
     }
   }
 

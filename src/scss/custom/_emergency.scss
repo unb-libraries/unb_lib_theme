@@ -35,7 +35,10 @@
 
       &:before {
         content: '\f06a';
-        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        font: var(--fa-font-solid);
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
         margin-right: 5px;
       }
     }

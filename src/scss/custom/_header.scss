@@ -42,9 +42,11 @@
         font-size: 1.1rem;
 
         &:after {
+          display: inline-block;
           float: right;
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
+          font: var(--fa-font-solid);
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
         }
 
         &[aria-expanded="false"] {
@@ -193,9 +195,11 @@
   }
   #header .navbar-nav a[aria-haspopup="true"]:after,
   #discovery-search .card-header a:after {
+    display: inline-block;
     float: right;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    font: var(--fa-font-solid);
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
   }
   #header .navbar-nav a[aria-expanded="true"]:after,
   #discovery-search .card-header a[aria-expanded="true"]:after {

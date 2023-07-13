@@ -130,8 +130,10 @@ form .field-multiple-table .field-multiple-drag,
 }
 #edit-delete:before {
     content: '\f2ed';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
+    display: inline-block;
+    font: var(--fa-font-solid);
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
     margin-right: .25rem;
 }
 .form-item label,

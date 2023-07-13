@@ -11,8 +11,10 @@ form {
     .alert-danger {
       &:not(.no-icon):before {
         content: '\f06a';
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
+        display: inline-block;
+        font: var(--fa-font-solid);
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
         vertical-align: top;
       }
 
@@ -124,8 +126,10 @@ form {
         margin-bottom: .25rem;
 
         &:before {
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
+          display: inline-block;
+          font: var(--fa-font-solid);
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
           content: '\f069';
         }
       }

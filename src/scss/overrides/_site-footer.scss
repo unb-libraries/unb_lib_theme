@@ -18,8 +18,9 @@
 
     & > div:not(.footer-middle) a.nav-link::after {
         color: $unb-red;
-        font: var(--fa-font-solid);
         content: "\f105";
+        display: inline-block;
+        font: var(--fa-font-solid);
         margin: 0 0 0 4px;
         opacity: .9;
         padding-right: 2px;

@@ -13,9 +13,11 @@
   background: none;
   color: $color;
   content: $content;
-  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  font: var(--fa-font-solid);
   font-size: $size;
-  font-weight: bold;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
   @if $margin == left {
     margin-left: .25rem;
   } @else {
