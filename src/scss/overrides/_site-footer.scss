@@ -18,13 +18,13 @@
 
     & > div:not(.footer-middle) a.nav-link::after {
         color: $unb-red;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
+        font: var(--fa-font-solid);
         content: "\f105";
         margin: 0 0 0 4px;
         opacity: .9;
         padding-right: 2px;
-        vertical-align: middle;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
     }
 
     .block {
