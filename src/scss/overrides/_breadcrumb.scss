@@ -9,9 +9,8 @@
 
     &:after {
       content: "\f015";
-      display: inline-block;
-      font-size: 80%;
       font: var(--fa-font-solid);
+      font-size: 80%;
       height: 100%;
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
