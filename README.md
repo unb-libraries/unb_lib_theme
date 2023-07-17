@@ -123,3 +123,8 @@ Several utility classes are available for use for your convenience <kbd>(see src
       may take precedence and not display)</i>
        - this in done via the Font Awesome Settings > Partial File Configuration admin config form: 
          <kbd>/admin/config/content/fontawesome</kbd>
+    - starting with version <strong>2.26</strong>, the library dependency in <code>/libraries/fontawesome</code> must
+      use version 6.x instead of 5.14.4 for the CKEditor plugin to work correctly as the module switched to v6.x
+      styled <kbd>fa</kbd> classes
+         - we use the <strong>FortAwesome</strong> repository located on GitHub (latest release as of this writing is 6.4.0): 
+           https://github.com/FortAwesome/Font-Awesome
