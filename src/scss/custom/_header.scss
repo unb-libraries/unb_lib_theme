@@ -38,6 +38,7 @@
   @media (max-width: 991px) {
     #navbar-main #navbar {
       button {
+        background: $black;
         color: $white;
         font-size: 1.1rem;
 
@@ -63,7 +64,7 @@
       }
 
       li.show>button {
-        background: rgb(55 63 68 / 30%)!important;
+        background: rgb(0 0 0 / 85%)!important;
       }
 
       div.dropdown-menu {
