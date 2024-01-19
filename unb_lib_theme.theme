@@ -60,7 +60,7 @@ function unb_lib_theme_preprocess_page(&$variables) {
     }
   }
 
-  $base_theme_path = drupal_get_path('theme', 'unb_lib_theme');
+  $base_theme_path = \Drupal::service('extension.list.theme')->getPath('unb_lib_theme');
   $variables['unb_lib_theme_path'] = '/' . $base_theme_path;
 
   $active_theme_path = \Drupal::service('theme.manager')
