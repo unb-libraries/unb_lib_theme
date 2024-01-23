@@ -60,7 +60,7 @@ project's administration theme and want to incorporate these overrides please pr
         dist/css/admin-style.css: { minified: true }
   </code></pre>
 - finally, you may attach the admin library assets to an administration form in code using:
-<code>$form['#attached']['library'][] = 'lib_unb_ca/admin-styling';</code>
+  <code>$form['#attached']['library'][] = 'lib_unb_ca/admin-styling';</code>
 
 This will compile (minimized) to <code>dist/css/admin-style.css</code>. If you wish to add additional project-specific
 administration rules simply add them **after** your <code>@import</code> line.
@@ -68,27 +68,74 @@ administration rules simply add them **after** your <code>@import</code> line.
 ### Utility Classes
 Several utility classes are available for use for your convenience <kbd>(see src/scss/custom/_utility.scss)</kbd>:
 
-- <i>Hover Grow</i>
-  - To transitionally scale an element by 3% on hover/focus, apply <code>hover-grow</code> class to the element<br>
-    Example: <code>&lt;div class="card bg-light border border-unb-red hover-grow text-center"&gt;</code><br>
-    See: https://lib.unb.ca/copyright
-  - To transitionally scale an element <b>horizontally</b> (i.e. width) by 3% on hover/focus, apply <code>hover-grow-h</code> class to the element<br>
-    Example: <code>&lt;div class="card bg-light border border-unb-red hover-grow-h text-center"&gt;</code>
-  - To transitionally scale an element <b>vertically</b> (i.e. height) by 3% on hover/focus, apply <code>hover-grow-v</code> class to the element<br>
-    Example: <code>&lt;div class="card bg-light border border-unb-red hover-grow-v text-center"&gt;</code><
-- <i>Expanded/Collapsed Icons</i>
-  - To add a Font Awesome square caret (i.e. upward/downward-facing arrow) icon to the left of toggle buttons to
-  indicate expandable/collapsible sections simply apply a <kbd>header-icon-h</kbd> class to the parent element of
-  the buttons.
+- #### Hover Grow
+    - To transitionally scale an element by 3% on hover/focus, apply <code>hover-grow</code> class to the element<br>
+      <b>Example:</b> <code>&lt;div class="card bg-light border border-unb-red hover-grow text-center"&gt;</code><br>
+      See: https://lib.unb.ca/copyright <br><br>
 
-     Example: <code>&lt;div class="accordion header-icon-h" id="accordion-example"&gt;</code><br>
+    - To transitionally scale an element <b>horizontally</b> (i.e. width) by 3% on hover/focus, apply <code>hover-grow-h</code> class to the element<br>
+      Example: <code>&lt;div class="card bg-light border border-unb-red hover-grow-h text-center"&gt;</code><br><br>
 
-     Note this feature relies on the <b>aria-expanded</b> attribute - for info on Bootstrap buttons + aria see:
-     https://getbootstrap.com/docs/4.6/components/collapse/#accordion-example) <br>
+    - To transitionally scale an element <b>vertically</b> (i.e. height) by 3% on hover/focus, apply <code>hover-grow-v</code> class to the element<br>
+      Example: <code>&lt;div class="card bg-light border border-unb-red hover-grow-v text-center"&gt;</code><br><br>
+
+- #### Expanded/Collapsed Icons
+    - To add a Font Awesome square caret (i.e. upward/downward-facing arrow) icon to the left of toggle buttons to
+      indicate expandable/collapsible sections simply apply a <kbd>header-icon-h</kbd> class to the parent element of
+      the buttons.<br><br>
+
+      Example: <code>&lt;div class="accordion header-icon-h" id="accordion-example"&gt;</code><br><br>
+
+      Note this feature relies on the <b>aria-expanded</b> attribute - for info on Bootstrap buttons + aria see:
+      https://getbootstrap.com/docs/4.6/components/collapse/#accordion-example) <br><br>
+
+- #### Linked images
+    - To add a standardized image link visual hover/focus effect, add the <code>img-link</code> class either to the parent
+      <code>&lt;a&gt;</code> tag of the image or to the parent container of the <code>&lt;a&gt;</code> tag itself<br><br>
+      <b>Example</b> <i>(class added to parent tag of &lt;a&gt;)</i>:<br>
+      <pre><code>&lt;div class="img-link"&gt;
+        &lt;a href="#url"&gt;>&lt;img src="/path/img-filename" alt="Logo of external website"&gt;&lt;/a&gt;
+      &lt;/div&gt;</code></pre>
+
+      This will reduce the opacity of the linked image using a 3ms transition effect upon hover and focus.
+
+- #### Custom opacities
+    - To add a transparent quality to a container apply one of UNB Library Theme's custom <kbd>opacity</kbd> classes
+      <br><br>
+      <b>Example:</b> <i>(slightly see the content behind an affixed navbar)</i><br>
+      <code>&lt;nav id="navbar-main" class="navbar navbar-expand-lg px-0 affix opacity-80"&gt;</code>
+      <br><br>
+      ![](documentation/images/opacity-utlility.png)
+      <br><br>
+      Valid class values, from least to most opaque (i.e. most to least translucent), are:
+        - <kbd>opacity-25</kbd>
+        - <kbd>opacity-50</kbd>
+        - <kbd>opacity-75</kbd>
+        - <kbd>opacity-80</kbd>
+        - <kbd>opacity-85</kbd>
+        - <kbd>opacity-90</kbd>
+        - <kbd>opacity-95</kbd>
+          <br><br>
+
+- #### Inline lists
+    - To change the default display behaviour of an unordered list from block to inline block, wrap the <kbd>ul</kbd>
+      list element with a container that has the <kbd>wrapper-list-inline</kbd> class applied.
+  <pre><code>&lt;div id="quicklinks-wrapper" class="collapse wrapper-list-inline"&gt;
+    &lt;h3 class="d-inline-block"&gt;Quick Links:&lt;/h3&gt;
+    &lt;ul class="pl-2"&gt;
+      &lt;li&gt;&lt;a href="https://unb.on.worldcat.org/myaccount">Renew Books / My Account&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/services/docdel"&gt;Document Delivery&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/services/recalls"&gt;Recalls&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/about/find-us"&gt;Floor Plans&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/services/tech-tools"&gt;Borrow Tech &amp; Tools&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;  </code></pre>
+
+  ![](documentation/images/list-inline-utility-quicklinks.png)<br>
 
 ## Style Guide Suggestions
 ### Webforms
-- UNB Libraries forms adopt a standardized look and feel for attributes such as background, border, button colors, etc - 
+- UNB Libraries forms adopt a standardized look and feel for attributes such as background, border, button colors, etc -
   this is done by wrapping the form field (including form action buttons)) inside a container with a
   <code>theme-dark</code> class applied to it:
   ![Sample UNB Libraries webform](documentation/images/webform-sample.png)<br><br>
@@ -101,30 +148,54 @@ Several utility classes are available for use for your convenience <kbd>(see src
 
 - The <b>Privacy</b> footer is used across most webforms and is implemented using a Bootstrap alert:
   <pre><code>&lt;div class="alert alert-info" role="alert"&gt;
-    &lt;strong&gt;Privacy: </strong> UNB Libraries will only use the comments you send to
+    &lt;strong&gt;Privacy:&lt;/strong&gt; UNB Libraries will only use the comments you send to
     improve our website and services. We are not storing any personal information.
   &lt;/div&gt;
   </code></pre>
 
+- Related fields are typically grouped together as children of a <b>Fieldset</b> element container within the Webform
+  "Build" UI.
+
+  ![Sample UNB Libraries webform](documentation/images/webform-fieldset-container-wrapper.png)<br><br>
+
+  This triggers custom style attributes for the form display with regards to font-size, font-weight, whitespace, etc
+
+  ![Sample UNB Libraries webform](documentation/images/webform-fieldset-wrapper-display.png)<br><br>
+
 ## Notes
 - This subtheme uses Bootstrap Barrio as a base theme, specifically the 5.1.x branch which, in turn, employs Bootstrap 4 (Barrio 5.5.x uses Bootstrap v5):
-  - https://www.drupal.org/project/bootstrap_barrio
+    - https://www.drupal.org/project/bootstrap_barrio
 
-- As of Bootstrap Barrio v5.1.10, Bootstrap v4.5.x is specifically bundled (i.e. do not use v4.6.x - see global-styling theme library)
-  - Subthemes compiling sass should add the following `require-dev` package to `composer.jason`:  
-    "twbs/bootstrap": "~4.5.3",
+  - As of Bootstrap Barrio v5.1.10, Bootstrap v4.5.x is specifically bundled (i.e. do not use v4.6.x - see global-styling theme library)
+      - Subthemes compiling sass should add the following `require-dev` package to `composer.jason`:
+        "twbs/bootstrap": "~4.5.3",
 
-  - The banner hours depends on the UNB Libraries > Calendar Hours > Calendar Hours Client module:
-    - https://github.com/unb-libraries/calendar_hours
+      - The banner hours depends on the UNB Libraries > Calendar Hours > Calendar Hours Client module:
+          - https://github.com/unb-libraries/calendar_hours
 
-  - Add Font Awesome Icons module, 2.x branch for icons used in Header/Footer:
-    - https://www.drupal.org/project/fontawesome
-    - load only the <b>free</b> icon subset, i.e. the <b>Solid</b> and <b>Brand</b> icons <i>(else the non-free icon font
-      may take precedence and not display)</i>
-       - this in done via the Font Awesome Settings > Partial File Configuration admin config form: 
-         <kbd>/admin/config/content/fontawesome</kbd>
-    - starting with version <strong>2.26</strong>, the library dependency in <code>/libraries/fontawesome</code> must
-      use version 6.x instead of 5.14.4 for the CKEditor plugin to work correctly as the module switched to v6.x
-      styled <kbd>fa</kbd> classes
-         - we use the <strong>FortAwesome</strong> repository located on GitHub (latest release as of this writing is 6.4.0): 
-           https://github.com/FortAwesome/Font-Awesome
+      - Add Font Awesome Icons module, 2.x branch for icons used in Header/Footer:
+          - https://www.drupal.org/project/fontawesome
+          - load only the <b>free</b> icon subset, i.e. the <b>Solid</b> and <b>Brand</b> icons <i>(else the non-free icon font
+            may take precedence and not display)</i>
+              - this in done via the Font Awesome Settings > Partial File Configuration admin config form:
+                <kbd>/admin/config/content/fontawesome</kbd>
+              - starting with version <strong>2.26</strong>, the library dependency in <code>/libraries/fontawesome</code> must
+                use version 6.x instead of 5.14.4 for the CKEditor plugin to work correctly as the module switched to v6.x
+                styled <kbd>fa</kbd> classes
+                - note we use at least version 6.4.2 as this release introduced updated social icons.
+                <pre><code>{
+                  "package": {
+                    "name": "fontawesome/fontawesome",
+                    "version": "6.5.1",
+                    "type": "drupal-library",
+                    "extra": {
+                      "installer-name": "fontawesome"
+                    },
+                    "dist": {
+                      "url": "https://use.fontawesome.com/releases/v6.5.1/fontawesome-free-6.5.1-web.zip",
+                      "type": "zip"
+                    }
+                  },
+                  "type": "package"
+                },
+                </code></pre>
