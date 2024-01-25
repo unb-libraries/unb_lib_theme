@@ -176,11 +176,11 @@
     {{ page.breadcrumb }}
     <div id="main-content" tabindex="-1">
       <div class="row row-offcanvas row-offcanvas-left clearfix">
-        <main{{ content_attributes }}>
+        <div class="col order-first">
           <section class="section">
             {{ page.content }}
           </section>
-        </main>
+        </div>
         {% if page.sidebar_first %}
           <div{{ sidebar_first_attributes }}>
             <aside class="section" role="complementary">
