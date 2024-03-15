@@ -12,4 +12,5 @@ global-styling:
     js/global.min.js: { minified: true }
   dependencies:
     - core/jquery
+    - core/once
     - calendar_hours_client/calendar-hours
