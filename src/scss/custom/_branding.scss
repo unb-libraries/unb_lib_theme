@@ -1,0 +1,39 @@
+/* UNB Libraries Branding */
+.branding {
+  a {
+    border-bottom: 3px solid transparent;
+    margin-top: 2px;
+
+    &:focus,
+    &:hover {
+      border-bottom: 3px solid $header-hover-color;
+    }
+  }
+}
+
+/* SVG Logo */
+#unb-lib-logo {
+  width: 320px;
+  max-width: 100%;
+
+  .fill-libraries {
+    fill: $unb-red;
+  }
+}
+
+.affix {
+  #unb-lib-logo {
+    .fill-unb,
+    .fill-libraries {
+      fill: $white;
+    }
+  }
+}
+
+.header-fluid {
+  #unb-lib-logo {
+    .fill-unb {
+      fill: $white;
+    }
+  }
+}
