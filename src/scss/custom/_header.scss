@@ -269,20 +269,6 @@ ul[role="menubar"] a[aria-haspopup="true"] {
     max-width: 320px;
   }
 }
-
-.branding h1 {
-  min-width: 320px;
-}
-.branding a,
-.branding h1 {
-  border-bottom: 3px solid transparent;
-  height: 100%;
-  margin-top: 1px;
-}
-.branding a:focus,
-.branding a:hover {
-  border-bottom: 3px solid $header-hover-color;
-}
 /* END Branding */
 
 /* Megamenu */
