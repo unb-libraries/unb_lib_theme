@@ -2,13 +2,20 @@
   background: rgba(192, 192, 192, 0.2);
   transition: top 0.25s, left 0.25s, width 0.25s, height 0.25s, opacity 0.125s;
 }
-a.focus-ring,
-.breadcrumb a[href="/"].focus-ring:after {
-  outline: 1px dotted $gray-light;
-}
 :focus:not(.focus-ring):not(.form-control-file) {
   outline: none;
 }
+.branding a {
+  &:focus,
+  .focus-ring {
+    outline: 1px dotted $white;
+    outline-offset: 0;
+  }
+}
+.breadcrumb a[href="/"].focus-ring:after {
+  height: 75%;
+}
+
 .btn {
   &:focus {
     @include css3-prefix(box-shadow, 0 0 0 0.2rem rgba(0, 123, 255, 0.25));
