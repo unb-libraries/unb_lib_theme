@@ -5,6 +5,9 @@
 :focus:not(.focus-ring):not(.form-control-file) {
   outline: none;
 }
+a.focus-ring {
+  outline: 1px dotted $gray-medium;
+}
 .branding a {
   &:focus,
   .focus-ring {
