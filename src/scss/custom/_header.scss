@@ -273,6 +273,7 @@ ul[role="menubar"] a[aria-haspopup="true"] {
 
 /* Megamenu */
 .megamenu-li {
+  margin-top: 1px;
   position: static;
 
   button.nav-link {
@@ -288,7 +289,7 @@ ul[role="menubar"] a[aria-haspopup="true"] {
     border-bottom: 3px solid transparent;
     color: $black;
     height: 100%;
-    margin: 1px 0 0 0;
+    line-height: 1.4;
     padding-bottom: .99rem;
     padding-top: .99rem;
     text-align: left;
