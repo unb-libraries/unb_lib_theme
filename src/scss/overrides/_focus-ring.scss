@@ -2,12 +2,18 @@
   background: rgba(192, 192, 192, 0.2);
   transition: top 0.25s, left 0.25s, width 0.25s, height 0.25s, opacity 0.125s;
 }
-a.focus-ring,
-.breadcrumb a[href="/"].focus-ring:after {
-  outline: 1px dotted $gray-light;
-}
 :focus:not(.focus-ring):not(.form-control-file) {
   outline: none;
+}
+a.focus-ring {
+  outline: 1px dotted $gray-medium;
+}
+.branding a {
+  &:focus,
+  .focus-ring {
+    outline: 1px dotted $white;
+    outline-offset: 0;
+  }
 }
 .btn {
   &:focus {

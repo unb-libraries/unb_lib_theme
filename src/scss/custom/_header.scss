@@ -100,10 +100,6 @@
   }
 
   #navbar-main:not(.affix) {
-    .branding h1 {
-      min-width: auto;
-    }
-
     #navbar {
       flex-basis: auto;
 
@@ -240,42 +236,6 @@ ul[role="menubar"] a[aria-haspopup="true"] {
   }
 }
 
-/* Branding */
-/* Logo image */
-.branding .unblib-logo {
-  padding-top: .5rem;
-}
-@media (max-width: 991px) {
-  .branding img {
-    max-width: 350px;
-  }
-}
-@media (max-width: 350px) {
-  .branding img {
-    max-width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .branding img {
-    max-width: 320px;
-  }
-}
-
-.branding h1 {
-  min-width: 320px;
-}
-.branding a,
-.branding h1 {
-  border-bottom: 3px solid transparent;
-  height: 100%;
-  margin-top: 1px;
-}
-.branding a:focus,
-.branding a:hover {
-  border-bottom: 3px solid $header-hover-color;
-}
-/* END Branding */
-
 /* Megamenu */
 .megamenu-li {
   margin-top: 1px;
@@ -283,9 +243,9 @@ ul[role="menubar"] a[aria-haspopup="true"] {
 
   button.nav-link {
     @include css3-prefix(transition,
-      background-color $duration-default ease,
-      border-bottom $duration-default ease-in-out,
-      color $duration-default ease
+        background-color $duration-default ease,
+        border-bottom $duration-default ease-in-out,
+        color $duration-default ease
     );
     background: none;
     border-top: none;
