@@ -51,14 +51,14 @@
             a {
                 display: block;
 
-                img {
+                svg {
                     border-bottom: 2px outset transparent;
                     transition: border-color .25s;
                     max-width: 200px;
                 }
 
-                &:focus img,
-                &:hover img {
+                &:focus svg,
+                &:hover svg {
                     border-bottom: 2px outset $navbar-dark-hover;
                 }
             }
