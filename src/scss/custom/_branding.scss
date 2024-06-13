@@ -17,7 +17,7 @@
   max-width: 100%;
 
   .fill-libraries {
-    fill: $unb-red;
+    fill: $unb-logo-red;
   }
 }
 
@@ -35,5 +35,18 @@
     .fill-unb {
       fill: $white;
     }
+  }
+}
+
+/* UNB Logo SVG */
+.unb-logo {
+  width: 185px;
+  max-width: 100%;
+
+  .fill-sail {
+    fill: $unb-logo-red;
+  }
+  .fill-unb {
+    fill: $white;
   }
 }
