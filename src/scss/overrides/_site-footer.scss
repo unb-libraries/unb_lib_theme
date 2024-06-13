@@ -50,15 +50,15 @@
             a {
                 display: block;
 
-                img {
+                img, svg {
                     border-bottom: 2px outset transparent;
                     transition: border-color .25s;
                     max-width: 200px;
                 }
 
-                &:focus img,
-                &:hover img {
-                    border-bottom: 2px outset $navbar-dark-hover;
+                &:focus img, &:focus svg,
+                &:hover img, &:hover svg {
+                  border-bottom: 2px outset $navbar-dark-hover;
                 }
             }
         }
