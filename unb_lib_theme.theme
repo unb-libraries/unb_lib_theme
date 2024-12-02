@@ -152,12 +152,12 @@ function unb_lib_theme_form_system_theme_settings_alter(&$form, FormStateInterfa
 
 /**
  * Implements template_preprocess_radios()
- * Add '#wrapper_attributes' support for radios. See:
+ * Add '#wrapper_attributes' support for radios. Based off:
  * @link https://www.drupal.org/project/drupal/issues/3352581 @endlink
  */
 function lib_unb_ca_preprocess_radios(&$variables) {
   $element = $variables['element'];
-  $variables['attributes'] = $element['#wrapper_attributes'] ?? [];
+  $variables['attributes'] = $element['#wrapper_attributes'] ?? $variables['attributes'];
   if (isset($element['#id']) && !isset($variables['attributes']['id'])) {
     $variables['attributes']['id'] = $element['#id'];
   }
