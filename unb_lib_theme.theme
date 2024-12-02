@@ -10,24 +10,6 @@ use Symfony\Component\Finder\Finder;
 const BANNER_SUBDIR = '/img/banner';
 
 /**
- * Implements template_preprocess_checkboxes().
- */
-function unb_lib_theme_preprocess_checkboxes(&$variables) {
-  if (count($variables['element']['#options']) < 5) {
-    $variables['custom_inline'] = TRUE;
-  }
-}
-
-/**
- * Implements template_preprocess_radios().
- */
-function unb_lib_theme_preprocess_radios(&$variables) {
-  if (count($variables['element']['#options']) < 5) {
-    $variables['custom_inline'] = TRUE;
-  }
-}
-
-/**
  * Implements hook_theme_preprocess_page().
  */
 function unb_lib_theme_preprocess_page(&$variables) {
@@ -166,6 +148,23 @@ function unb_lib_theme_form_system_theme_settings_alter(&$form, FormStateInterfa
     '#weight' => 50,
     '#open' => TRUE,
   ];
+}
+
+/**
+ * Implements template_preprocess_radios()
+ * Add '#wrapper_attributes' support for radios. See:
+ * @link https://www.drupal.org/project/drupal/issues/3352581 @endlink
+ */
+function lib_unb_ca_preprocess_radios(&$variables) {
+  $element = $variables['element'];
+  $variables['attributes'] = $element['#wrapper_attributes'] ?? [];
+  if (isset($element['#id']) && !isset($variables['attributes']['id'])) {
+    $variables['attributes']['id'] = $element['#id'];
+  }
+  if (isset($element['#attributes']['title']) && !isset($variables['attributes']['title'])) {
+    $variables['attributes']['title'] = $element['#attributes']['title'];
+  }
+  $variables['children'] = $element['#children'];
 }
 
 /**
