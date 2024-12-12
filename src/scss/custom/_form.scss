@@ -9,15 +9,6 @@ form {
 
     /* ALERTS */
     .alert-danger {
-      &:not(.no-icon):before {
-        content: '\f06a';
-        display: inline-block;
-        font: var(--fa-font-solid);
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        vertical-align: top;
-      }
-
       /* Inline form error fix */
       .wrapper-list-comma-list {
         display: inline-block;
@@ -222,11 +213,10 @@ form {
     margin-left: .5rem;
   }
 
-  input[value="Remove selected"] {
-    background: $gray-600;
+  input[value*="Remove"] {
+    background: $gray-700;
     border-radius: 0.2rem;
     color: $white;
-    font-size: 0.875rem;
     margin-top: .5rem;
     margin-left: .5rem;
     padding: 0.25rem 0.5rem;
@@ -234,7 +224,7 @@ form {
     &:focus,
     &:hover {
       color: $white;
-      opacity: .85;
+      opacity: .88;
     }
   }
 
