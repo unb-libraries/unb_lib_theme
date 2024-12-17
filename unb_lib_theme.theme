@@ -24,7 +24,7 @@ function unb_lib_theme_preprocess_page(&$variables) {
 
     case 'local':
       $variables['env_indicator'] = 'Local Container';
-      $variables['env_indicator_bg_color'] = 'primary';
+      $variables['env_indicator_bg_color'] = 'info';
       $variables['env_indicator_txt_color'] = 'white';
       break;
 
