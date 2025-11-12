@@ -210,7 +210,7 @@ a.nav-link[href$="//unb.ca"]::before {
     overflow: hidden;
 }
 @media (max-width: 991px) {
-    #banner.front {
+    #banner.front.show {
         display: block;
     }
     header .container {
