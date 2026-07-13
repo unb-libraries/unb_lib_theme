@@ -1,8 +1,11 @@
 ![UNB Libraries Search](documentation/images/unb-libraries-screenshot.png)
 # UNB Libraries Theme.
-Drupal 8 and 9 theme based on Bootstrap Barrio 5.1.x theme (https://www.drupal.org/project/bootstrap_barrio).<br>
-Note the theme branch <kbd>9.x</kbd> segment refers to Drupal 9.x while the <kbd>4.x</kbd> segment refers
-to Bootstrap 4. The <kbd>dev-8.x-4.x</kbd> branch is intended to use for projects using Drupal 8.x.
+Drupal 11 theme based on Bootstrap Barrio 5.1.x theme (https://www.drupal.org/project/bootstrap_barrio).<br>
+Note the theme branch's first segment refers to the Drupal major version (this <kbd>11.x-4.x</kbd> branch targets
+Drupal 11) while the second segment refers to the Bootstrap major version (this branch still uses Bootstrap
+4/Barrio 5.1.x). Other branches (e.g. <kbd>dev-9.x-4.x</kbd>, <kbd>dev-10.x-4.x</kbd>, <kbd>dev-8.x-4.x</kbd>)
+target their respective Drupal major versions. The <kbd>dev-11.x-5.x</kbd> branch is reserved for a future
+Bootstrap 5 migration on top of Drupal 11.
 
 ## License
 - unb_lib_theme is licensed under the MIT License:
@@ -20,10 +23,10 @@ header/footer/assets etc. for a project's subtheme. Requirements/dependencies ar
   to your project repo <kbd>build/composer.json</kbd> file's require section:
   <pre><code>"require": {
     &hellip;
-    "drupal/bootstrap_barrio": "5.1.10",
+    "drupal/bootstrap_barrio": "5.1.12",
     "unb-libraries/alert_scheduler": "dev-8.x-1.x",
     "unb-libraries/calendar_hours": "dev-9.x-1.x",
-    "unb-libraries/unb_lib_theme": "dev-9.x-4.x",
+    "unb-libraries/unb_lib_theme": "dev-11.x-4.x",
     &hellip;
   }</code></pre>
 
@@ -43,27 +46,6 @@ header/footer/assets etc. for a project's subtheme. Requirements/dependencies ar
   }</code></pre>
 
 Note that the <kbd>4.5.3</kbd> branch was selected to match the version used by Bootstrap Barrio 5.1.x.
-
-## UNB Libraries Administration Theme Enhancements
-This theme contains various stylistic improvements to Drupal core's `Seven` administration
-theme defined in the <code>src/scss/admin-overrides-seven.scss</code> Sass file. These style
-rules are primary intended for UNB Libraries projects. Should you use `Seven` as your
-project's administration theme and want to incorporate these overrides please proceed as follows:
-- create an <code>admin-style.scss</code> files inside your subtheme's <code>src/scss</code> folder
-- add the following import at the top of this file:
-  <pre><code>@import '../../../../../vendor/unb-libraries/unb_lib_theme/src/scss/admin-overrides-seven.scss';</code></pre>
-- define a library for the administration styles in your subtheme's <code>SUBTHEMENAME.libraries.yml</code> file:
-  <pre><code>admin-styling:
-    version: VERSION
-    css:
-      theme:
-        dist/css/admin-style.css: { minified: true }
-  </code></pre>
-- finally, you may attach the admin library assets to an administration form in code using:
-<code>$form['#attached']['library'][] = 'lib_unb_ca/admin-styling';</code>
-
-This will compile (minimized) to <code>dist/css/admin-style.css</code>. If you wish to add additional project-specific
-administration rules simply add them **after** your <code>@import</code> line.
 
 ### Utility Classes
 Several utility classes are available for use for your convenience <kbd>(see src/scss/custom/_utility.scss)</kbd>:
