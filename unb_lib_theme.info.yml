@@ -2,7 +2,7 @@ name: UNB Libraries Base Theme
 type: theme
 description: 'UNB Libraries Drupal 11 base theme constructed from Bootstrap Barrio.'
 # version: VERSION
-core_version_requirement: ^11
+core_version_requirement: ^10 || ^11
 base theme: bootstrap_barrio
 
 libraries:
