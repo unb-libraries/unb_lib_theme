@@ -1,0 +1,28 @@
+// Land Acknowledgement Section.
+#land-acknowledgement {
+    background: var(--bg-dark);
+    line-height: $line-height-sm;
+    padding: calc($spacer * 1.5) 0;
+
+    p:last-child {
+        color: $light;
+        margin-bottom: 0!important;
+    }
+
+    a {
+        color: $white;
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-underline-offset: $text-underline-offset;
+
+        &:focus-visible,
+        &:hover {
+            color: $warning;
+        }
+
+        &:hover {
+            text-decoration-color: $warning;
+        }
+    }
+}
