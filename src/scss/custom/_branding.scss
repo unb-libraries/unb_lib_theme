@@ -17,7 +17,11 @@
   max-width: 100%;
 
   .fill-libraries {
-    fill: $unb-logo-red;
+    fill: $black;
+
+      .fill-sail {
+        fill: $unb-logo-red;
+      }
   }
 }
 
