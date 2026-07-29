@@ -1,10 +1,8 @@
-name: UNB Libraries Base Theme
+name: UNB Libraries Refresh (2026)
 type: theme
-description: 'UNB Libraries Drupal 8 base theme constructed from Bootstrap Barrio.'
-# version: VERSION
-core: 8.x
-core_version_requirement: ^8 || ^9 || ^10
 base theme: bootstrap_barrio
+core_version_requirement: ^9.5 || ^10 || ^11
+description: 'UNB Libraries Drupal 9+ subtheme based on Bootstrap Barrio v5.1.x (BS 4.5.2).'
 
 libraries:
   - unb_lib_theme/global-styling
