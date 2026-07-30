@@ -18,6 +18,13 @@
     ul {
         margin: 0;
 
+        li {
+            &.list-inline-item {
+                color: $secondary;
+                margin-right: 0;
+            }
+        }
+
         a {
             color: $light;
         }
