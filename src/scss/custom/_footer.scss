@@ -1,3 +1,40 @@
+footer {
+    background: $unb-red;
+}
+
+#footer-social {
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 768px) {
+        margin: 0;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    a {
+        background: $black;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        box-shadow: 0 0 1px 0px rgba(255, 255, 255, 0.95);
+        /* Alternative fix for Safari rendering issues */
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        padding: 0 calc($spacer * 0.5);
+
+        &[href^="https://facebook"] {
+            min-width: calc($spacer * 2);
+            text-align: center;
+        }
+
+        &:hover {
+            border-color: $secondary;
+        }
+    }
+}
+
 #land-acknowledgement {
     background: $dark;
 
