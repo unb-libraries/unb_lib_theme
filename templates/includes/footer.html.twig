@@ -4,10 +4,6 @@
       <a class="d-none d-lg-block link-no-hover mb-3" href="//unb.ca">
         {% include '@unb_lib_theme/includes/unb-logo.html.twig' %}
       </a>
-   {# <a class="donate" href="//donations.helpforcharities.com/unbdonation">
-        <img class="img-fluid" src="{{ unb_lib_theme_path }}/img/donate.png" alt="Donate to UNB Libraries">
-      </a>
-   #}
     </div>
     <div class="my-2">
       <h2>General</h2>
@@ -20,16 +16,6 @@
       </ul>
     </div>
     <div class="my-2">
-      <h2>Libraries</h2>
-      <ul class="clearfix nav">
-        <li><a class="nav-link" href="https://lib.unb.ca/about/harriet-irving-library">Harriet Irving</a></li>
-        <li><a class="nav-link" href="https://lib.unb.ca/about/iuc-library">I.U.C.</a></li>
-        <li><a class="nav-link" href="https://lib.unb.ca/about/head-hall-library">Head Hall</a></li>
-        <li><a class="nav-link" href="https://lib.unb.ca/about/hans-w-klohn-commons">Hans W. Klohn</a></li>
-        <li><a class="nav-link" href="https://unb.ca/fredericton/law/library">Gerard V. La Forest Law</a></li>
-      </ul>
-    </div>
-    <div class="my-2">
       <h2>Departments</h2>
       <ul class="clearfix nav">
         <li><a class="nav-link" href="https://lib.unb.ca/archives">Archives &amp; Special Collections</a></li>
@@ -39,35 +25,48 @@
         <li><a class="nav-link" href="https://lib.unb.ca/about/contact-us#units">&hellip;&nbsp;more</a></li>
       </ul>
     </div>
+    <div class="my-2">
+      <h2 class="visually-hidden">Join the conversation:</h2>
+      <ul class="nav">
+        <li><a class="nav-link" href="https://facebook.com/UNBLibraries/"><i class="fa-brands fa-facebook-f mr-1 text-unb-red" aria-hidden="true"></i><span class="visually-hidden">Facebook</span></a></li>
+        <li class="mx-4"><a class="nav-link" href="https://instagram.com/unblibraries"><i class="fa-brands fa-instagram mr-1 text-unb-red" aria-hidden="true"></i><span class="visually-hidden">Instagram</span></a></li>
+        <li><a class="nav-link" href="https://www.youtube.com/user/UNBLibraries"><i class="fa-brands fa-youtube mr-1 text-unb-red" aria-hidden="true"></i><span class="visually-hidden">YouTube</span></a></li>
+      </ul>
+    </div>
   </div>
 </div>
 
-<div class="footer-middle container pb-3">
-  <h2 class="mr-4">Join the conversation:</h2>
-  <ul class="nav">
-    <li><a class="nav-link" href="https://facebook.com/UNBLibraries/"><i class="fa-brands fa-facebook-f mr-1 text-unb-red" aria-hidden="true"></i>Facebook</a></li>
-    <li class="mx-4"><a class="nav-link" href="https://x.com/UNBLibraries"><i class="fa-brands fa-x-twitter mr-1 text-unb-red" aria-hidden="true"></i>X/Twitter</a></li>
-    <li><a class="nav-link" href="https://instagram.com/unblibraries"><i class="fa-brands fa-instagram mr-1 text-unb-red" aria-hidden="true"></i>Instagram</a></li>
-  </ul>
+<div id="land-acknowledgement">
+    <div class="container">
+        <p>
+            <span class="font-weight-bold">Territorial Acknowledgement:</span>
+            The University of New Brunswick recognizes and respectfully
+            acknowledges that all UNB course interactions take place on
+            the unsurrendered and unceded traditional lands of
+            Wolastoqiyik (Maliseet).
+            <a href="#">Read more &#10093;</a>
+        </p>
+    </div>
 </div>
 
-{% include '@unb_lib_theme/includes/land-acknowledgement.html.twig' %}
-
-<div class="footer-bottom py-2">
-  <nav aria-label="Footer Utility Menu" class="container d-flex flex-column flex-lg-row justify-content-lg-between">
-    <ul role="menu" class="list-inline mb-0">
-      <li role="none" class="list-inline-item"><a role="menuitem" class="nav-link" href="https://unb.ca/copyright">Copyright</a></li>
-      <li role="none" class="list-inline-item"><a role="menuitem" class="nav-link" href="https://unb.ca/privacy/">Privacy</a></li>
-      <li role="none" class="list-inline-item"><a role="menuitem" class="nav-link" href="https://lib.unb.ca/help/web-accessibility-statement">Accessibility</a></li>
-      <li role="none" class="list-inline-item"><a role="menuitem" class="nav-link" href="https://lib.unb.ca/contact-unb-libraries-staff">Web Feedback</a></li>
-    </ul>
-    <div class="pt-3 pt-lg-0">
-      <ul role="menu" class="list-inline mb-0 text-lg-right">
-        <li role="none" class="list-inline-item"><a role="menuitem" class="nav-link" href="https://unb.ca">UNB</a></li>
-        <li role="none" class="list-inline-item"><a role="menuitem" class="nav-link" href="https://lib.unb.ca/help/ask-us"><i class="fas fa-question-circle mr-1" aria-hidden="true"></i>Ask Us</a></li>
-        <li role="none" class="list-inline-item"><a role="menuitem" class="nav-link" href="https://lib.unb.ca/services/your-comments-and-suggestions"><i class="fas fa-comments mr-1" aria-hidden="true"></i>Feedback</a></li>
-        <li role="none" class="list-inline-item"><a role="menuitem" class="nav-link" href="https://lib.unb.ca/search"><i class="fas fa-search mr-1" aria-hidden="true"></i>Search</a></li>
+<div id="footer-bottom">
+  <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
+    <div class="text-light">&copy; {{ "now"|date("Y") }} UNB Libraries. All rights reserved.</div>
+    <nav aria-label="Footer Menu" >
+      <ul role="menu" class="list-inline">
+        <li role="none" class="list-inline-item">
+          <a role="menuitem" href="https://unb.ca/copyright">Copyright</a>
+        </li>
+        <li role="none" class="list-inline-item">
+          <a role="menuitem" href="https://unb.ca/privacy/">Privacy Policy</a>
+        </li>
+        <li role="none" class="list-inline-item">
+          <a role="menuitem" href="https://lib.unb.ca/help/web-accessibility-statement">Accessibility</a>
+        </li>
+        <li role="none" class="list-inline-item">
+          <a role="menuitem" href="https://lib.unb.ca/contact-unb-libraries-staff">Feedback</a>
+        </li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </div>
