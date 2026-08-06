@@ -6,6 +6,16 @@
 /* Import Sass files */
 @import 'import';
 
+/* Base font */
+:root {
+  font-size: 110%; /* Sets 1rem = 17.6px based on browser default of 16px */
+}
+
+/* Optional: Safeguard for user browser accessibility adjustments */
+html {
+  font-size: 110%; 
+}
+
 /* Block elements */
 body,
 .font-regular {
