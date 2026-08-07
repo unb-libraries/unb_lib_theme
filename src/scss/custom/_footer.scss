@@ -2,6 +2,23 @@ footer {
     background: $unb-red;
 }
 
+#footer-lib-link {
+    .lib-label,
+    .lib-url {
+        font-size: $spacer * 1.5;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    .lib-label {
+        color: $white;
+    }
+
+    .lib-url {
+        color: $black;
+    }
+}
+
 #footer-social {
     margin-left: auto;
     margin-right: auto;
@@ -25,7 +42,7 @@ footer {
         padding: 0 calc($spacer * 0.5);
 
         &[href^="https://facebook"] {
-            min-width: calc($spacer * 2);
+            min-width: calc($spacer * 2.05);
             text-align: center;
         }
 

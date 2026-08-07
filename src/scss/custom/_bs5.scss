@@ -3,6 +3,9 @@
   gap: $spacer!important;
 }
 
+.lh-base {
+  line-height: $spacer * 1.5 !important;
+}
 .lh-sm {
     line-height: $spacer * 1.25 !important;
 }
