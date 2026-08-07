@@ -15,18 +15,6 @@
         font-size: 1.1em;
     }
 
-    & > div:not(.footer-middle) a.nav-link::after {
-        color: $unb-red;
-        content: "\f105";
-        font: var(--fa-font-solid);
-        font-size: 91%;
-        margin: 0 0 0 4px;
-        opacity: .9;
-        padding-right: 2px;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-    }
-
     .block {
         border: none;
         margin: 0;
