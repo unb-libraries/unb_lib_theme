@@ -443,6 +443,13 @@ ol, ul {
 /* STATS SECTION */
 #section-stats {
     background: $primary-red-800;
+    padding-bottom: $spacer * 2;
+    padding-top: $spacer * 2;
+
+    h2 {
+        color: $white;
+        font-size: $spacer * 2;
+    }
 }
 
 .stats-number {
