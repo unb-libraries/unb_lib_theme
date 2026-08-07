@@ -439,3 +439,14 @@ ol, ul {
     }
   }
 }
+
+/* STATS SECTION */
+#section-stats {
+    background: $primary-red-800;
+}
+
+.stats-number {
+    color: $white;
+    font-weight: bold;
+    font-size: larger;
+}
