@@ -3,6 +3,21 @@ footer {
 }
 
 #footer-lib-link {
+    a {
+        .lib-url {
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            text-underline-offset: 5px;
+            transition: all $trans-timing-duration $trans-timing-function;
+        }
+
+        &:hover {
+            .lib-url {
+                text-decoration-color: $white;
+            }
+        }
+    }
+
     .lib-label,
     .lib-url {
         font-size: $spacer * 1.5;
