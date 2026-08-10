@@ -7,8 +7,8 @@
       </a>
     </div>
     <div class="my-2">
-      <h2>General</h2>
-      <ul class="nav">
+      <h2 id="footer-general">General</h2>
+      <ul aria-labelledby="footer-general" class="nav">
         <li><a class="nav-link" href="https://lib.unb.ca/about/contact-us">Contact Us</a></li>
         <li><a class="nav-link" href="https://lib.unb.ca/about/find-us">Find Us</a></li>
         <li><a class="nav-link" href="https://lib.unb.ca/about/hours">Operating Hours</a></li>
@@ -16,8 +16,8 @@
       </ul>
     </div>
     <div class="my-2">
-      <h2>Departments</h2>
-      <ul class="nav">
+      <h2 id="footer-departments">Departments</h2>
+      <ul aria-labelledby="footer-departments" class="nav">
         <li><a class="nav-link" href="https://lib.unb.ca/archives">Archives &amp; Special Collections</a></li>
         <li><a class="nav-link" href="https://lib.unb.ca/cds">Centre for Digital Scholarship</a></li>
         <li><a class="nav-link" href="https://lib.unb.ca/microforms">Microforms</a></li>
@@ -36,8 +36,8 @@
         'Visit our YouTube channel'
     %}
     <div id="footer-social" class="my-2">
-      <h2 class="visually-hidden">Socials:</h2>
-      <ul class="list-inline">
+      <h2 id="footer-socials" class="visually-hidden">Socials:</h2>
+      <ul aria-labelledby="footer-socials" class="list-inline">
         <li class="list-inline-item">
           <a class="nav-link" href="https://facebook.com/UNBLibraries" title="{{ facebook_alt }}">
             <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
@@ -80,7 +80,7 @@
 <div id="footer-bottom">
   <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
     <div class="text-light">&copy; {{ "now"|date("Y") }} UNB Libraries. All rights reserved.</div>
-    <nav aria-label="Footer Menu" >
+    <nav aria-label="Bottom Footer Menu" >
       <ul role="menu" class="list-inline">
         <li role="none" class="list-inline-item">
           <a role="menuitem" href="https://unb.ca/copyright">Copyright</a>
