@@ -1,12 +1,16 @@
 .site-footer {
     font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-    a.nav-link {
-        @include nav-menu-style;
+    ul {
+        a.nav-link {
+            @include nav-menu-style;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            text-underline-offset: 5px;
 
-        &:focus,
-        &:hover {
-            @include nav-menu-hover-style;
+            &:hover {
+                text-decoration-color: $white;
+            }
         }
     }
 

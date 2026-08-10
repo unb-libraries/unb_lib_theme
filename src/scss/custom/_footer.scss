@@ -14,8 +14,6 @@ footer {
 
 #footer-lib-link {
     a {
-        display: block;
-
         .lib-url {
             text-decoration: underline;
             text-decoration-color: transparent;
@@ -68,8 +66,9 @@ footer {
         backface-visibility: hidden;
         padding: 0 calc($spacer * 0.5);
 
+        &[href^="https://instagram"],
         &[href^="https://facebook"] {
-            min-width: calc($spacer * 2.05);
+            min-width: calc($spacer * 2.25);
             text-align: center;
         }
 
