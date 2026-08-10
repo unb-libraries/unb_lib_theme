@@ -2,6 +2,16 @@ footer {
     background: $unb-red;
 }
 
+#footer-top {
+    padding: calc($spacer * 1.5) 0;
+
+    ul {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+}
+
 #footer-lib-link {
     a {
         .lib-url {

@@ -11,64 +11,12 @@
     }
 
     h2 {
-        color: $footer-heading;
-        font-size: 1.1em;
+        color: $white;
+        font-size: calc($font-size-base * 1.25);
     }
 
     .block {
         border: none;
         margin: 0;
-    }
-
-    .footer-top {
-        @include css3-prefix(transition, all .35s ease-in);
-
-        ul {
-            display: block;
-            margin-left: 0;
-            margin-bottom: 1em;
-        }
-
-        .unb-logo {
-            text-align: right;
-            @media (max-width: 991px) {
-                width: 100%;
-            }
-
-            a {
-                display: block;
-
-                svg {
-                    border-bottom: 2px outset transparent;
-                    transition: border-color .25s;
-                    max-width: 200px;
-                }
-
-                &:focus svg,
-                &:hover svg {
-                    border-bottom: 2px outset $navbar-dark-hover;
-                }
-            }
-        }
-    }
-
-    .footer-middle {
-        h2, ul {
-            display: inline-flex;
-        }
-    }
-
-    .footer-bottom {
-        background: $navbar-dark;
-
-        a.nav-link {
-            &:hover {
-                background: #272B2F;
-            }
-        }
-
-        li:not(:last-child) {
-            margin-right: 1em;
-        }
     }
 }
