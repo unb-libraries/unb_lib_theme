@@ -71,8 +71,10 @@ footer {
             text-align: center;
         }
 
+        &:focus-visible,
         &:hover {
             border-color: $secondary;
+            color: $warning;
         }
     }
 }
