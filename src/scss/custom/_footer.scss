@@ -5,6 +5,10 @@ footer {
 #footer-top {
     padding: calc($spacer * 1.5) 0;
 
+    h2 {
+        font-family: inherit;
+    }
+
     ul {
         display: block;
         margin-left: 0;
@@ -14,6 +18,8 @@ footer {
 
 #footer-lib-link {
     a {
+        display: inline-block;
+
         .lib-url {
             text-decoration: underline;
             text-decoration-color: transparent;

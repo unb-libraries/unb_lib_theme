@@ -1,13 +1,16 @@
 <div id="footer-top">
   <div class="container d-flex flex-column flex-lg-row flex-wrap justify-content-between">
-    <div id="footer-lib-link" class="my-4">
-      <a href="https://lib.unb.ca" class="nav-link">
+    <div id="footer-lib-link" class="mb-4">
+      <a href="https://lib.unb.ca">
         <div class="lib-label">UNB Libraries</div>
         <div class="lib-url">lib.unb.ca</div>
       </a>
     </div>
     <div class="my-2">
-      <h2 id="footer-general">General</h2>
+      <h2 id="footer-general">
+        General
+        <span class="visually-hidden">Information</span>
+      </h2>
       <ul aria-labelledby="footer-general" class="nav">
         <li><a class="nav-link" href="https://lib.unb.ca/about/contact-us">Contact Us</a></li>
         <li><a class="nav-link" href="https://lib.unb.ca/about/find-us">Find Us</a></li>
@@ -80,22 +83,22 @@
 <div id="footer-bottom">
   <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
     <div class="text-light">&copy; {{ "now"|date("Y") }} UNB Libraries. All rights reserved.</div>
-    <nav aria-label="Bottom Footer Menu" >
-      <ul role="menu" class="list-inline">
-        <li role="none" class="list-inline-item">
-          <a role="menuitem" href="https://unb.ca/copyright">Copyright</a>
+    <nav aria-label="Footer Utility Menu">
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="https://unb.ca/copyright">Copyright</a>
+          <span aria-hidden="true">|</span>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://unb.ca/privacy/">Privacy Policy</a>
           <span aria-hidden="true">|</span>
         </li>
         <li role="none" class="list-inline-item">
-          <a role="menuitem" href="https://unb.ca/privacy/">Privacy Policy</a>
+          <a href="https://lib.unb.ca/help/web-accessibility-statement">Accessibility</a>
           <span aria-hidden="true">|</span>
         </li>
-        <li role="none" class="list-inline-item">
-          <a role="menuitem" href="https://lib.unb.ca/help/web-accessibility-statement">Accessibility</a>
-          <span aria-hidden="true">|</span>
-        </li>
-        <li role="none" class="list-inline-item">
-          <a role="menuitem" href="https://lib.unb.ca/contact-unb-libraries-staff">Feedback</a>
+        <li class="list-inline-item">
+          <a href="https://lib.unb.ca/contact-unb-libraries-staff">Feedback</a>
         </li>
       </ul>
     </nav>
