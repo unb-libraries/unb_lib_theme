@@ -1,0 +1,65 @@
+#navbar-main-content {
+    background: $primary-red-500;
+    border: 1px solid $primary-red-500;
+    border-bottom: none; 
+
+    #navbar {
+        button.nav-link {
+            color: $white;
+            font-weight: bold;
+            padding-left: calc($spacer * 1.5);
+            padding-right: calc($spacer * 1.5);
+            text-transform: uppercase;
+
+            &:focus-visible,
+            &:hover {
+                background-color: $primary-red-800;
+            }
+
+            &[aria-expanded="true"] {
+                background: $white;
+                color: $black;
+            }
+        }
+    }
+
+    .megamenu-li {
+        .flex-fill {
+            transition: background $trans-timing-duration $trans-timing-function;
+
+            &:focus-within,
+            &:hover {
+                background: $white;
+            }
+        }
+
+        .megamenu {
+            & > div {
+                background-color: $gray-300;
+            }
+            
+            .nav-link {
+                color: $dark;
+                font-weight: bold;
+                text-decoration: underline;
+                text-decoration-color: transparent;
+                text-underline-offset: 3px;
+
+                &:focus-visible,
+                &:hover {
+                    background: none;
+                    color: $link-color;
+                    text-decoration: underline;
+                    text-decoration-color: $link-color;
+                }
+            }
+        }
+
+        .megamenu-col-title {
+            color: $black;
+            font-size: larger;
+            font-weight: bold;
+            margin-bottom: $spacer;
+        }
+    }
+}
