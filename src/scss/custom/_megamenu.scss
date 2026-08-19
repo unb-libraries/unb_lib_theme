@@ -24,33 +24,79 @@
     }
 
     .megamenu-li {
-        .flex-fill {
-            transition: background $trans-timing-duration $trans-timing-function;
-
-            &:focus-within,
-            &:hover {
-                background: $white;
-            }
-        }
-
         .megamenu {
+            @media screen and (min-width: 992px) {
+                // Absolute position re: dropdown-menu class.
+                left: 0;
+                right: 0;
+            }
+
+           
+            background: none;
+            border: none;
+            margin-top: 0;
+            opacity: 0;
+            padding: 0 15px;
+            visibility: hidden;
+
             & > div {
-                background-color: $gray-300;
+               @include css3-prefix(transition, opacity $trans-timing-duration $trans-timing-function);
+               background: $gray-300;
+               opacity: 0;
+            }
+
+            &.show {
+                opacity: 1;
+                visibility: visible;
+
+                & > div {
+                    opacity: 1;
+                };
             }
             
+            .flex-fill {
+                @include css3-prefix(transition, background $trans-timing-duration $trans-timing-function);
+
+                &:focus-within,
+                &:hover {
+                    background: $white;
+                }
+            }
+
+            .fa-ul {
+                margin-left: 0;
+
+                li {
+                    margin-bottom: calc($spacer * 0.25);
+                }
+            }
+
             .nav-link {
                 color: $dark;
                 font-weight: bold;
+                padding: 0;
                 text-decoration: underline;
                 text-decoration-color: transparent;
                 text-underline-offset: 3px;
 
                 &:focus-visible,
                 &:hover {
-                    background: none;
                     color: $link-color;
+                }
+                &:hover {
                     text-decoration: underline;
                     text-decoration-color: $link-color;
+                }
+
+                .fa-2xs {
+                    vertical-align: middle;
+                }
+            }
+
+            .btn-unb-red {
+                &:focus-visible,
+                &:hover{
+                    background: $primary-red-800;
                 }
             }
         }
@@ -59,7 +105,7 @@
             color: $black;
             font-size: larger;
             font-weight: bold;
-            margin-bottom: $spacer;
+            margin-bottom: calc($spacer * 0.5);
         }
     }
 }

@@ -1,23 +1,4 @@
 #header {
-  @media (min-width: 992px) {
-    .megamenu {
-      @include css3-prefix(transition, all $duration-default ease-in-out);
-      background: none;
-      display: initial;
-      opacity: 0;
-      visibility: hidden;
-
-      &.show {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      button {
-        color: $black;
-      }
-    }
-  }
-
   button[data-target="#navbar"][aria-expanded="false"]:after {
     @include link-fa-icon('\f0c9', left);
   }
