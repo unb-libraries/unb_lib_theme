@@ -1,10 +1,16 @@
 #navbar-main-content {
     background: $primary-red-500;
-    border: 1px solid $primary-red-500;
-    border-bottom: none; 
 
     #navbar {
         button.nav-link {
+            @include css3-prefix(transition,
+                background-color $trans-timing-duration $trans-timing-function,
+                border-color $trans-timing-duration $trans-timing-function,
+                color $trans-timing-duration $trans-timing-function
+            );
+            border-color: transparent;
+            border-style: solid;
+            border-width: 1px;
             color: $white;
             font-weight: bold;
             padding-left: calc($spacer * 1.5);
@@ -18,6 +24,8 @@
 
             &[aria-expanded="true"] {
                 background: $white;
+                border-color: $gray-300;
+                border-bottom-color: transparent;
                 color: $black;
             }
         }
@@ -30,7 +38,6 @@
                 left: 0;
                 right: 0;
             }
-
            
             background: none;
             border: none;
@@ -41,7 +48,7 @@
 
             & > div {
                @include css3-prefix(transition, opacity $trans-timing-duration $trans-timing-function);
-               background: $gray-300;
+               background: $gray-200;
                opacity: 0;
             }
 
@@ -87,10 +94,6 @@
                     text-decoration: underline;
                     text-decoration-color: $link-color;
                 }
-
-                .fa-2xs {
-                    vertical-align: middle;
-                }
             }
 
             .btn-unb-red {
@@ -98,6 +101,10 @@
                 &:hover{
                     background: $primary-red-800;
                 }
+            }
+
+            .fa-solid {
+                vertical-align: middle;
             }
         }
 
