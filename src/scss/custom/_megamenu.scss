@@ -47,9 +47,12 @@
             visibility: hidden;
 
             & > div {
-               @include css3-prefix(transition, opacity $trans-timing-duration $trans-timing-function);
-               background: $gray-200;
-               opacity: 0;
+                @include css3-prefix(transition, opacity $trans-timing-duration $trans-timing-function);
+                background: $gray-200;
+                border-color: $gray-300;
+                border-style: solid;
+                border-width: 1px;
+                opacity: 0;
             }
 
             &.show {
