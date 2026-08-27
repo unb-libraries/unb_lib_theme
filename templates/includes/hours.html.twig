@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * UNB Libraries Subtheme partial template providing library hours table for a page.
+ *
+ * Note: should only be included once per page.
+ *
+ */
+#}
+{{ attach_library('calendar_hours_client/calendar-hours') }}
+<div id="banner-hours" class="d-flex align-items-center col-xs-12 col-md-6 col-lg-5 col-xl-4 offset-md-6 offset-lg-7 offset-xl-8">
+    <table>
+        <thead>                                                                                     
+          <tr>                                                                                      
+            <th class="date" scope="col">                                                               
+              <span class="visually-hidden">Library</span>                                          
+              <time datetime="{{ "now"|date("Y-m-d") }}" aria-hidden="true">{{ "now"|date("D, M j, Y") }}</time>                        
+            </th>                                                                                   
+            <th scope="col">                                                                 
+              <span class="visually-hidden">Opening hours for {{ "now"|date("l, F j, Y") }}</span>      
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>                                
+            </th>                                                                                   
+          </tr>                                                                                     
+        </thead> 
+        <tbody>
+        <tr>
+            <th scope="row">
+                <span><a href="https://lib.unb.ca/about/harriet-irving-library">Harriet Irving</a></span>
+            </th>
+            <td class="ch-nd ch-live ch-live-co ch-live-nsdo ch-live-am"
+            data-ch-id="hil" data-ch-days="0" data-ch-format-time="h:mma" data-ch-format-date="dd">
+                <span>Unavailable</span>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <a href="https://lib.unb.ca/about/iuc-library">I.U.C.</a>
+            </th>
+            <td class="ch-nd ch-live ch-live-co ch-live-nsdo ch-live-am"
+            data-ch-id="sfl" data-ch-days="0" data-ch-format-time="h:mma" data-ch-format-date="dd">
+                <span>Unavailable</span>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://lib.unb.ca/about/head-hall-library">
+                Head Hall</a>
+            </th>
+            <td class="ch-nd ch-live ch-live-co ch-live-nsdo ch-live-am"
+            data-ch-id="ecsl" data-ch-days="0" data-ch-format-time="h:mma" data-ch-format-date="dd">
+                <span>Unavailable</span>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <a href="https://lib.unb.ca/about/hans-w-klohn-commons">Hans W. Klohn</a>
+            </th>
+            <td class="ch-nd ch-live ch-live-co ch-live-nsdo ch-live-am"
+            data-ch-id="hwkc" data-ch-days="0" data-ch-format-time="h:mma" data-ch-format-date="dd">
+                <span>Unavailable</span>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2">
+                <a href="https://lib.unb.ca/about/hours">Complete Hours&nbsp;&raquo;</a>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
