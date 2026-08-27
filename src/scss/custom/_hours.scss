@@ -2,6 +2,7 @@
   background: $black;
   box-sizing: initial;
   color: $white;
+  height: 100%;
   padding: 0;
   @include opacity(.8);
   @include css3-prefix(transition, opacity .25s ease-in-out);
