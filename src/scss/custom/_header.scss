@@ -18,10 +18,6 @@
 
   @media (max-width: 991px) {
     #navbar-main #navbar {
-      .megamenu-li {
-        background: $dark;
-      }
-
       button {
         background: $black;
         color: $white;
@@ -196,44 +192,7 @@ ul[role="menubar"] a[aria-haspopup="true"] {
 
 /* Megamenu */
 .megamenu-li {
-  /* margin-top: 1px; */
-  position: static;
-
-  button.nav-link {
-    @include css3-prefix(transition,
-      background-color $duration-default ease,
-      color $duration-default ease
-    );
-    background: none;
-    border: none;
-    color: $black;
-    height: 100%;
-    text-align: left;
-    width: 100%;
-
-    &.focus-ring:focus {
-      outline: 1px dotted $white;
-    }
-
-    span.text-nowrap {
-      &:after {
-        @media (min-width: 992px) {
-          content: '';
-          display: block;
-        }
-      }
-    }
-  }
-
   .megamenu {
-    background: $gray-dark;
-    border: none;
-    margin-top: 0;
-    padding: 15px;
-    left: 0;
-    right: 0;
-    width: 100%;
-
     /* Multi-row megamenu (borrow BS4 dropdown menu border) */
     & > div {
       background: $gray-dark;
