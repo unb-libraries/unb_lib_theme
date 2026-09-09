@@ -13,15 +13,12 @@
 
 /* UNB Libraries Logo SVG */
 .unb-lib-logo {
-  width: 320px;
-  max-width: 100%;
-
+  .fill-unb,
   .fill-libraries {
     fill: $black;
-
-      .fill-sail {
-        fill: $unb-logo-red;
-      }
+  }
+  .fill-sail {
+    fill: $unb-logo-red;
   }
 }
 
