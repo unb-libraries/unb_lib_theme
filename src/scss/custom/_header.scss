@@ -1,4 +1,15 @@
 #header {
+  #menu-secondary {
+    a {
+      color: $black;
+
+      &:focus-visible,
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+
   button[data-target="#navbar"][aria-expanded="false"]:after {
     @include link-fa-icon('\f0c9', left);
   }
