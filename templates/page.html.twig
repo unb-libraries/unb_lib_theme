@@ -80,55 +80,65 @@
   <header id="header" class="header">
     {{ attach_library('alert_scheduler_client/alerts') }}
     <div id="emergency-banner"><div class="container" data-alerts-container></div></div>
-    <div id="navbar-top" class="d-none d-lg-block py-3">
-      <div class="container">
-        <nav aria-label="Header Utility Menu" class="d-flex">
-          <ul class="nav">
-            <li><a class="nav-link" href="https://unb.ca">UNB</a></li>
-            <li><a class="nav-link" href="https://lib.unb.ca/help/ask-us"><i class="fas fa-question-circle" aria-hidden="true">&nbsp;</i>Ask Us</a></li>
-            <li><a class="nav-link" href="https://lib.unb.ca/services/your-comments-and-suggestions"><i class="fas fa-comments" aria-hidden="true">&nbsp;</i>Feedback</a></li>
-            <li><a class="nav-link" href="https://lib.unb.ca/search"><i class="fas fa-search" aria-hidden="true">&nbsp;</i>Search</a></li>
-          </ul>
-          {% if show_top_header_login or show_top_header_logout %}
-            <ul class="nav ml-auto">
-              {% if logged_in and show_top_header_logout %}
-                <li>{{ logout_link }}</li>
-              {% elseif not logged_in and show_top_header_login %}
-                <li>{{ login_link }}</li>
-              {% endif %}
-            </ul>
-          {% endif %}
-        </nav>
-      </div>
+    <div id="navbar-top" class="bg-white py-2">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex branding">
+                <a href="https://lib.unb.ca">
+                    {% include '@unb_lib_theme/includes/unb-lib-logo.html.twig' %}
+                </a>
+            </div>
+            <nav aria-label="Header Utility Menu" class="d-none d-md-block text-right">
+                <ul id="menu-secondary" class="list-inline mb-1">
+                    <li class="list-inline-item"><a class="" href="https://lib.unb.ca/search">Search this Site</a></li>
+                    <li class="list-inline-item"><a class="" href="https://lib.unb.ca/about/find-us">Floor Plans</a></li>
+                    <li class="list-inline-item"><a class="" href="https://unb.ca">UNB<i class="fa-solid fs-xs fa-up-right-from-square ml-1 ms-1" aria-hidden="true"></i></a></li>
+                </ul>
+                <ul id="header-buttons" class="list-inline mb-0">
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-light border"><i class="fa-solid fa-user mr-1 me-1" aria-hidden="true"></i>My Account</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-dark"><i class="fa-solid fa-house-circle-check mr-1 me-1" aria-hidden="true"></i>Book Study Space</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-warning"><i class="fa-solid fa-comments mr-1 me-1" aria-hidden="true"></i>Ask Us</a>
+                    </li>
+                </ul>
+                {% if show_top_header_login or show_top_header_logout or show_top_header_covid %}
+                    <ul class="d-none nav ml-auto">
+                        {% if logged_in and show_top_header_logout %}
+                            <li>{{ logout_link }}</li>
+                        {% elseif not logged_in and show_top_header_login %}
+                            <li>{{ login_link }}</li>
+                        {% endif %}
+                    </ul>
+                {% endif %}
+            </nav>
+        </div>
     </div>
     <nav aria-label="Main Menu" id="navbar-main" class="navbar navbar-expand-lg px-0">
       <div class="container">
-        <div id="navbar-main-content" class="d-flex align-items-stretch flex-column flex-lg-row w-100">
-          <div class="d-flex branding mr-lg-3 mx-auto text-lg-left">
-            <a href="https://lib.unb.ca">
-              {% include '@unb_lib_theme/includes/unb-lib-logo.html.twig' %}
-            </a>
+          <div id="navbar-main-content" class="d-flex align-items-stretch flex-column flex-lg-row w-100">
+              <div id="nav-btn" class="d-flex d-lg-none py-2">
+                  <ul class="container nav nav-pills">
+                      <li class="nav-item flex-fill text-center">
+                          <button id="btn-menu" class="btn btn-{{ nav_btn_style }}" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">Menu</button>
+                      </li>
+                      <li class="nav-item flex-fill text-center">
+                          {% if (nav_btn_hours_toggle == true) %}
+                              <button id="btn-hours" class="btn btn-{{ nav_btn_style }}" aria-controls="banner" aria-expanded="false" data-target="#banner" data-toggle="collapse" aria-label="Toggle Hours">Hours <span class="fas fa-clock"></span></button>
+                          {% else %}
+                              <a id="btn-hours" class="btn btn-{{ nav_btn_style }}" href="/about/hours">Hours <span class="fas fa-clock"></span></a>
+                          {% endif %}
+                      </li>
+                      <li class="nav-item flex-fill text-center">
+                          <a id="btn-askus" class="btn btn-{{ nav_btn_style }}" href="/help/ask-us">AskUs <span class="fas fa-comments"></span></a>
+                      </li>
+                  </ul>
+              </div>
+              {% include '@unb_lib_theme/includes/megamenu.html.twig' %}
           </div>
-          <div id="nav-btn" class="d-flex d-lg-none py-2">
-            <ul class="container nav nav-pills">
-              <li class="nav-item flex-fill text-center">
-                <button id="btn-menu" class="btn btn-red" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle Main Menu">Menu</button>
-              </li>
-              <li class="nav-item flex-fill text-center">
-                {% if (is_front and is_library) %}
-                  <button id="btn-quicklinks" class="btn btn-red" type="button" data-toggle="collapse" data-target="#quicklinks-wrapper" aria-expanded="false" aria-controls="quicklinks-wrapper" aria-label="Toggle QuickLinks">QuickLinks <span class="fas fa-link"></span></button>
-                {% else %}
-                  <button id="btn-hours" class="btn btn-red" aria-controls="banner" aria-expanded="false" data-target="#banner" data-toggle="collapse" aria-label="Toggle Library Hours">Hours <span class="fas fa-clock"></span></button>
-                {% endif %}
-              </li>
-              <li class="nav-item flex-fill text-center">
-                <a id="btn-askus" class="btn btn-red" href="https://lib.unb.ca/help/ask-us">AskUs <span class="fas fa-comments"></span></a>
-              </li>
-            </ul>
-          </div>
-          {% include '@unb_lib_theme/includes/megamenu.html.twig' %}
         </div>
-      </div>
     </nav>
     {% if banner_image %}
       <div id="banner" {{ attributes.addClass(banner_classes) }}>
