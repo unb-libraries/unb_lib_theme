@@ -175,33 +175,6 @@ a.nav-link[href$="//unb.ca"]::before {
     background: $navbar-dark;
 }
 
-/* Utilities menu */
-#navbar-top {
-    background-color: $navbar-dark;
-}
-#navbar-top li,
-.footer-bottom-first  li {
-    display: inline;
-}
-#navbar-top li:not(:first-child) {
-    margin-left: 8px;
-}
-#navbar-top li:not(:last-child) {
-    margin-right: 8px;
-}
-#navbar-top li:not(:last-child) {
-    border-right: 1px solid $gray-medium;
-    padding-right: 15px;
-}
-#navbar-top a.nav-link {
-    @include nav-menu-style;
-}
-#navbar-top a.nav-link:focus,
-#navbar-top a.nav-link:hover {
-    @include nav-menu-hover-style;
-}
-/* END Utilities Menu */
-
 /* Banner */
 #banner-image {
     background-size: cover;
