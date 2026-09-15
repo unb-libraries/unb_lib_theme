@@ -1,11 +1,31 @@
 #header {
   #menu-secondary {
+    li {
+      margin: .33rem 0;
+
+      &:not(:first-child):not(:last-child) {
+        margin-left: calc($spacer * 0.75);
+        margin-right: calc($spacer * 0.75);
+      }
+    }
+
     a {
       color: $black;
 
       &:focus-visible,
       &:hover {
         color: $link-color;
+      }
+    }
+  }
+
+  #header-buttons {
+    li {
+      margin: 0;
+
+      &:not(:first-child):not(:last-child) {
+        margin-left: calc($spacer * 0.75);
+        margin-right: calc($spacer * 0.75);
       }
     }
   }
@@ -83,6 +103,8 @@
   #navbar-top {
     font-size: .9rem;
     font-weight: bold;
+    padding-bottom: calc($spacer * 0.5);
+    padding-top: calc($spacer * 0.5);
 
     a.nav-link {
       line-height: normal;
@@ -129,7 +151,6 @@
 
 /* Mobile Buttons */
 .btn-red {
-  color: $white;
   background-color: $unb-red;
 }
 #nav-btn {
@@ -138,6 +159,7 @@
 #nav-btn .btn,
 #nav-btn .btn:active {
   border: 1px solid $gray-200;
+  color: $white;
 }
 #nav-btn .btn-red:focus {
   box-shadow: none;
@@ -172,7 +194,6 @@
   }
   #header .navbar-nav a[aria-haspopup="true"]:after,
   #discovery-search .card-header a:after {
-    display: inline-block;
     float: right;
     font: var(--fa-font-solid);
     text-rendering: auto;
