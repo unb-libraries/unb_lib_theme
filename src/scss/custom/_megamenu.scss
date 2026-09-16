@@ -102,6 +102,8 @@
                 }
 
                 flex: 1 1 auto;
+                // Horizontally align multi-row flex columns: max 3 cols / row.
+                min-width: 33.3%;
                 padding: $spacer;
             }
 
