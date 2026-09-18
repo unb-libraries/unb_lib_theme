@@ -142,7 +142,7 @@
 
       .navbar-nav {
         a {
-          @include css3-prefix(transition, all $duration-fast ease-out);
+          @include css3-prefix(transition, all $trans-timing-duration-fast ease-out);
         }
       }
     }
