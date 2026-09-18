@@ -2,6 +2,9 @@
 <div id="emergency-banner">
     <div class="container" data-alerts-container></div>
 </div>
+{% if is_front %}
+    <div id="header-overlay">
+{% endif %}
 <div id="navbar-top">
     <div class="container d-flex justify-content-between align-items-center">
         <div class="d-flex branding">
@@ -68,6 +71,9 @@
         </div>
     </div>
 </nav>
+{% if is_front %}
+    </div>
+{% endif %}
 {% if banner_image %}
     <div id="banner" {{ attributes.addClass(banner_classes) }}>
         <div id="banner-image" style="background-image: url({{ banner_image }})">
