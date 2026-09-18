@@ -24,7 +24,7 @@ footer {
             text-decoration: underline;
             text-decoration-color: transparent;
             text-underline-offset: 5px;
-            transition: all $trans-timing-duration $trans-timing-function;
+            transition: all $trans-timing-duration-default $trans-timing-function;
         }
 
         &:hover {

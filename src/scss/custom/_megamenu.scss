@@ -4,9 +4,9 @@
     #navbar {
         button.nav-link {
             @include css3-prefix(transition,
-                background-color $trans-timing-duration $trans-timing-function,
-                border-color $trans-timing-duration $trans-timing-function,
-                color $trans-timing-duration $trans-timing-function
+                background-color $trans-timing-duration-default $trans-timing-function,
+                border-color $trans-timing-duration-default $trans-timing-function,
+                color $trans-timing-duration-default $trans-timing-function
             );
             border-color: transparent;
             border-style: solid;
@@ -76,7 +76,7 @@
             width: 100%;
 
             & > div {
-                @include css3-prefix(transition, opacity $trans-timing-duration $trans-timing-function);
+                @include css3-prefix(transition, opacity $trans-timing-duration-default $trans-timing-function);
                 background: $gray-200;
                 border-color: $gray-300;
                 border-style: solid;
@@ -94,7 +94,7 @@
             }
             
             .dropdown-submenu {
-                @include css3-prefix(transition, background $trans-timing-duration $trans-timing-function);
+                @include css3-prefix(transition, background $trans-timing-duration-default $trans-timing-function);
 
                 &:focus-within,
                 &:hover {
