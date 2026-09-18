@@ -12,7 +12,7 @@
 
 .affix {
   animation-name: slideDown;
-  animation-duration: $duration-slow;
+  animation-duration: $trans-timing-duration-slow;
   background-color: $light;
   box-shadow: 0 4px 4px -1px rgba(17, 17, 17, 0.7);
   position: fixed !important;

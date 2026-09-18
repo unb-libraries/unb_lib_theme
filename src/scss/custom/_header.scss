@@ -87,7 +87,7 @@
 
           .container > div {
             -webkit-animation: megamenu-expand 0.3s;
-            animation-duration: 0.35s;
+            animation-duration: $trans-timing-duration-default;
             animation-iteration-count: 1;
             animation-name: megamenu-expand;
 
