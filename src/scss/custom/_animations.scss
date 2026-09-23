@@ -64,13 +64,6 @@ button {
   }
 }
 
-    top: -2.5rem;
-  }
-  to {
-    top: $admin-toolbar-height;
-  }
-}
-
 button {
   /* Button with animated Menu/Close icon */
   &.animated-menu-icon {
