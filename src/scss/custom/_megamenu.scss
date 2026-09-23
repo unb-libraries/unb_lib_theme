@@ -1,6 +1,8 @@
-#navbar-main-content {
+#navbar-main {
     background: $primary-red-500;
+}
 
+#navbar-main-content {
     #navbar {
         button.nav-link {
             @include css3-prefix(transition,
@@ -68,7 +70,9 @@
                 right: 0;
             }
            
+            background: transparent;
             border: none;
+            border-radius: 0;
             margin-top: 0;
             opacity: 0;
             padding: 0 15px;
@@ -151,5 +155,23 @@
             font-weight: bold;
             margin-bottom: calc($spacer * 0.5);
         }
+    }
+
+    #header-buttons-mobile {
+        background-color: $black;
+        margin-bottom: 0;
+        padding: $spacer 0;
+        width: 100%;
+    }
+    #menu-secondary-mobile {
+        background-color: $light;
+        margin-bottom: 0;
+        padding: calc($spacer * 0.35) 0;
+        width: 100%;
+
+        a {
+            color: $black;
+        }
+
     }
 }

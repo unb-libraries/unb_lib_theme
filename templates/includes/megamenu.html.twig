@@ -6,6 +6,14 @@
 */
 #}
 <nav id="navbar" aria-label="Main navigation" class="collapse navbar-collapse">
+  <ul id="header-buttons-mobile" class="d-flex d-md-none justify-content-center">
+     <li class="list-inline-item">
+        <a class="btn btn-sm btn-dark border-secondary"><i class="fa-solid fa-user mr-1 me-1" aria-hidden="true"></i>My Account</a>
+     </li>
+     <li class="list-inline-item">
+        <a class="btn btn-sm btn-unb-red"><i class="fa-solid fa-house-circle-check mr-1 me-1" aria-hidden="true"></i>Book Study Space</a>
+     </li>
+  </ul>
   <ul aria-labelledby="navbar" class="navbar-nav justify-content-between w-100">
     <li class="dropdown nav-item">
       <button id="btn-search" type="button" aria-haspopup="true" aria-controls="menu-search" aria-expanded="false" class="nav-link text-lg-center" data-toggle="dropdown">
@@ -697,6 +705,17 @@
           </div>
         </div>
       </div>
+    </li>
+  </ul>
+  <ul id="menu-secondary-mobile" class="d-flex d-md-none justify-content-around list-inline">
+    <li class="list-inline-item">
+      <a href="https://lib.unb.ca/search">Search UNB Libraries</a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://lib.unb.ca/about/find-us">Floor Plans</a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://unb.ca">UNB<i class="fa-solid fs-xs fa-up-right-from-square ml-1 ms-1" aria-hidden="true"></i></a>
     </li>
   </ul>
 </nav>
