@@ -48,9 +48,7 @@
 
 #header .affix li.show > .nav-link,
 #header .affix .megamenu-li > .nav-link:focus,
-#header .affix .megamenu-li > .nav-link:hover,
-.affix .branding a:focus,
-.affix .branding a:hover {
+#header .affix .megamenu-li > .nav-link:hover {
   border-bottom: 3px solid $white;
   color: $gray-200;
 }
