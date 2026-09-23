@@ -8,10 +8,123 @@
 }
 
 @keyframes slideDownToolbar {
+  from {@keyframes slideDown {
+  from {
+    top: -3rem;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes slideDownToolbar {
   from {
     top: -2.5rem;
   }
   to {
     top: $admin-toolbar-height;
+  }
+}
+
+button {
+  /* Button with animated Menu/Close icon */
+  &.animated-menu-icon {
+    background: transparent!important;
+    border: none!important;
+    width: calc($spacer * 2.7);
+    height: calc($spacer * 2.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+     /* "Hamburger" menu line spans */
+    span {
+    width: 100%;
+    height: 4px;
+    background-color: $black;
+    border-radius: 2px;
+      /* Smooth transition for hardware-accelerated transform properties */
+      transition: transform $trans-timing-duration-default $trans-timing-function,
+                  opacity $trans-timing-duration-default $trans-timing-function;
+      /* Keep rotation aligned correctly */
+      transform-origin: left center;
+    }
+
+    /* Transform to "X" close icon */
+    &[aria-expanded="true"] {
+      /* Top span line rotates down */
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(calc($spacer * 0.1), -2px);
+      }
+
+      /* Middle span line disappears */
+      span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+
+      /* Bottom span line rotates up */
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(calc($spacer * 0.1), 2px);
+      }
+    }
+  }
+  &::after {
+    content: none!important;
+  }
+}
+
+    top: -2.5rem;
+  }
+  to {
+    top: $admin-toolbar-height;
+  }
+}
+
+button {
+  /* Button with animated Menu/Close icon */
+  &.animated-menu-icon {
+    background: transparent!important;
+    border: none!important;
+    width: calc($spacer * 2.7);
+    height: calc($spacer * 2.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+     /* "Hamburger" menu line spans */
+    span {
+    width: 100%;
+    height: 4px;
+    background-color: $black;
+    border-radius: 2px;
+      /* Smooth transition for hardware-accelerated transform properties */
+      transition: transform $trans-timing-duration-default $trans-timing-function,
+                  opacity $trans-timing-duration-default $trans-timing-function;
+      /* Keep rotation aligned correctly */
+      transform-origin: left center;
+    }
+
+    /* Transform to "X" close icon */
+    &[aria-expanded="true"] {
+      /* Top span line rotates down */
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(calc($spacer * 0.1), -2px);
+      }
+
+      /* Middle span line disappears */
+      span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+
+      /* Bottom span line rotates up */
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(calc($spacer * 0.1), 2px);
+      }
+    }
+  }
+  &::after {
+    content: none!important;
   }
 }
