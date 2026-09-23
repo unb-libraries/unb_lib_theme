@@ -79,7 +79,7 @@
             visibility: hidden;
             width: 100%;
 
-            & > div {
+           .dropdown-menu-wrapper {
                 @include css3-prefix(transition, opacity $trans-timing-duration-default $trans-timing-function);
                 background: $gray-200;
                 border-color: $gray-300;
@@ -96,7 +96,10 @@
                     opacity: 1;
                 };
             }
-            
+            .dropdown-menu-wrapper {
+                justify-content: space-between;
+                width: 100%;
+            }
             .dropdown-submenu {
                 @include css3-prefix(transition, background $trans-timing-duration-default $trans-timing-function);
 
