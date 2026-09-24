@@ -1,12 +1,15 @@
 /* Main Nav | UNB Libraries SVG Link */
 .branding {
   a {
-    border-bottom: 3px solid transparent;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-top: 2px solid transparent;
     margin-top: 1px;
 
     &:focus,
     &:hover {
-      border-bottom: 3px solid $header-hover-color;
+      border-bottom-color: $header-hover-color;
     }
   }
 
@@ -14,14 +17,24 @@
   .unb-lib-logo {
     max-width: 100%;
     width: 400px;
+    height: 59px;
 
-    .fill-uonb,
+    .lib-logo-unb,
+    .lib-logo-libraries {
+      fill: $black;
+
+      .sail {
+        fill: $unb-logo-red;
+      }
+    }
+  }
+}
+
+.affix {
+  .unb-lib-logo {
     .fill-unb,
     .fill-libraries {
-      fill: $black;
-    }
-    .fill-sail {
-      fill: $unb-logo-red;
+      fill: $white;
     }
   }
 }
@@ -39,14 +52,15 @@
 .unb-logo {
   width: 185px;
   max-width: 100%;
+}
 
-  .fill-sail {
+
+.lib-logo-unb,
+.lib-logo-libraries {
+  fill: $black;
+
+  .sail {
     fill: $unb-logo-red;
-  }
-  .fill-uonb,
-  .fill-unb,
-  .fill-libraries {
-    fill: $black;
   }
 }
 
@@ -54,6 +68,9 @@
   #header {
     .branding {
       max-width: 46%;
+      .unb-lib-logo {
+        height: 50px;
+      }
     }
   }
 }
@@ -69,7 +86,7 @@
     }
 
     .unb-lib-logo {
-      .fill-uonb {
+      .uonb {
         fill: transparent;
       }
     }
