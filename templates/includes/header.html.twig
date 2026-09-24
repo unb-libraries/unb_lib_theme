@@ -74,7 +74,9 @@
 {% if is_front %}
     </div>
 {% endif %}
-{% if banner_image %}
+
+{# Temp logic re: exclude hours block from front page banner #}
+{% if banner_image and (is_front != true) %}
     <div id="banner" {{ attributes.addClass(banner_classes) }}>
         <div id="banner-image" style="background-image: url({{ banner_image }})">
             {% include '@unb_lib_theme/includes/hours.html.twig' %}
