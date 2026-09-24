@@ -118,9 +118,12 @@
   {{ page.footer_top_second }}
 {% endblock %}
 
-<footer class="site-footer{{- ' ' ~ subtheme_footer_classes -}}">
-  {% include '@unb_lib_theme/includes/footer.html.twig' %}
-</footer>
+{% block footer %}
+  <footer class="site-footer{{- ' ' ~ subtheme_footer_classes -}}">
+    {% include '@unb_lib_theme/includes/footer.html.twig' %}
+  </footer>
+{% endblock %}
+
 {% if env_indicator %}
   <div class="alert alert-{{ env_indicator_bg_color }} alert-dismissible fixed-bottom m-0 p-0 show fade" role="alert">
     <div class="bg-{{ env_indicator_bg_color }} progress-bar progress-bar-striped py-1 text-{{ env_indicator_txt_color }} w-100">
