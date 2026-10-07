@@ -3,10 +3,37 @@
     <div id="footer-lib-link" class="mb-4">
       <a href="https://lib.unb.ca">
         <span class="lib-label">UNB Libraries</span>
-        <span class="lib-url">
-          <span class="fa-solid fa-house fa-xs mr-2 me-2 text-light" aria-hidden="true"></span>lib.unb.ca
-        </span>
+        <span class="lib-url">lib.unb.ca</span>
       </a>
+      {% set
+        facebook_alt,
+        instagram_alt,
+        youtube_alt
+      =
+        'Visit our Facebook page',
+        'Follow us on Instagram',
+        'Visit our YouTube channel'
+      %}
+      <div id="footer-social" class="my-2">
+        <h2 id="footer-socials" class="visually-hidden">Socials:</h2>
+        <ul aria-labelledby="footer-socials" class="list-inline">
+          <li class="list-inline-item">
+            <a class="nav-link" href="https://facebook.com/UNBLibraries" title="{{ facebook_alt }}">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="nav-link" href="https://instagram.com/unblibraries" title="{{ instagram_alt }}"></i>
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="nav-link" href="https://www.youtube.com/user/UNBLibraries" title="{{ youtube_alt }}">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="my-2">
       <h2 id="footer-general">
@@ -21,6 +48,16 @@
       </ul>
     </div>
     <div class="my-2">
+      <h2 id="footer-libraries">Departments</h2>
+      <ul aria-labelledby="footer-libraries"class="nav">
+        <li><a class="nav-link" href="https://lib.unb.ca/about/harriet-irving-library">Harriet Irving</a></li>
+        <li><a class="nav-link" href="https://lib.unb.ca/about/iuc-library">I.U.C.</a></li>
+        <li><a class="nav-link" href="https://lib.unb.ca/about/head-hall-library">Head Hall</a></li>
+        <li><a class="nav-link" href="https://lib.unb.ca/about/hans-w-klohn-commons">Hans W. Klohn</a></li>
+        <li><a class="nav-link" href="https://unb.ca/fredericton/law/library">Gerard V. La Forest Law</a></li>
+      </ul>
+    </div>
+    <div class="my-2">
       <h2 id="footer-departments">Departments</h2>
       <ul aria-labelledby="footer-departments" class="nav">
         <li><a class="nav-link" href="https://lib.unb.ca/archives">Archives &amp; Special Collections</a></li>
@@ -29,36 +66,6 @@
         <li><a class="nav-link" href="https://lib.unb.ca/gddm">Government Documents, Data &amp; Maps</a></li>
         <li><a class="nav-link" href="https://lib.unb.ca/researchcommons">Harriet Irving Research Commons</a></li>
         <li><a class="nav-link" href="https://lib.unb.ca/about/contact-us#units">View All &raquo;</a></li>
-      </ul>
-    </div>
-
-    {% set
-        facebook_alt,
-        instagram_alt,
-        youtube_alt
-      =
-        'Visit our Facebook page',
-        'Follow us on Instagram',
-        'Visit our YouTube channel'
-    %}
-    <div id="footer-social" class="my-2">
-      <h2 id="footer-socials" class="visually-hidden">Socials:</h2>
-      <ul aria-labelledby="footer-socials" class="list-inline">
-        <li class="list-inline-item">
-          <a class="nav-link" href="https://facebook.com/UNBLibraries" title="{{ facebook_alt }}">
-            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="nav-link" href="https://instagram.com/unblibraries" title="{{ instagram_alt }}"></i>
-            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="nav-link" href="https://www.youtube.com/user/UNBLibraries" title="{{ youtube_alt }}">
-            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-          </a>
-        </li>
       </ul>
     </div>
   </div>

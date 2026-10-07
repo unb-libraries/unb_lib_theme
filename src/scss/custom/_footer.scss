@@ -36,7 +36,7 @@ footer {
 
     .lib-label,
     .lib-url {
-        font-size: $spacer * 1.5;
+        font-size: $spacer * 2;
         font-weight: bold;
         line-height: 1.2;
     }
@@ -75,7 +75,7 @@ footer {
 
         &[href^="https://instagram"],
         &[href^="https://facebook"] {
-            min-width: calc($spacer * 2.25);
+            min-width: calc($spacer * 2.35);
             text-align: center;
         }
 
