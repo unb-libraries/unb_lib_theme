@@ -47,10 +47,12 @@
     @include link-fa-icon('\f011', left, '', $white);
   }
 
+  #navbar-main {
+    margin-top: calc($spacer * 0.5);
+  }
+
   @media (max-width: 991px) {
     #navbar-main {
-      margin-top: calc($spacer * 0.5);
-
       #navbar {
         button {
           background: $black;
