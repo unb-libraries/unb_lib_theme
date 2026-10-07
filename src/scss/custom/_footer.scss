@@ -29,7 +29,7 @@ footer {
 
         &:hover {
             .lib-url {
-                text-decoration-color: $white;
+                text-decoration-color: $black;
             }
         }
     }
@@ -81,7 +81,7 @@ footer {
 
         &:focus-visible,
         &:hover {
-            border-color: $secondary;
+            border-color: $warning;
             color: $warning;
         }
 
