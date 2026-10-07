@@ -48,51 +48,104 @@
   }
 
   @media (max-width: 991px) {
-    #navbar-main #navbar {
-      button {
-        background: $black;
-        color: $white;
-        font-size: 1.1rem;
+    #navbar-main {
+      margin-top: $calc($spacer * 0.5);
 
-        &:after {
-          display: inline-block;
-          float: right;
-          font: var(--fa-font-solid);
-          text-rendering: auto;
-          -webkit-font-smoothing: antialiased;
-        }
+      #navbar {
+        button {
+          background: $black;
+          color: $white;
+          font-size: 1.1rem;
 
-        &[aria-expanded="false"] {
           &:after {
-            content: "\f078"
+            display: inline-block;
+            float: right;
+            font: var(--fa-font-solid);
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+          }
+
+          &[aria-expanded="false"] {
+            &:after {
+              content: "\f078"
+            }
+          }
+
+          &[aria-expanded="true"] {
+            &:after {
+              content: "\f077"
+            }
           }
         }
 
-        &[aria-expanded="true"] {
+        l  #navbar {
+        button {
+          background: $black;
+          color: $white;
+          font-size: 1.1rem;
+
           &:after {
-            content: "\f077"
+            display: inline-block;
+            float: right;
+            font: var(--fa-font-solid);
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+          }
+
+          &[aria-expanded="false"] {
+            &:after {
+              content: "\f078"
+            }
+          }
+
+          &[aria-expanded="true"] {
+            &:after {
+              content: "\f077"
+            }
           }
         }
-      }
 
-      li.show>button {
-        background: rgb(0 0 0 / 60%)!important;
-      }
+        li.show>button {
+          background: rgb(0 0 0 / 60%)!important;
+        }
 
-      div.dropdown-menu {
-        display: none;
+        div.dropdown-menu {
+          display: none;
 
-        &.show {
-          display: flex;
+          &.show {
+            display: flex;
 
-          .container > div {
-            -webkit-animation: megamenu-expand 0.3s;
-            animation-duration: $trans-timing-duration-default;
-            animation-iteration-count: 1;
-            animation-name: megamenu-expand;
+            .container > div {
+              -webkit-animation: megamenu-expand 0.3s;
+              animation-duration: $trans-timing-duration-default;
+              animation-iteration-count: 1;
+              animation-name: megamenu-expand;
 
-            ul {
-              margin-bottom: .5em;
+              ul {
+                margin-bottom: .5em;
+              }
+            }
+          }
+        }
+      }i.show>button {
+          background: rgb(0 0 0 / 60%)!important;
+        }
+
+        div.dropdown-menu {
+          display: none;
+
+          &.show {
+            display: flex;
+
+            .container > div {
+              -webkit-animation: megamenu-expand 0.3s;
+              animation-duration: $trans-timing-duration-default;
+              animation-iteration-count: 1;
+              animation-name: megamenu-expand;
+
+              ul {
+                margin-bottom: .5em;
+              }
             }
           }
         }
@@ -103,7 +156,7 @@
   #navbar-top {
     font-size: .9rem;
     font-weight: bold;
-    padding-bottom: calc($spacer * 0.75);
+    // padding-bottom: calc($spacer * 0.75);
     padding-top: calc($spacer * 0.5);
 
     a.nav-link {
