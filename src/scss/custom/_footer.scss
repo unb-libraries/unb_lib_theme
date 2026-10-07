@@ -71,18 +71,15 @@ footer {
         /* Alternative fix for Safari rendering issues */
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+        min-width: calc($spacer * 2.25);
+        min-height: calc($spacer * 2.25);
         padding: 0 calc($spacer * 0.5);
-
-        &[href^="https://instagram"],
-        &[href^="https://facebook"] {
-            min-width: calc($spacer * 2.35);
-            text-align: center;
-        }
+        text-align: center;
 
         &:focus-visible,
         &:hover {
-            border-color: $warning;
-            color: $warning;
+            background: $primary-red-800;
+            border-color: $primary-red-800;
         }
 
         .fa-brands {
