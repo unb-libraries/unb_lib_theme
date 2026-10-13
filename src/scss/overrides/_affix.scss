@@ -16,10 +16,10 @@
   box-shadow: 0 4px 4px -1px rgba(17, 17, 17, 0.7);
   position: fixed !important;
 
-  .megamenu-li button.nav-link {
+  button.nav-link {
     color: $white;
-    padding-bottom: .5rem;
-    padding-top: .5rem;
+    padding-bottom: calc($spacer * 0.25);
+    padding-top: calc($spacer * 0.25);
   }
 
   ul[role="menubar"] a[aria-haspopup="true"] {
