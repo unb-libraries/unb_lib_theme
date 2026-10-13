@@ -1,36 +1,81 @@
-/**
- * @license
- * MyFonts Webfont Build ID 3054824, 2015-07-07T12:50:48-0400
- *
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are
- * explicitly restricted from using the Licensed Webfonts(s).
- *
- * You may obtain a valid license at the URLs below.
- *
- * Webfont: ProximaNovaA-Regular by Mark Simonson
- * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-regular/
- *
- * Webfont: ProximaNovaA-Thin by Mark Simonson
- * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-thin/
- *
- * Webfont: ProximaNovaA-Bold by Mark Simonson
- * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-bold/
- *
- * Webfont: ProximaNovaA-Semibold by Mark Simonson
- * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-semibold/
- *
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=3054824
- * Licensed pageviews: 10,000,000
- * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
- *
- * Â© 2015 MyFonts Inc
-*/
+/* barlow-condensed-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/themes/contrib/unb_lib_theme/fonts/barlow-condensed-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-condensed-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Condensed';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/themes/contrib/unb_lib_theme/fonts/bar../low-condensed-v13-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-condensed-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/themes/contrib/unb_lib_theme/fonts/barlow-condensed-v13-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-condensed-500italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Condensed';
+  font-style: italic;
+  font-weight: 500;
+  src: url('/themes/contrib/unb_lib_theme/fonts/barlow-condensed-v13-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-condensed-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/themes/contrib/unb_lib_theme/fonts/barlow-condensed-v13-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-condensed-600italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Condensed';
+  font-style: italic;
+  font-weight: 600;
+  src: url('/themes/contrib/unb_lib_theme/fonts/barlow-condensed-v13-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
-/* @import must be at top of file, otherwise CSS will not work*/
-@import url("//hello.myfonts.net/count/2e9ce8");
-
-@font-face {font-family: 'ProximaNovaA-Regular';src: url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_5_0.eot');src: url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_5_0.eot?#iefix') format('embedded-opentype'),url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_5_0.woff2') format('woff2'),url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_5_0.woff') format('woff'),url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_5_0.ttf') format('truetype');}
-@font-face {font-family: 'ProximaNovaA-Thin';src: url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_7_0.eot');src: url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_7_0.eot?#iefix') format('embedded-opentype'),url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_7_0.woff2') format('woff2'),url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_7_0.woff') format('woff'),url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_7_0.ttf') format('truetype');}
-@font-face {font-family: 'ProximaNovaA-Bold';src: url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_1_0.eot');src: url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_1_0.eot?#iefix') format('embedded-opentype'),url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_1_0.woff2') format('woff2'),url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_1_0.woff') format('woff'),url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_1_0.ttf') format('truetype');}
-@font-face {font-family: 'ProximaNovaA-Semibold';src: url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_6_0.eot');src: url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_6_0.eot?#iefix') format('embedded-opentype'),url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_6_0.woff2') format('woff2'),url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_6_0.woff') format('woff'),url('/themes/contrib/unb_lib_theme/fonts/2E9CE8_6_0.ttf') format('truetype');}
+/* nunito-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/themes/contrib/unb_lib_theme/fonts/nunito-sans-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-sans-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/themes/contrib/unb_lib_theme/fonts/nunito-sans-v19-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/themes/contrib/unb_lib_theme/fonts/nunito-sans-v19-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-sans-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/themes/contrib/unb_lib_theme/fonts/nunito-sans-v19-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
