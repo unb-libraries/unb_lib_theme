@@ -15,6 +15,7 @@
 
   /* UNB Libraries Logo SVG */
   .unb-lib-logo {
+    display: inline;
     max-width: 100%;
 
     .lib-logo-unb,
@@ -27,14 +28,18 @@
       }
     }
   }
+  .unb-lib-logo-sm {
+    display: none;
+  }
 }
 
 .affix {
-  .unb-lib-logo {
-    .fill-unb,
-    .fill-libraries {
-      fill: $white;
-    }
+  .unb-lib-logo,
+  #menu-secondary {
+    display: none;
+  }
+  .unb-lib-logo-sm {
+    display: inline;
   }
 }
 
