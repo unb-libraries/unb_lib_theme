@@ -9,17 +9,16 @@
 
     &:focus,
     &:hover {
-      border-bottom-color: $header-hover-color;
+      // border-bottom-color: $header-hover-color;
     }
   }
 
   /* UNB Libraries Logo SVG */
   .unb-lib-logo {
     max-width: 100%;
-    width: 400px;
-    height: 59px;
 
     .lib-logo-unb,
+    .lib-logo-divider,
     .lib-logo-libraries {
       fill: $black;
 
@@ -45,23 +44,6 @@
     .fill-uonb {
       fill: $black;
     }
-  }
-}
-
-/* UNB Logo SVG */
-.unb-logo {
-  width: 185px;
-  max-width: 100%;
-}
-
-
-.lib-logo-unb,
-.lib-logo-divider,
-.lib-logo-libraries {
-  fill: $black;
-
-  .sail {
-    fill: $unb-logo-red;
   }
 }
 

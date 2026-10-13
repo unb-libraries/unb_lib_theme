@@ -14,7 +14,9 @@
             border-style: solid;
             border-width: 1px;
             color: $white;
-            font-weight: bold;
+            font-family: "Barlow Condensed", sans-serif;
+            font-size: calc($font-size-base * 1.4);;
+            font-weight: 600;
             padding-left: calc($spacer * 1.5);
             padding-right: calc($spacer * 1.5);
             text-transform: uppercase;
@@ -124,7 +126,6 @@
 
             .nav-link {
                 color: $dark;
-                font-weight: bold;
                 padding: 0;
                 text-decoration: underline;
                 text-decoration-color: transparent;
@@ -155,7 +156,7 @@
         .dropdown-menu-title {
             color: $black;
             font-size: larger;
-            font-weight: bold;
+            font-weight: 600;
             margin-bottom: calc($spacer * 0.5);
         }
     }
