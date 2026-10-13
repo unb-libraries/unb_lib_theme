@@ -9,27 +9,38 @@
 /* Block elements */
 body,
 .font-regular {
-    font-family: 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;
+    /*font-family: 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;*/
+    font-family: "Nunito Sans", sans-serif;
 }
+/*
 strong,
 .font-weight-bold {
     font-family: 'ProximaNovaA-Semibold', 'Century Gothic', AppleGothic, Arial, sans-serif;
     font-weight: normal;
 }
+*/
 
 /* Headings */
 h1, h2, h3,
 .h1, .h2,.h3 {
+    /*
     font-family: 'ProximaNovaA-Thin', 'Century Gothic', AppleGothic, Arial, sans-serif;
     font-weight: bold;
     -webkit-text-stroke: 0.45px;
     -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+    */
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
 }
 h4, h5, h6,
 .h4, .h5, .h6 {
+    /*
     font-family: 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;
     font-weight: bold;
-}
+    */
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+} */
 h1,
 .h1 {
     font-size: 2rem;
