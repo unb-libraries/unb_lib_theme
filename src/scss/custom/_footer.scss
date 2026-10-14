@@ -72,9 +72,9 @@ footer {
         /* Alternative fix for Safari rendering issues */
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        min-width: calc($spacer * 2.25);
-        min-height: calc($spacer * 2.25);
-        padding: 0 calc($spacer * 0.5);
+        min-width: calc($spacer * 3);
+        min-height: calc($spacer * 3);
+        padding: 0 calc($spacer * 0.39);
         text-align: center;
 
         &:focus-visible,
