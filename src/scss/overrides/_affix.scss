@@ -1,43 +1,3 @@
-.unblib-logo-affix {
-  display: none;
-}
-.unblib-logo {
-  display: inline;
-}
-
-#header #navbar-top.affix {
-  max-width: 100%;
-}
-
-.affix {
-  animation-name: slideDown;
-  animation-duration: $trans-timing-duration-slow;
-  background-color: $light;
-  box-shadow: 0 4px 4px -1px rgba(17, 17, 17, 0.7);
-  position: fixed !important;
-
-  button.nav-link {
-    color: $white;
-    padding-bottom: calc($spacer * 0.25);
-    padding-top: calc($spacer * 0.25);
-  }
-
-  ul[role="menubar"] a[aria-haspopup="true"] {
-    color: $white;
-  }
-
-  ul[role="menubar"] .show a[aria-haspopup="true"] {
-    color: $black;
-  }
-
-  /* Swap unb lib branding img visibility. */
-  .unblib-logo {
-    display: none;
-  }
-  .unblib-logo-affix {
-    display: inline;
-  }
-}
 #toolbar-administration + div {
   #navbar-main.affix {
     animation-name: slideDownToolbar;
@@ -45,9 +5,49 @@
   }
 }
 
-#header .affix li.show > .nav-link,
-#header .affix .megamenu-li > .nav-link:focus,
-#header .affix .megamenu-li > .nav-link:hover {
-  border-bottom: 3px solid $white;
-  color: $gray-200;
+#header {
+  #navbar-top.affix {
+    max-width: 100%;
+  }
+
+  .affix {
+    animation-name: slideDown;
+    animation-duration: $trans-timing-duration-slow;
+    background-color: $light;
+    box-shadow: 0 4px 4px -1px rgba(17, 17, 17, 0.7);
+    position: fixed !important;
+
+    #navbar-main {
+      margin-top: calc($spacer * 0.25);
+    }
+
+    button.nav-link {
+      color: $white;
+      padding-bottom: calc($spacer * 0.25);
+      padding-top: calc($spacer * 0.25);
+    }
+
+    ul[role="menubar"] a[aria-haspopup="true"] {
+      color: $white;
+    }
+
+    ul[role="menubar"] .show a[aria-haspopup="true"] {
+      color: $black;
+    }
+
+    li.show > .nav-link,
+    .nav-link:focus,
+    .nav-link:hover {
+      border-bottom: 3px solid $white;
+      color: $gray-200;
+    }
+
+    /* Swap unb lib branding img visibility. */
+    .unblib-logo {
+      display: none;
+    }
+    .unblib-logo-affix {
+      display: inline;
+    }
+  }
 }
