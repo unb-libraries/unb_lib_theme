@@ -6,13 +6,13 @@
   outline: none;
 }
 a.focus-ring {
-  outline: 1px dotted $gray-medium;
+  outline: 1px dotted $gray-600;
+  outline-offset: 1px;
 }
 .branding a {
   &:focus,
   .focus-ring {
-    outline: 1px dotted $white;
-    outline-offset: 0;
+    outline-offset: 4px;
   }
 }
 .breadcrumb a[href="/"].focus-ring:after {
