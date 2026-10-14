@@ -35,13 +35,6 @@
       color: $black;
     }
 
-    li.show > .nav-link,
-    .nav-link:focus,
-    .nav-link:hover {
-      border-bottom: 3px solid $white;
-      color: $gray-200;
-    }
-
     /* Swap unb lib branding img visibility. */
     .unblib-logo {
       display: none;
