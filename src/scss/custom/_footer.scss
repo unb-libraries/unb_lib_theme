@@ -74,7 +74,7 @@ footer {
         backface-visibility: hidden;
         min-width: calc($spacer * 3);
         min-height: calc($spacer * 3);
-        padding: 0 calc($spacer * 0.39);
+        padding: calc($spacer * 0.39);
         text-align: center;
 
         &:focus-visible,
