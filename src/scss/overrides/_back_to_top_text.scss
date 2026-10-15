@@ -1,0 +1,24 @@
+/**
+ * Style overrides re: Back to Top contrib module button themed similar to UNB
+ * @reference https://www.drupal.org/project/back_to_top
+ */
+
+body {
+  #backtotop {
+    background-color: rgb(0 0 0 / 75%);
+    font-family: $unb-font-emphasis, sans-serif;
+    font-size: calc($font-size-base * 1.38);
+    font-weight: 700;
+    transition: all $trans-timing-duration-fast $trans-timing-function;
+
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+      opacity: 1;
+    }
+    &:focus,
+    &:hover {
+      background-color: $primary-red-800;
+      border-color: $unb-light;
+    }
+  }
+}
