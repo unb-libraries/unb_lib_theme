@@ -9,12 +9,12 @@
 /* Block elements */
 body,
 .font-regular {
-    font-family: $unb-default-font, sans-serif;
+    font-family: $unb-font-default, sans-serif;
 }
 
 /* Headings */
 h1, .h1, h2, .h2, .h2-light {
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: $unb-font-emphasis, sans-serif;
     line-height: 1.2;
 }
 h1, .h1, h2, .h2 {
@@ -25,7 +25,7 @@ h3, .h3, h4, .h4, h5, .h5, h6 .h6 {
     font-family: 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;
     font-weight: bold;
     */
-    font-family: $unb-default-font, sans-serif;
+    font-family: $unb-font-default, sans-serif;
     font-weight: 700;
 }
 /* Sizes & margin */
