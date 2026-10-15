@@ -9,7 +9,7 @@
 /* Block elements */
 body,
 .font-regular {
-    font-family: "Nunito Sans", sans-serif;
+    font-family: $unb-default-font, sans-serif;
 }
 
 /* Headings */
@@ -25,7 +25,7 @@ h3, .h3, h4, .h4, h5, .h5, h6 .h6 {
     font-family: 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;
     font-weight: bold;
     */
-    font-family: "Nunito Sans", sans-serif;
+    font-family: $unb-default-font, sans-serif;
     font-weight: 700;
 }
 /* Sizes & margin */
