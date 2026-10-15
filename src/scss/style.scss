@@ -91,7 +91,7 @@ a {
 
     &.external {
         &:after {
-            content: '\f35d';
+            content: '\00a0\f35d';
             display: inline-block;
             font: var(--fa-font-solid);
             text-rendering: auto;
