@@ -30,7 +30,7 @@ button {
      /* "Hamburger" menu line spans */
     span {
     width: 100%;
-    height: 4px;
+    height: 3px;
     background-color: $black;
     border-radius: 2px;
       /* Smooth transition for hardware-accelerated transform properties */
@@ -44,7 +44,7 @@ button {
     &[aria-expanded="true"] {
       /* Top span line rotates down */
       span:nth-child(1) {
-        transform: rotate(45deg) translate(0, 0);
+        transform: rotate(45deg) translate(2px, -3px);
       }
 
       /* Middle span line disappears */
@@ -55,7 +55,7 @@ button {
 
       /* Bottom span line rotates up */
       span:nth-child(3) {
-        transform: rotate(-45deg) translate(0, 0);
+        transform: rotate(-45deg) translate(2px, 2px);
       }
     }
   }
