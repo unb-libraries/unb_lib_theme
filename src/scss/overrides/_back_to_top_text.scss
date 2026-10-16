@@ -9,6 +9,8 @@ body {
     font-family: $unb-font-emphasis, sans-serif;
     font-size: calc($font-size-base * 1.38);
     font-weight: 700;
+    padding-bottom: 5px;
+    padding-top: 5px;
     transition: all $trans-timing-duration-fast $trans-timing-function;
 
     &:focus {
