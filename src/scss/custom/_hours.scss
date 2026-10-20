@@ -5,11 +5,19 @@
   height: 100%;
   padding: 0;
   @include opacity(.8);
-  @include css3-prefix(transition, opacity .25s ease-in-out);
+  @include css3-prefix(transition, opacity $trans-timing-duration-fast $trans-timing-function);
 
   &:focus-within,
   &:hover {
-    @include opacity(.95);
+    @include opacity(.96);
+
+    table {
+      tbody {
+        tr {
+          border: 1px solid $gray-800;
+        }
+      }
+    }
   }
 
   table {
@@ -23,7 +31,8 @@
       th {
         border: none;
         font-size: calc($font-size-base * 0.96);
-        padding-left: calc($spacer * 1.75);
+        line-height: $line-height-sm;
+        padding-left: calc($spacer * 1.5);
         vertical-align: top;
 
         & + td,
@@ -71,12 +80,36 @@
       }
     }
 
+    tbody {
+      tr {
+        border: 1px solid transparent;
+        @include css3-prefix(transition, border $trans-timing-duration-fast $trans-timing-function);
+      }
+    }
     tfoot {
       td {
         padding-top: calc($spacer * 0.75);
 
         a {
           font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #banner {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+  }
+
+  #banner-hours {
+    @include opacity(.96);
+
+    table {
+      tbody {
+        tr {
+          border: 1px solid $gray-800;
         }
       }
     }
