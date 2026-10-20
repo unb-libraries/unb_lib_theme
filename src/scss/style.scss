@@ -131,25 +131,27 @@ a.nav-link[href$="//unb.ca"]::before {
     opacity: .7;
 }
 #skiptocontent a {
-    background: $skip-link-bg;
+    @include css3-prefix(transition, all $trans-timing-duration-slow ease-in);
+    background: $primary-red-800;
     color: $white;
     display: block;
-    font-size: 2rem;
-    padding: .13em;
+    font-size: calc($font-size-base * 1.8);
+    padding: calc($spacer * 0.13);
     position: absolute;
     text-align: center;
     text-decoration: none;
-    top: -3.5rem;
-    @include css3-prefix(transition, all .5s ease-in);
+    top: calc($spacer * -4);
     width: 100%;
     z-index: 1000;
 
     &:focus {
-      box-shadow: 0 0 5px #000;
+      @include css3-prefix(transition, top $trans-timing-duration-fast ease-out);
+      box-shadow: 0 0 5px $black;
+      outline-color: $white;
+      outline-offset: -4px;
       outline-style: dotted;
-      outline-offset: -0.33rem;
+      outline-width: 2px;
       top: 0;
-      @include css3-prefix(transition, top .25s ease-out);
     }
 }
 .user-logged-in #skiptocontent a:focus {
