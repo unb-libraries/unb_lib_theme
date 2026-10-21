@@ -5,15 +5,15 @@
 {% if is_front %}
     <div id="header-overlay">
 {% endif %}
-<div id="navbar-top" class="shadow-sm">
-    <div class="container d-flex justify-content-between align-items-center">
+<div id="navbar-top" class="shadow">
+    <div class="container d-flex flex-wrap flex-md-nowrap align-items-center justify-content-center justify-content-sm-between">
         <div class="d-flex branding">
             <a href="https://lib.unb.ca">
                 {% include '@unb_lib_theme/includes/unb-lib-logo.html.twig' %}
                 {% include '@unb_lib_theme/includes/unb-lib-logo-sm.html.twig' %}
             </a>
         </div>
-        <ul class="nav d-flex d-md-none">
+        <ul id="utility-menu-mobile" class="nav d-flex d-md-none">
             <li class="nav-item flex-fill text-center">
                 {% if is_library and is_front %}
                     <a id="btn-hours" class="btn" href="#todays-lib-hours-block">
@@ -32,14 +32,11 @@
             </li>
             <li class="nav-item flex-fill text-center">
                 <button id="btn-menu" class="animated-menu-icon btn" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="visually-hidden">Toggle navigation menu</span>
+                    <span class="visually-hidden">Toggle navigation menu</span><span class="fa-solid fa-bars fa-lg"></span>
                 </button>
             </li>
         </ul>
-        <nav aria-label="Header Utility Menu" class="d-none d-md-block text-right">
+        <nav id="utility-menu" aria-label="Header Utility Menu" class="d-none d-md-block text-right">
             <ul id="menu-secondary" class="list-inline mb-1">
                 <li class="list-inline-item">
                     <a href="https://lib.unb.ca/search">Search this Site</a>
@@ -53,13 +50,13 @@
             </ul>
             <ul id="header-buttons" class="list-inline mb-0">
                 <li class="list-inline-item">
-                    <a href="https://unb.on.worldcat.org/myaccount" class="btn btn-sm btn-light border-dark"><span class="fa-solid fa-user mr-1 me-1" aria-hidden="true"></span>My Account</a>
+                    <a href="https://unb.on.worldcat.org/myaccount" class="btn btn-sm btn-light border-dark"><span class="fa-regular fa-user mr-1 me-1" aria-hidden="true"></span>My Account</a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="https://lib.unb.ca/services/bookings" class="btn btn-sm btn-primary"><span class="fa-solid fa-house-circle-check mr-1 me-1" aria-hidden="true"></span>Book Study Space</a>
+                    <a href="https://lib.unb.ca/services/bookings" class="btn btn-sm btn-primary"><span class="fa-solid fa-book-open-reader mr-1 me-1" aria-hidden="true"></span>Book Study Space</a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="https://lib.unb.ca/help/ask-us" class="btn btn-sm btn-warning"><span class="fa-solid fa-comments mr-1 me-1" aria-hidden="true"></span>Ask Us</a>
+                    <a href="https://lib.unb.ca/help/ask-us" class="btn btn-sm btn-warning"><span class="fa-regular fa-comments mr-1 me-1" aria-hidden="true"></span>Ask Us</a>
                 </li>
             </ul>
         </nav>

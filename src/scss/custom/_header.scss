@@ -1,20 +1,20 @@
 #header {
   #menu-secondary {
-    li {
-      margin: .33rem 0;
-
-      &:not(:first-child):not(:last-child) {
-        margin-left: calc($spacer * 0.75);
-        margin-right: calc($spacer * 0.75);
-      }
-    }
-
-    a {
+     a {
       color: $black;
 
       &:focus-visible,
       &:hover {
         color: $link-color;
+      }
+    }
+
+    li {
+      margin: calc($spacer * 0.33) 0;
+
+      &:not(:first-child):not(:last-child) {
+        margin-left: calc($spacer * 0.75);
+        margin-right: calc($spacer * 0.75);
       }
     }
   }
@@ -24,41 +24,37 @@
       margin: 0;
 
       &:not(:first-child):not(:last-child) {
-        margin-left: calc($spacer * 0.75);
-        margin-right: calc($spacer * 0.75);
+        margin-left: calc($spacer * 0.5);
+        margin-right: calc($spacer * 0.5);
+      }
+    }
+  }
+  @media (max-width: 1199px) {
+    #navbar-main {
+      #navbar {
+        button {
+          font-size: calc($font-size-base * 1.18);
+          padding-bottom: calc($spacer * 0.5);
+          padding-top: calc($spacer * 0.5);
+        }
       }
     }
   }
 
-  button[data-target="#navbar"][aria-expanded="false"]:after {
-    @include link-fa-icon('\f0c9', left);
-  }
+  @media (max-width: 767px) {
+    #banner {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
-  button[data-target="#navbar"][aria-expanded="true"]:after {
-    @include link-fa-icon('\f00d', left);
-    margin-left: 0.44rem;
-  }
-
-  button[data-target="#quicklinks-wrapper"][aria-expanded="false"]:after {
-    @include link-fa-icon('\f011', left, '', $text-muted);
-  }
-
-  button[data-target="#quicklinks-wrapper"][aria-expanded="true"]:after {
-    @include link-fa-icon('\f011', left, '', $white);
-  }
-
-  #navbar-main {
-    margin-top: calc($spacer * 0.75);
-  }
-
-  @media (max-width: 991px) {
     #navbar-main {
       #navbar {
         button {
           font-size: 1.15rem;
+          padding-bottom: calc($spacer * 0.75);
+          padding-top: calc($spacer * 0.75);
 
           &:after {
-            display: inline-block;
             float: right;
             font: var(--fa-font-solid);
             text-rendering: auto;
@@ -85,7 +81,6 @@
           font-size: 1.1rem;
 
           &:after {
-            display: inline-block;
             float: right;
             font: var(--fa-font-solid);
             text-rendering: auto;
@@ -117,7 +112,7 @@
 
             .container > div {
               -webkit-animation: megamenu-expand 0.3s;
-              animation-duration: $trans-timing-duration-default;
+              animation-duration: $trans-timing-duration-fast;
               animation-iteration-count: 1;
               animation-name: megamenu-expand;
 
@@ -139,7 +134,7 @@
 
             .container > div {
               -webkit-animation: megamenu-expand 0.3s;
-              animation-duration: $trans-timing-duration-default;
+              animation-duration: $trans-timing-duration-fast;
               animation-iteration-count: 1;
               animation-name: megamenu-expand;
 
@@ -156,14 +151,64 @@
   #navbar-top {
     font-size: .9rem;
     font-weight: bold;
-    // padding-bottom: calc($spacer * 0.75);
-    padding-top: calc($spacer * 0.5);
 
-    a.nav-link {
+    & > div {
+      padding-top: calc($spacer * 0.25);
+    }
+
+    a {
       line-height: normal;
+    }
+
+    #utility-menu-mobile {
+      button {
+        &[aria-expanded="true"] {
+          .fa-regular {
+            font-weight: 900;
+          }
+        }
+      }
+
+      a {
+        transition: color $trans-timing-duration-fast $trans-timing-function;
+
+        &:focus,
+        &:hover {
+          color: $unb-nav-red;
+        }
+      }
+
+      /* Mobile button: Menu/Close icon */
+      button {
+        &.btn {
+          &[aria-expanded="true"] {
+            color: $primary-red-800;
+
+            .fa-bars {
+              &::before {
+                content: '\f057';
+                font-size: $font-size-base;
+                vertical-align: bottom;
+              }
+            }
+          }
+
+          &:focus,
+          &:hover {
+            color: $unb-nav-red;
+          }
+        }
+      }
     }
   }
 
+  @media (min-width: 768px) {
+    #navbar-top:not(.affix) {
+      & > div {
+        padding-bottom: calc($spacer * 0.75);
+      }
+    }
+  }
   #navbar-main:not(.affix) {
     .branding h1 {
       min-width: auto;
@@ -228,7 +273,7 @@
 /* END  Mobile Buttons */
 
 /* Top-level Menu */
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   ul[role="menubar"] {
     background: $navbar-dark;
   }
