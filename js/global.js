@@ -18,7 +18,7 @@
 
       $(window).scroll(function () {
         let scroll = $(window).scrollTop();
-        if (scroll >= 131 && window.width >= 977) {
+        if (scroll >= 131 && window.width >= 756) {
           header.addClass("affix");
         } else {
           header.removeClass("affix");
