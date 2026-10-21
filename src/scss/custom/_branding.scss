@@ -1,40 +1,44 @@
 /* Main Nav | UNB Libraries SVG Link */
 .branding {
+
   a {
     border-bottom-color: transparent;
     border-bottom-style: solid;
     border-bottom-width: 2px;
     border-top: 2px solid transparent;
     margin-top: 1px;
-
-    &:focus,
-    &:hover {
-      // border-bottom-color: $header-hover-color;
-    }
   }
 
   /* UNB Libraries Logo SVG */
-  .unb-lib-logo {
-    display: inline;
-    max-width: 100%;
+  .lib-logo-unb,
+  .lib-logo-divider,
+  .lib-logo-libraries {
+    fill: $black;
 
-    .lib-logo-unb,
-    .lib-logo-divider,
-    .lib-logo-libraries {
-      fill: $black;
-
-      .sail {
-        fill: $unb-logo-red;
-      }
+    .sail {
+      fill: $unb-logo-red;
     }
   }
-  .unb-lib-logo-sm {
+
+  .unb-lib-logo-lg {
     display: none;
+  }
+  .unb-lib-logo-sm {
+    display: block;
+  }
+  @media (min-width: 768px) {
+    .unb-lib-logo-lg {
+      display: block;
+      max-width: 100%;
+    }
+    .unb-lib-logo-sm {
+      display: none;
+    }
   }
 }
 
 .affix {
-  .unb-lib-logo,
+  .unb-lib-logo-lg,
   #menu-secondary {
     display: none;
   }
@@ -52,31 +56,11 @@
   }
 }
 
-@media (max-width: 992px) {
-  #header {
-    .branding {
-      max-width: 46%;
-      .unb-lib-logo {
-        height: 50px;
-      }
-    }
-  }
-}
 @media (max-width: 767px) {
   #header {
-    .branding {
-      max-width: 60%;
-    }
-
     #navbar-top {
       padding-bottom: 0!important;
       padding-top: 0!important;
-    }
-
-    .unb-lib-logo {
-      .uonb {
-        fill: transparent;
-      }
     }
   }
 }
