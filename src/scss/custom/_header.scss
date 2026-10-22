@@ -153,6 +153,7 @@
     font-weight: bold;
 
     & > div {
+      padding-bottom: calc($spacer * 0.25);
       padding-top: calc($spacer * 0.25);
     }
 
