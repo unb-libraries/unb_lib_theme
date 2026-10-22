@@ -1,29 +1,36 @@
 /* BS5.x classes */
 .column-gap-2 {
-  column-gap: calc($spacer * 0.5)!important;
+  column-gap: calc($spacer * 0.5) !important;
 }
 .column-gap-3 {
-  column-gap: $spacer!important;
+  column-gap: $spacer !important;
 }
 .gap-2 {
-    gap: calc($spacer * 0.5)!important;
+    gap: calc($spacer * 0.5) !important;
 }
 .gap-3 {
-  gap: $spacer!important;
+  gap: $spacer !important;
 }
 .gap-4 {
-  gap: calc($spacer * 1.5)!important;
+  gap: calc($spacer * 1.5) !important;
 }
 .row-gap-2 {
-  row-gap: calc($spacer * 0.5)!important;
+  row-gap: calc($spacer * 0.5) !important;
 }
 .row-gap-3 {
-  row-gap: $spacer!important;
+  row-gap: $spacer !important;
 }
 
 .lh-base {
-  line-height: calc($spacer * 1.5)!important;
+  line-height: calc($spacer * 1.5) !important;
 }
 .lh-sm {
-    line-height: calc($spacer * 1.25)!important;
+    line-height: calc($spacer * 1.25) !important;
+}
+
+.text-start {
+  text-align: left !important;
+}
+.text-end {
+  text-align: right !important;
 }
