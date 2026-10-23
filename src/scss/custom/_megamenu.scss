@@ -43,8 +43,8 @@
 
         button.nav-link {
             @include css3-prefix(transition,
-                background-color $trans-timing-duration-default ease,
-                color $trans-timing-duration-default ease
+                background-color $trans-timing-duration-fast $trans-timing-function,
+                color $trans-timing-duration-fast $trans-timing-function
             );
             background: none;
             border: none;
