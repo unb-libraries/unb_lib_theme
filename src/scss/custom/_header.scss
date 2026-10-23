@@ -1,21 +1,26 @@
 #header {
-  #menu-secondary {
+  #menu-secondary,
+  #menu-secondary-mobile {
      a {
       color: $black;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      text-underline-offset: 2px;
 
       &:focus-visible,
       &:hover {
         color: $link-color;
       }
-    }
 
-    li {
-      margin: calc($spacer * 0.33) 0;
-
-      &:not(:first-child):not(:last-child) {
-        margin-left: calc($spacer * 0.75);
-        margin-right: calc($spacer * 0.75);
+      &:hover {
+        color: $link-color;
+        text-decoration-color: $link-color;
       }
+    }
+  }
+  #menu-secondary {
+    li {
+      margin: calc($spacer * 0.35) 0;
     }
   }
 
@@ -189,7 +194,7 @@
               &::before {
                 content: '\f057';
                 font-size: $font-size-base;
-                vertical-align: bottom;
+                vertical-align: 1px;
               }
             }
           }
