@@ -6,9 +6,9 @@
     #navbar {
         button.nav-link {
             @include css3-prefix(transition,
-                background-color $trans-timing-duration-default $trans-timing-function,
-                border-color $trans-timing-duration-default $trans-timing-function,
-                color $trans-timing-duration-default $trans-timing-function
+                background-color $trans-timing-duration-fast $trans-timing-function,
+                border-color $trans-timing-duration-fast $trans-timing-function,
+                color $trans-timing-duration-fast $trans-timing-function
             );
             border-color: transparent;
             border-style: solid;
@@ -67,11 +67,15 @@
             }
         }
 
+        @media screen and (max-width: 767px) {
+            button.nav-link {
+                background: $black;
+            }
+        }
         .dropdown-menu {
-            @media screen and (max-width: 767px) {
+             @media screen and (max-width: 767px) {
                 padding: 0;
             }
-
             @media screen and (min-width: 992px) {
                 // Absolute position re: dropdown-menu class.
                 left: 0;
@@ -88,7 +92,7 @@
             width: 100%;
 
            .dropdown-menu-wrapper {
-                @include css3-prefix(transition, opacity $trans-timing-duration-default $trans-timing-function);
+                @include css3-prefix(transition, opacity $trans-timing-duration-fast $trans-timing-function);
                 background: $gray-200;
                 border-color: $gray-300;
                 border-style: solid;
