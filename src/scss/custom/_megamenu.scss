@@ -68,6 +68,10 @@
         }
 
         .dropdown-menu {
+            @media screen and (max-width: 767px) {
+                padding: 0;
+            }
+
             @media screen and (min-width: 992px) {
                 // Absolute position re: dropdown-menu class.
                 left: 0;
