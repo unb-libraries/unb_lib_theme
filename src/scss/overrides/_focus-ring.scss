@@ -12,7 +12,7 @@ a.focus-ring {
 .branding a {
   &:focus,
   .focus-ring {
-    outline-offset: 4px;
+    outline-offset: 2px;
   }
 }
 .breadcrumb a[href="/"].focus-ring:after {
