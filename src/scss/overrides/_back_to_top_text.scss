@@ -6,6 +6,7 @@
 body {
   #backtotop {
     background-color: rgb(0 0 0 / 75%);
+    bottom: calc($spacer * 3.5);
     font-family: $unb-font-emphasis, sans-serif;
     font-size: calc($font-size-base * 1.38);
     font-weight: 700;
