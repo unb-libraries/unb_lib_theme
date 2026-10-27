@@ -172,9 +172,9 @@
     }
 
     #header-buttons-mobile {
-        background-color: $black;
+        background-color: $unb-nav-red;
         margin-bottom: 0;
-        padding: $spacer 0;
+        padding: calc($spacer * 0.5) 0;
         width: 100%;
     }
     #menu-secondary-mobile {
