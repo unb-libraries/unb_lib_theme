@@ -92,7 +92,7 @@
             width: 100%;
 
            .dropdown-menu-wrapper {
-                @include css3-prefix(transition, opacity $trans-timing-duration-fast $trans-timing-function);
+                // @include css3-prefix(transition, opacity $trans-timing-duration-fast $trans-timing-function);
                 background: $gray-200;
                 border-color: $gray-300;
                 border-style: solid;
