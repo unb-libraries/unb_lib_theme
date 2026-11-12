@@ -1,12 +1,8 @@
 global-styling:
   version: VERSION
   js:
-    https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js:
-      type: external
-      attributes:
-        integrity: 'sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx'
-        crossorigin: anonymous
-      minified: true
+    # Bootstrap 4.5.3 patched to accept jQuery 4 (Drupal 11.2+); see file header.
+    js/bootstrap.bundle.min.js: { minified: true }
     js/focus-ring.min.js: { minified: true }
     js/animated-focus-ring.min.js: { minified: true }
     js/global.min.js: { minified: true }
